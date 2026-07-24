@@ -128,7 +128,8 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   font-size: .95rem;
   transition: color var(--transition);
 }
-.nav__links a:hover { color: var(--red); }
+.nav__links a:hover { color: var(--gray-500); }
+.nav__links a.active, .nav__links a[aria-current] { color: var(--red); font-weight: 700; }
 
 .nav__cta {
   display: inline-flex;

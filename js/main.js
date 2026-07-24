@@ -300,7 +300,7 @@
   document.querySelectorAll('.nav__links a, .nav__mobile a').forEach(link => {
     const href = link.getAttribute('href');
     if (href === current || (current === '' && href === 'index.html')) {
-      link.style.color = '#FFFFFF';
+      link.style.color = 'var(--red, #C41E1E)';
       link.style.fontWeight = '700';
     }
   });
