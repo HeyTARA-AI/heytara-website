@@ -1215,7 +1215,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
 }
 .contact-hero__visual-side {
   flex: 1;
-  background: var(--grad-hero);
+  background: linear-gradient(135deg, #1A0A0A 0%, #2D1414 30%, #1A1A2E 100%);
   position: relative;
   overflow: hidden;
   display: flex;
