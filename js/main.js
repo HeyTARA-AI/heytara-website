@@ -296,11 +296,16 @@
 // ACTIVE NAV LINK (highlight current page)
 // ─────────────────────────────────────────────────────
 (function highlightActiveNav() {
-  const current = window.location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.nav__links a, .nav__mobile a').forEach(link => {
+  const path = window.location.pathname;
+  const current = path.split('/').pop() || 'index.html';
+  const inBlog = path.includes('/blog');
+  document.querySelectorAll('.nav__links a:not(.nav__cta), .nav__mobile a:not(.nav__cta)').forEach(link => {
     const href = link.getAttribute('href');
-    if (href === current || (current === '' && href === 'index.html')) {
-      link.style.color = 'var(--red, #C41E1E)';
+    const hrefFile = href.split('/').pop();
+    const isMatch = (hrefFile === current || (current === '' && hrefFile === 'index.html'));
+    const isBlogLink = href.includes('blog');
+    if (isMatch || (inBlog && isBlogLink)) {
+      link.style.color = '#C41E1E';
       link.style.fontWeight = '700';
     }
   });
