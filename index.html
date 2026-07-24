@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HeyTARA — The Hospitality OS That Never Sleeps</title>
+  <meta name="description" content="Voice, Text, and Email automation built for restaurants and hotels. TARA handles guest communication across every channel — driving revenue, loyalty, and unforgettable experiences." />
+
+  <!-- Open Graph -->
+  <meta property="og:title"       content="HeyTARA — The Hospitality OS That Never Sleeps" />
+  <meta property="og:description" content="Hospitality-driven workflow automation. Voice. Text. Email. TARA answers every call, takes orders, and follows up — so your team can focus on the guests in front of them." />
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://heytara.ai" />
+  <meta property="og:image"       content="heytara-logo.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="heytara-logo.jpg" type="image/jpeg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     NAVIGATION
+     ═══════════════════════════════════════════════════ -->
+<header>
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+
+      <a href="index.html" class="nav__logo" aria-label="HeyTARA home">
+        <img src="heytara-logo-dark.png" alt="HeyTARA" />
+      </a>
+
+      <ul class="nav__links" role="list">
+        <li><a href="#channels">How It Works</a></li>
+        <li><a href="#encounters">Capabilities</a></li>
+        <li><a href="#results">Results</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <a href="contact.html" class="nav__cta">
+        Book a Demo &rarr;
+      </a>
+
+      <button
+        class="nav__burger"
+        id="nav-burger"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="nav-mobile"
+      >
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+
+    <!-- Mobile nav -->
+    <nav id="nav-mobile" class="nav__mobile" aria-label="Mobile navigation">
+      <a href="#channels">How It Works</a>
+      <a href="#encounters">Capabilities</a>
+      <a href="#results">Results</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="nav__cta">Book a Demo &rarr;</a>
+    </nav>
+  </nav>
+</header>
+
+<!-- ═══════════════════════════════════════════════════
+     HERO
+     ═══════════════════════════════════════════════════ -->
+<section class="hero" aria-labelledby="hero-headline">
+
+  <!-- Ambient orbs -->
+  <div class="hero__bg" aria-hidden="true">
+    <div class="hero__orb hero__orb--1"></div>
+    <div class="hero__orb hero__orb--2"></div>
+    <div class="hero__orb hero__orb--3"></div>
+  </div>
+
+  <div class="hero__inner hero__inner--split">
+
+    <div class="hero__left">
+    <div class="hero__badge" aria-hidden="true">
+      <span></span> Hospitality-Driven Workflow Automation
+    </div>
+
+    <h1 class="hero__headline" id="hero-headline">
+      The Hospitality OS<br />
+      <em>That Never Sleeps</em>
+    </h1>
+
+    <p class="hero__sub">
+      <strong>Voice. Text. Email.</strong> TARA handles guest communication across every channel —
+      answering every call, taking every order, and following up — so your team can focus
+      on the guests right in front of them.
+    </p>
+
+    <div class="hero__channels" aria-label="Communication channels">
+      <div class="hero__channel hero__channel--voice">📞 Voice</div>
+      <div class="hero__channel hero__channel--text">💬 Text / SMS</div>
+      <div class="hero__channel hero__channel--email">📧 Email</div>
+    </div>
+
+    <div class="hero__ctas">
+      <a href="contact.html" class="btn btn--primary btn--large">
+        Book a Demo &rarr;
+      </a>
+      <a href="#how-it-works" class="btn btn--ghost btn--large">
+        See How It Works ↓
+      </a>
+    </div>
+
+    </div><!-- end hero__left -->
+
+    <!-- Right side: Restaurant illustration -->
+    <div class="hero__right">
+      <div class="hero__illustration">
+        <img src="heytara-restaurant.png" alt="HeyTARA Restaurant Illustration" class="hero__restaurant-img" />
+      </div>
+    </div>
+
+  </div><!-- end hero__inner--split -->
+
+  <!-- Stats + Trusted — full width below hero split -->
+  <div class="hero__bottom">
+    <div class="hero__stat-strip" aria-label="Key statistics">
+      <div class="hero__stat">
+        <span class="hero__stat-num" data-counter data-target="30" data-suffix="%" data-duration="1600">30%</span>
+        <span class="hero__stat-label">More orders captured</span>
+      </div>
+      <div class="hero__stat">
+        <span class="hero__stat-num" data-counter data-target="20" data-suffix="%" data-duration="1400">20%</span>
+        <span class="hero__stat-label">Higher avg ticket</span>
+      </div>
+      <div class="hero__stat">
+        <span class="hero__stat-num" data-counter data-target="20" data-suffix="+" data-duration="1500">20+</span>
+        <span class="hero__stat-label">Staff hours saved / week</span>
+      </div>
+      <div class="hero__stat">
+        <span class="hero__stat-num">24/7</span>
+        <span class="hero__stat-label">Always available</span>
+      </div>
+    </div>
+
+    <!-- Trusted By — right below stats -->
+    <div class="hero__trusted">
+      <p class="hero__trusted-label">Trusted by great hospitality brands</p>
+      <div class="logo-carousel">
+        <div class="logo-carousel__track">
+          <img src="lucilles-logo.png" alt="Lucille's Smokehouse BBQ" />
+          <img src="pokeworks-logo.png" alt="Pokeworks" />
+          <span class="logo-text-fallback">Mendocino Farms</span>
+          <img src="lucilles-logo.png" alt="Lucille's Smokehouse BBQ" aria-hidden="true" />
+          <img src="pokeworks-logo.png" alt="Pokeworks" aria-hidden="true" />
+          <span class="logo-text-fallback" aria-hidden="true">Mendocino Farms</span>
+          <img src="lucilles-logo.png" alt="Lucille's Smokehouse BBQ" aria-hidden="true" />
+          <img src="pokeworks-logo.png" alt="Pokeworks" aria-hidden="true" />
+          <span class="logo-text-fallback" aria-hidden="true">Mendocino Farms</span>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end hero__bottom -->
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     PROBLEM
+     ═══════════════════════════════════════════════════ -->
+<section class="problem" id="problem" aria-labelledby="problem-title">
+  <div class="container">
+
+    <header class="section-header section-header--center">
+      <span class="section-eyebrow eyebrow--orange">The Reality</span>
+      <h2 class="section-title" id="problem-title">
+        Your Guests Are Trying to Reach You. Right Now.<br />Will You Answer the Call?
+      </h2>
+      <p class="section-sub section-sub--light section-sub--center">
+        <strong style="color:#fff">Because we can.</strong> Every call answered. Every need met.<br />Every experience positive and on brand.
+      </p>
+    </header>
+
+    <div class="stat-grid">
+
+      <div class="stat-card stat-card--red">
+        <h3 class="stat-card__title">Being Unavailable</h3>
+        <span class="stat-card__icon" aria-hidden="true">📵</span>
+        <span class="stat-card__num"
+          data-counter data-target="40" data-suffix="%" data-duration="1600">40%</span>
+        <p class="stat-card__label">of guests can't reach you during peak hours</p>
+        <p class="stat-card__desc">That's nearly half your dinner rush — going unanswered.</p>
+      </div>
+
+      <div class="stat-card stat-card--orange">
+        <h3 class="stat-card__title">Destroys Loyalty & Retention</h3>
+        <span class="stat-card__icon" aria-hidden="true">📉</span>
+        <span class="stat-card__num"
+          data-counter data-target="60" data-suffix="%" data-duration="1700">60%</span>
+        <p class="stat-card__label">of those customers never call back</p>
+        <p class="stat-card__desc">One missed call is often a lost guest — forever.</p>
+      </div>
+
+      <div class="stat-card stat-card--yellow">
+        <h3 class="stat-card__title">Driving Lost Revenue</h3>
+        <span class="stat-card__icon" aria-hidden="true">💸</span>
+        <span class="stat-card__num">$27K–<span
+          data-counter data-target="40" data-suffix="K" data-duration="1800">40K</span></span>
+        <p class="stat-card__label">lost per location annually</p>
+        <p class="stat-card__desc">From missed calls, inconsistent service, and zero upsell.</p>
+      </div>
+
+      <div class="stat-card stat-card--green">
+        <h3 class="stat-card__title">Memorable Poor Experiences</h3>
+        <span class="stat-card__icon" aria-hidden="true">📊</span>
+        <span class="stat-card__num"
+          data-counter data-target="70" data-suffix="%" data-duration="1600">70%</span>
+        <p class="stat-card__label">of peak-hour experiences are inconsistent</p>
+        <p class="stat-card__desc">When your team is slammed, service suffers. Every time.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     INTEGRATIONS
+     ═══════════════════════════════════════════════════ -->
+<section class="integrations" id="integrations">
+  <div class="container">
+    <header class="section-header section-header--center">
+      <span class="section-eyebrow eyebrow--green">Seamless Integrations</span>
+      <h2 class="section-title">Works With the Tools You Already Use</h2>
+      <p class="section-sub section-sub--center">TARA connects directly to your existing POS, ordering, and operations systems.</p>
+    </header>
+    <div class="integration-grid fade-in">
+      <div class="integration-card" style="border-color:rgba(255,159,67,.3);">
+        <div class="integration-card__logo" style="background:#FF9F43;color:#fff;">Olo</div>
+        <p class="integration-card__name">Olo</p>
+      </div>
+      <div class="integration-card" style="border-color:rgba(255,99,71,.3);">
+        <div class="integration-card__logo" style="background:#FF6347;color:#fff;">Toast</div>
+        <p class="integration-card__name">Toast</p>
+      </div>
+      <div class="integration-card" style="border-color:rgba(0,0,0,.15);">
+        <div class="integration-card__logo" style="background:#1A1A2E;color:#fff;">Square</div>
+        <p class="integration-card__name">Square</p>
+      </div>
+      <div class="integration-card" style="border-color:rgba(41,98,255,.3);">
+        <div class="integration-card__logo" style="background:#2962FF;color:#fff;">NCR Aloha</div>
+        <p class="integration-card__name">NCR Aloha</p>
+      </div>
+    </div>
+    <p class="integration-note fade-in">Don't see your system? We integrate with <strong>20+ platforms</strong>. <a href="contact.html">Contact us →</a></p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     CHANNEL: VOICE
+     ═══════════════════════════════════════════════════ -->
+<section class="channel channel--voice" id="channels" aria-labelledby="voice-title">
+  <div class="channel__inner container">
+
+    <!-- Left: Copy -->
+    <div class="channel__content fade-in">
+      <div class="channel__icon-wrap" aria-hidden="true">📞</div>
+      <span class="section-eyebrow eyebrow--purple">Voice Channel</span>
+      <h2 class="section-title" id="voice-title">
+        Your Best Employee,<br />On Every Call
+      </h2>
+
+      <blockquote class="channel__quote">
+        "Answer nuisance calls so your employees don't have to.
+        Let your team focus on the guests right in front of them."
+      </blockquote>
+
+      <p class="section-sub section-sub--light">
+        TARA answers every call instantly — zero hold time, zero missed orders.
+        She takes orders, books reservations, answers FAQs, and intelligently upsells
+        like your best server, on every single interaction.
+      </p>
+
+      <ul class="feature-list" aria-label="Voice features">
+        <li class="feature-item">
+          <div class="feature-item__check" aria-hidden="true">✓</div>
+          <span class="feature-item__text"><strong>Zero hold time</strong> — answers every call instantly, even during the dinner rush</span>
+        </li>
+        <li class="feature-item">
+          <div class="feature-item__check" aria-hidden="true">✓</div>
+          <span class="feature-item__text"><strong>Intelligent upselling</strong> — +10–20% average ticket increase, naturally</span>
+        </li>
+        <li class="feature-item">
+          <div class="feature-item__check" aria-hidden="true">✓</div>
+          <span class="feature-item__text"><strong>Direct POS integration</strong> — orders sync to Toast, Square, Clover automatically</span>
+        </li>
+        <li class="feature-item">
+          <div class="feature-item__check" aria-hidden="true">✓</div>
+          <span class="feature-item__text"><strong>SMS payment link</strong> — completes the transaction, no back-and-forth</span>
+        </li>
+        <li class="feature-item">
+          <div class="feature-item__check" aria-hidden="true">✓</div>
+          <span class="feature-item__text"><strong>Infinite patience</strong> — on brand every time, no matter how busy</span>
+        </li>
+        <li class="feature-item">
+          <div class="feature-item__check" aria-hidden="true">✓</div>
+          <span class="feature-item__text"><strong>Smart escalation</strong> — knows when to route to a real person</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Right: Visual -->
+    <div class="channel__visual fade-in fade-in-delay-2">
+      <div class="channel__card">
+        <div class="channel__card-title">
+          <span aria-hidden="true">🎙️</span> TARA is live — answering now
+        </div>
+
+        <!-- Waveform animation -->
+        <div class="waveform" aria-label="Audio waveform visualization" aria-hidden="true">
+          <div class="waveform__bar"></div>
+          <div class="waveform__bar"></div>
+          <div class="waveform__bar"></div>
+          <div class="waveform__bar"></div>
+          <div class="waveform__bar"></div>
+          <div class="waveform__bar"></div>
+          <div class="waveform__bar"></div>
+          <div class="waveform__bar"></div>
+          <div class="waveform__bar"></div>
+          <div class="waveform__bar"></div>
+          <div class="waveform__bar"></div>
+          <div class="waveform__bar"></div>
+        </div>
+
+        <p style="font-size:.85rem;color:rgba(255,255,255,.6);margin-bottom:1rem;font-style:italic;">
+          "Hi! Thanks for calling. I'm TARA — I'd love to help with your order or reservation tonight."
+        </p>
+
+        <!-- Stat pills -->
+        <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem;">
+          <div style="padding:.4rem .9rem;background:rgba(207,147,255,.15);border-radius:999px;font-size:.78rem;font-weight:600;color:#CF93FF;">
+            ✓ Order Taken
+          </div>
+          <div style="padding:.4rem .9rem;background:rgba(107,203,119,.15);border-radius:999px;font-size:.78rem;font-weight:600;color:#74F0A0;">
+            ✓ Upsell +$12
+          </div>
+          <div style="padding:.4rem .9rem;background:rgba(114,195,255,.15);border-radius:999px;font-size:.78rem;font-weight:600;color:#72C3FF;">
+            ✓ POS Synced
+          </div>
+          <div style="padding:.4rem .9rem;background:rgba(255,217,61,.15);border-radius:999px;font-size:.78rem;font-weight:600;color:#FFD93D;">
+            ✓ SMS Sent
+          </div>
+        </div>
+
+        <!-- Mini stats -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.1);">
+          <div>
+            <div style="font-size:1.8rem;font-weight:800;color:#CF93FF;">0s</div>
+            <div style="font-size:.78rem;color:rgba(255,255,255,.45);">Hold time</div>
+          </div>
+          <div>
+            <div style="font-size:1.8rem;font-weight:800;color:#CF93FF;">100%</div>
+            <div style="font-size:.78rem;color:rgba(255,255,255,.45);">Calls answered</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     CHANNEL: TEXT / SMS
+     ═══════════════════════════════════════════════════ -->
+<section class="channel channel--text" aria-labelledby="text-title">
+  <div class="channel__inner channel__inner--reverse container">
+
+    <!-- Left (visual) — reversed layout -->
+    <div class="channel__visual fade-in">
+      <div class="channel__card">
+        <div class="channel__card-title">
+          <span aria-hidden="true">💬</span> Live SMS Thread
+        </div>
+
+        <div class="sms-thread" aria-label="Example SMS conversation">
+          <p class="sms-label">Guest</p>
+          <div class="sms-bubble sms-bubble--in">
+            Hey, can I order 2 spicy tuna rolls and a miso soup for pickup at 7pm?
+          </div>
+
+          <p class="sms-label" style="text-align:right;">TARA</p>
+          <div class="sms-bubble sms-bubble--out">
+            Absolutely! 2 Spicy Tuna Rolls + 1 Miso Soup for 7:00 PM pickup 🎉<br/><br/>
+            Would you like to add a Green Tea or edamame? Most guests love the combo!
+          </div>
+
+          <p class="sms-label">Guest</p>
+          <div class="sms-bubble sms-bubble--in">
+            Yes, add an edamame! Thanks
+          </div>
+
+          <p class="sms-label" style="text-align:right;">TARA</p>
+          <div class="sms-bubble sms-bubble--out">
+            Perfect! Your total is $34.50. Pay securely here:<br/>
+            <strong style="color:#72C3FF;">heytara.ai/pay/xq98k</strong><br/><br/>
+            See you at 7! 🍣
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Copy -->
+    <div class="channel__content fade-in fade-in-delay-2">
+      <div class="channel__icon-wrap" aria-hidden="true">💬</div>
+      <span class="section-eyebrow eyebrow--blue">Text / SMS Channel</span>
+      <h2 class="section-title" id="text-title">
+        Meet Guests<br />Where They Are
+      </h2>
+
+      <blockquote class="channel__quote">
+        "Consistent, on-brand communication at scale — every guest gets the same great experience."
+      </blockquote>
+
+      <p class="section-sub section-sub--light">
+        Two-way SMS that handles orders, confirmations, and follow-ups automatically.
+        Guests text what they want — TARA takes it from there, synced to your POS,
+        payment completed, confirmation sent.
+      </p>
+
+      <ul class="feature-list" aria-label="Text features">
+        <li class="feature-item">
+          <div class="feature-item__check" aria-hidden="true">✓</div>
+          <span class="feature-item__text"><strong>Two-way ordering</strong> — guests text their order, TARA handles the rest</span>
+        </li>
+        <li class="feature-item">
+          <div class="feature-item__check" aria-hidden="true">✓</div>
+          <span class="feature-item__text"><strong>Order confirmations & status</strong> — automated, on-brand, every time</span>
+        </li>
+        <li class="feature-item">
+          <div class="feature-item__check" aria-hidden="true">✓</div>
+          <span class="feature-item__text"><strong>Reservation reminders</strong> — reduce no-shows automatically</span>
+        </li>
+        <li class="feature-item">
+          <div class="feature-item__check" aria-hidden="true">✓</div>
+          <span class="feature-item__text"><strong>Upsell via text</strong> — natural, conversational, never pushy</span>
+        </li>
+        <li class="feature-item">
+          <div class="feature-item__check" aria-hidden="true">✓</div>
+          <span class="feature-item__text"><strong>Payment links</strong> — transactions completed right in the thread</span>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     CHANNEL: EMAIL
+     ═══════════════════════════════════════════════════ -->
+<section class="channel channel--email" aria-labelledby="email-title">
+  <div class="channel__inner container">
+
+    <!-- Left: Copy -->
+    <div class="channel__content fade-in">
+      <div class="channel__icon-wrap" aria-hidden="true">📧</div>
+      <span class="section-eyebrow eyebrow--green">Email Channel</span>
+      <h2 class="section-title" id="email-title">
+        The Follow-Up That<br />Drives Loyalty
+      </h2>
+
+      <blockquote class="channel__quote">
+        "Turn one-time visitors into lifetime regulars — automatically."
+      </blockquote>
+
+      <p class="section-sub section-sub--light">
+        TARA doesn't just answer — she follows up. Post-visit feedback requests,
+        win-back campaigns for lapsed guests, loyalty rewards, event announcements.
+        The relationship continues long after the meal ends.
+      </p>
+
+      <ul class="feature-list" aria-label="Email features">
+        <li class="feature-item">
+          <div class="feature-item__check" aria-hidden="true">✓</div>
+          <span class="feature-item__text"><strong>Post-visit feedback</strong> — collect reviews at the peak of happiness</span>
+        </li>
+        <li class="feature-item">
+          <div class="feature-item__check" aria-hidden="true">✓</div>
+          <span class="feature-item__text"><strong>Win-back campaigns</strong> — re-engage guests who haven't visited lately</span>
+        </li>
+        <li class="feature-item">
+          <div class="feature-item__check" aria-hidden="true">✓</div>
+          <span class="feature-item__text"><strong>Loyalty communications</strong> — reward your best guests automatically</span>
+        </li>
+        <li class="feature-item">
+          <div class="feature-item__check" aria-hidden="true">✓</div>
+          <span class="feature-item__text"><strong>Event & promo announcements</strong> — fill seats on slow nights</span>
+        </li>
+        <li class="feature-item">
+          <div class="feature-item__check" aria-hidden="true">✓</div>
+          <span class="feature-item__text"><strong>Always on-brand</strong> — your voice, your personality, consistently</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Right: Visual -->
+    <div class="channel__visual fade-in fade-in-delay-2">
+      <div class="channel__card">
+        <div class="channel__card-title">
+          <span aria-hidden="true">📬</span> TARA sent this automatically
+        </div>
+
+        <div class="email-preview">
+          <div class="email-preview__header">
+            <div class="email-preview__subject">We miss you, Sarah! 🌿</div>
+            <div class="email-preview__from">From: hello@lucillesbbq.com · TARA Automated</div>
+          </div>
+          <div class="email-preview__body">
+            <p>Hi Sarah,</p><br/>
+            <p>It's been a while since we've seen you at Lucille's — and we've been thinking about you! 😊</p><br/>
+            <p>As a thank-you for being a loyal guest, here's something special just for you:</p><br/>
+            <div class="email-preview__cta">🎁 Get 20% Off Your Next Visit</div>
+          </div>
+        </div>
+
+        <div style="margin-top:1.5rem;padding:1rem;background:rgba(116,240,160,.08);border-radius:12px;border:1px solid rgba(116,240,160,.15);">
+          <div style="font-size:.8rem;color:rgba(255,255,255,.5);margin-bottom:.75rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;">Campaign Results</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:.5rem;text-align:center;">
+            <div>
+              <div style="font-size:1.4rem;font-weight:800;color:#74F0A0;">38%</div>
+              <div style="font-size:.72rem;color:rgba(255,255,255,.4);">Open rate</div>
+            </div>
+            <div>
+              <div style="font-size:1.4rem;font-weight:800;color:#74F0A0;">14%</div>
+              <div style="font-size:.72rem;color:rgba(255,255,255,.4);">Click rate</div>
+            </div>
+            <div>
+              <div style="font-size:1.4rem;font-weight:800;color:#74F0A0;">$4.2K</div>
+              <div style="font-size:.72rem;color:rgba(255,255,255,.4);">Revenue driven</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     WORKFLOW — HOW THE CHANNELS CONNECT
+     ═══════════════════════════════════════════════════ -->
+<section class="workflow" id="how-it-works" aria-labelledby="workflow-title">
+  <div class="workflow__inner">
+
+    <header class="section-header section-header--center">
+      <span class="section-eyebrow eyebrow--orange">One Coherent Strategy</span>
+      <h2 class="section-title" id="workflow-title">
+        Three Channels. Every Guest.<br />One Seamless Experience.
+      </h2>
+      <p class="section-sub section-sub--center">
+        TARA doesn't just answer phones. She orchestrates the entire guest journey —
+        from first contact to loyal regular — across Voice, Text, and Email, automatically.
+      </p>
+    </header>
+
+    <!-- Visual workflow diagram — inspired by deck flow -->
+    <div class="workflow-diagram-v2" role="list" aria-label="Guest journey workflow">
+      
+      <div class="wf-step wf-step--start" role="listitem">
+        <div class="wf-step__circle" style="background:linear-gradient(135deg,var(--orange),var(--yellow));">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="white"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+        </div>
+        <div class="wf-step__label">Guest Reaches Out</div>
+        <div class="wf-step__sub">Phone call, text, or email</div>
+      </div>
+
+      <div class="wf-connector"><div class="wf-connector__line"></div><div class="wf-connector__arrow">›</div></div>
+
+      <div class="wf-step" role="listitem">
+        <div class="wf-step__circle" style="background:linear-gradient(135deg,var(--red),var(--coral));">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="white"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/></svg>
+        </div>
+        <div class="wf-step__label">TARA Answers Instantly</div>
+        <div class="wf-step__sub">No hold time. No menu maze.</div>
+      </div>
+
+      <div class="wf-connector"><div class="wf-connector__line"></div><div class="wf-connector__arrow">›</div></div>
+
+      <div class="wf-step" role="listitem">
+        <div class="wf-step__circle" style="background:linear-gradient(135deg,#A855F7,#7C3AED);">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+        </div>
+        <div class="wf-step__label">Understands Intent</div>
+        <div class="wf-step__sub">Orders, reservations, FAQs, upsells</div>
+      </div>
+
+      <div class="wf-connector"><div class="wf-connector__line"></div><div class="wf-connector__arrow">›</div></div>
+
+      <div class="wf-step" role="listitem">
+        <div class="wf-step__circle" style="background:linear-gradient(135deg,var(--green),var(--teal));">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="white"><path d="M18 17H6V5h12m0-2H6a2 2 0 00-2 2v14a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2M7 7h10v2H7V7m0 4h10v2H7v-2m0 4h7v2H7v-2z"/></svg>
+        </div>
+        <div class="wf-step__label">Completes the Transaction</div>
+        <div class="wf-step__sub">POS synced. Payment link sent via SMS.</div>
+      </div>
+
+      <div class="wf-connector"><div class="wf-connector__line"></div><div class="wf-connector__arrow">›</div></div>
+
+      <div class="wf-step wf-step--end" role="listitem">
+        <div class="wf-step__circle" style="background:linear-gradient(135deg,var(--yellow),var(--orange));">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="white"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        </div>
+        <div class="wf-step__label">Loyalty & Follow-Up</div>
+        <div class="wf-step__sub">Email follow-up. Feedback. Return visits.</div>
+      </div>
+
+    </div>
+
+    <!-- Mission statement -->
+    <div class="fade-in" style="text-align:center;margin-top:4rem;padding:3rem;background:var(--white);border-radius:24px;box-shadow:var(--shadow-md);">
+      <p style="font-size:1.3rem;font-weight:700;color:var(--navy);max-width:600px;margin:0 auto;line-height:1.5;">
+        Three channels. One coherent strategy.<br>Every guest touched at the right time, in the right way.      </p>
+      <p style="font-size:.95rem;color:var(--gray-700);margin-top:1rem;">Omnichannel, consistent guest experience across orders, reservations, and support.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     ENCOUNTER TYPES
+     ═══════════════════════════════════════════════════ -->
+<section class="encounters" id="encounters" aria-labelledby="encounters-title">
+  <div class="container">
+
+    <header class="section-header section-header--center">
+      <span class="section-eyebrow eyebrow--yellow">Every Interaction</span>
+      <h2 class="section-title" id="encounters-title">Handled.</h2>
+      <p class="encounter-quote" aria-label="Key message">
+        "Agents with infinite patience. On brand every time.
+        Consistent customer service for every single interaction."
+      </p>
+    </header>
+
+    <div class="encounter-grid">
+
+      <article class="encounter-card">
+        <span class="encounter-card__emoji" aria-hidden="true">🍕</span>
+        <h3 class="encounter-card__title">Ordering</h3>
+        <p class="encounter-card__desc">
+          Complete takeout and delivery orders via voice, text, or email.
+          Synced directly to your POS — no manual entry, no mistakes.
+          TARA upsells naturally, just like your best server would.
+        </p>
+        <span class="encounter-card__tag tag--orange">High Revenue Impact</span>
+      </article>
+
+      <article class="encounter-card">
+        <span class="encounter-card__emoji" aria-hidden="true">📅</span>
+        <h3 class="encounter-card__title">Reservations</h3>
+        <p class="encounter-card__desc">
+          Book, modify, and confirm reservations across all channels.
+          Integrated with OpenTable, Resy, and Yelp. Automated reminders
+          reduce no-shows — without anyone picking up a phone.
+        </p>
+        <span class="encounter-card__tag tag--purple">Fully Automated</span>
+      </article>
+
+      <article class="encounter-card">
+        <span class="encounter-card__emoji" aria-hidden="true">❓</span>
+        <h3 class="encounter-card__title">FAQs</h3>
+        <p class="encounter-card__desc">
+          Hours, directions, menu questions, dietary info, parking —
+          answered instantly, every time. No more interrupting your staff
+          with questions they've answered a thousand times.
+        </p>
+        <span class="encounter-card__tag tag--blue">Zero Staff Time</span>
+      </article>
+
+      <article class="encounter-card">
+        <span class="encounter-card__emoji" aria-hidden="true">🎉</span>
+        <h3 class="encounter-card__title">Catering Inquiries</h3>
+        <p class="encounter-card__desc">
+          High-value catering inquiries captured and routed intelligently.
+          Never lose a $2,000+ catering order to voicemail again.
+          TARA collects the details and escalates to the right person.
+        </p>
+        <span class="encounter-card__tag tag--yellow">High-Value Capture</span>
+      </article>
+
+      <article class="encounter-card">
+        <span class="encounter-card__emoji" aria-hidden="true">🛡️</span>
+        <h3 class="encounter-card__title">Service Recovery</h3>
+        <p class="encounter-card__desc">
+          When something goes wrong, TARA handles it with grace. Issues
+          are captured, triaged, and escalated appropriately — turning
+          a potential loss into a loyalty-building moment.
+        </p>
+        <span class="encounter-card__tag tag--red">Loyalty Builder</span>
+      </article>
+
+      <article class="encounter-card">
+        <span class="encounter-card__emoji" aria-hidden="true">↗️</span>
+        <h3 class="encounter-card__title">Escalation Pathways</h3>
+        <p class="encounter-card__desc">
+          TARA knows her limits. Complex situations, VIP guests, and
+          sensitive issues are routed to the right team member —
+          with full context, no explanation needed.
+        </p>
+        <span class="encounter-card__tag tag--green">Smart Routing</span>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     HOW IT WORKS — 4 STEPS
+     ═══════════════════════════════════════════════════ -->
+<section class="howitworks" aria-labelledby="hiw-title">
+  <div class="howitworks__inner">
+
+    <header class="section-header section-header--center">
+      <span class="section-eyebrow eyebrow--orange">Getting Started</span>
+      <h2 class="section-title" id="hiw-title">
+        Live in Days. Not Months.
+      </h2>
+      <p class="section-sub section-sub--center">
+        No IT team needed. No lengthy implementations. Just connect, customize, and go.
+      </p>
+    </header>
+
+    <div class="steps">
+
+      <div class="step-card">
+        <div class="step-num" aria-hidden="true">1</div>
+        <h3 class="step-card__title">Connect Your Systems</h3>
+        <p class="step-card__desc">
+          Integrate with your existing POS, reservation platform, and phone system.
+          Works with Toast, Square, Clover, OpenTable, Resy, and more.
+          No new hardware required.
+        </p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num" aria-hidden="true">2</div>
+        <h3 class="step-card__title">TARA Learns Your Brand</h3>
+        <p class="step-card__desc">
+          Upload your menu, your hours, your specials. Tell TARA your voice,
+          your personality, your standards. She becomes an extension of
+          your team — not a generic bot.
+        </p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num" aria-hidden="true">3</div>
+        <h3 class="step-card__title">Go Live</h3>
+        <p class="step-card__desc">
+          TARA handles guest interactions across voice, text, and email — 24/7.
+          Your team is freed up to deliver the in-person experiences
+          that make guests come back.
+        </p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num" aria-hidden="true">4</div>
+        <h3 class="step-card__title">Watch Revenue Grow</h3>
+        <p class="step-card__desc">
+          Real-time dashboard shows orders captured, upsells landed, and
+          revenue driven. See exactly what TARA is earning you —
+          every single day.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- ═══════════════════════════════════════════════════
+     RESULTS
+     ═══════════════════════════════════════════════════ -->
+<section class="results" id="results" aria-labelledby="results-title">
+  <div class="results__inner">
+
+    <header class="section-header section-header--center">
+      <span class="section-eyebrow eyebrow--green">By the Numbers</span>
+      <h2 class="section-title" id="results-title" style="color:var(--white);">
+        The Numbers Don't Lie
+      </h2>
+      <p class="section-sub section-sub--light section-sub--center">
+        Real results, real restaurants. This is what happens when TARA goes to work.
+      </p>
+    </header>
+
+    <div class="results-grid">
+
+      <div class="result-card">
+        <span class="result-card__num"
+          data-counter data-target="30" data-suffix="%" data-duration="1800">30%</span>
+        <div class="result-card__label">More Orders Captured</div>
+        <div class="result-card__sub">Calls that used to go unanswered — converted</div>
+      </div>
+
+      <div class="result-card">
+        <span class="result-card__num"
+          data-counter data-target="20" data-suffix="%" data-duration="1600">20%</span>
+        <div class="result-card__label">Higher Average Ticket</div>
+        <div class="result-card__sub">Intelligent upselling on every single interaction</div>
+      </div>
+
+      <div class="result-card">
+        <span class="result-card__num"
+          data-counter data-target="20" data-suffix="+" data-duration="1700">20+</span>
+        <div class="result-card__label">Staff Hours Saved / Week</div>
+        <div class="result-card__sub">Per location, freed up for in-person hospitality</div>
+      </div>
+
+      <div class="result-card">
+        <span class="result-card__num">24/7</span>
+        <div class="result-card__label">Always Available</div>
+        <div class="result-card__sub">365 days a year — holidays, rush hours, everything</div>
+      </div>
+
+      <div class="result-card">
+        <span class="result-card__num"
+          data-counter data-target="40" data-suffix="K" data-duration="2000">40K</span>
+        <div class="result-card__label">Recovered Per Location</div>
+        <div class="result-card__sub">Annual revenue that used to walk out the door</div>
+      </div>
+
+      <div class="result-card">
+        <span class="result-card__num"
+          data-counter data-target="250" data-suffix="+" data-duration="1900">250+</span>
+        <div class="result-card__label">Languages Supported</div>
+        <div class="result-card__sub">Serve every guest, in their language</div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     MISSION-ALIGNED PRICING TEASER
+     ═══════════════════════════════════════════════════ -->
+<section style="padding:80px 5%;background:var(--offwhite);" aria-labelledby="pricing-teaser-title">
+  <div class="container text-center">
+    <span class="section-eyebrow eyebrow--orange">Pricing</span>
+    <h2 class="section-title" id="pricing-teaser-title" style="margin-bottom:.75rem;">
+      Mission Aligned Pricing
+    </h2>
+    <p style="font-size:1.5rem;font-weight:700;color:var(--red);margin-bottom:1rem;">
+      We Succeed When You Do.
+    </p>
+    <p class="section-sub section-sub--center" style="margin-bottom:2.5rem;">
+      HeyTARA's pricing model is built around a simple idea: if TARA doesn't drive
+      revenue for your restaurant, you shouldn't be paying for it.
+      Our success is directly tied to yours.
+    </p>
+    <a href="contact.html" class="btn btn--primary btn--large">
+      Talk Pricing with Us →
+    </a>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     FAQ
+     ═══════════════════════════════════════════════════ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <header class="section-header section-header--center">
+      <span class="section-eyebrow eyebrow--orange">Common Questions</span>
+      <h2 class="section-title">Everything You Need to Know</h2>
+    </header>
+    <div class="faq-list fade-in">
+
+      <div class="faq-item">
+        <button class="faq-item__q" aria-expanded="false">
+          <span>How does TARA handle phone orders?</span>
+          <span class="faq-item__icon">+</span>
+        </button>
+        <div class="faq-item__a">
+          <p>TARA answers calls instantly with natural conversation — understanding menu items, modifications, upsells, and payment. Orders sync directly to your POS system in real time.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-item__q" aria-expanded="false">
+          <span>What happens if a guest needs a real person?</span>
+          <span class="faq-item__icon">+</span>
+        </button>
+        <div class="faq-item__a">
+          <p>TARA seamlessly transfers to your staff when needed. She recognizes complex requests, complaints, or specific asks that need a human touch — and routes them immediately.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-item__q" aria-expanded="false">
+          <span>How long does setup take?</span>
+          <span class="faq-item__icon">+</span>
+        </button>
+        <div class="faq-item__a">
+          <p>Most restaurants are live within 48 hours. We handle menu ingestion, POS integration, and voice training. Your team doesn't need to learn anything new.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-item__q" aria-expanded="false">
+          <span>Does TARA work with my current POS system?</span>
+          <span class="faq-item__icon">+</span>
+        </button>
+        <div class="faq-item__a">
+          <p>TARA integrates with all major POS systems including Toast, Square, NCR Aloha, Olo, and 20+ others. If you use it, we probably connect to it.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-item__q" aria-expanded="false">
+          <span>What if TARA makes a mistake on an order?</span>
+          <span class="faq-item__icon">+</span>
+        </button>
+        <div class="faq-item__a">
+          <p>TARA confirms every order before processing and sends SMS confirmation to the guest. Our accuracy rate exceeds 97%, and any issues trigger automatic escalation to your team.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-item__q" aria-expanded="false">
+          <span>How is TARA different from a call center?</span>
+          <span class="faq-item__icon">+</span>
+        </button>
+        <div class="faq-item__a">
+          <p>Call centers are expensive, inconsistent, and don't know your menu. TARA is always available, always on-brand, costs a fraction of a call center, and gets smarter over time.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-item__q" aria-expanded="false">
+          <span>Is there a long-term contract?</span>
+          <span class="faq-item__icon">+</span>
+        </button>
+        <div class="faq-item__a">
+          <p>No. We believe in earning your business every month. Our pricing is mission-aligned — we succeed when you do.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-item__q" aria-expanded="false">
+          <span>Can TARA handle catering orders?</span>
+          <span class="faq-item__icon">+</span>
+        </button>
+        <div class="faq-item__a">
+          <p>Yes. TARA manages catering inquiries, builds custom quotes, handles dietary requirements, and follows up with confirmation and logistics details.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-item__q" aria-expanded="false">
+          <span>What languages does TARA speak?</span>
+          <span class="faq-item__icon">+</span>
+        </button>
+        <div class="faq-item__a">
+          <p>TARA currently supports English and Spanish, with more languages in development. She can detect language preference and switch automatically.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-item__q" aria-expanded="false">
+          <span>How do I track TARA's performance?</span>
+          <span class="faq-item__icon">+</span>
+        </button>
+        <div class="faq-item__a">
+          <p>You get a real-time dashboard showing calls handled, orders placed, revenue captured, upsell success rate, and guest satisfaction scores.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     BOTTOM CTA
+     ═══════════════════════════════════════════════════ -->
+<section class="bottom-cta" aria-labelledby="cta-title">
+  <div class="bottom-cta__orb-1" aria-hidden="true"></div>
+  <div class="bottom-cta__orb-2" aria-hidden="true"></div>
+  <div class="bottom-cta__inner">
+    <h2 class="section-title" id="cta-title">
+      Ready to Stop Missing Revenue?
+    </h2>
+    <p class="section-sub">
+      Join the restaurants that are capturing more orders, retaining more guests,
+      and delivering exceptional experiences — 24/7, without adding staff.
+    </p>
+    <div class="bottom-cta__btns">
+      <a href="contact.html" class="btn btn--primary btn--large">
+        Book a Demo →
+      </a>
+    </div>
+    <p class="bottom-cta__mission">
+      <strong>Mission Aligned Pricing — We Succeed When You Do.</strong>
+      No guesswork. No risk. Just results.
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     FOOTER
+     ═══════════════════════════════════════════════════ -->
+<footer class="footer" role="contentinfo">
+  <div class="footer__inner">
+
+    <div class="footer__top">
+
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <img src="heytara-logo-dark.png" alt="HeyTARA" style="background:#000;padding:6px 12px;border-radius:8px;" />
+        </div>
+        <p class="footer__tagline">
+          Hospitality-driven workflow automation. Voice, Text, and Email — built for
+          restaurants and hotels that refuse to miss a single guest interaction.
+        </p>
+      </div>
+
+      <nav aria-label="Footer navigation — Product">
+        <p class="footer__col-title">Platform</p>
+        <ul class="footer__links">
+          <li><a href="#channels">Voice</a></li>
+          <li><a href="#channels">Text / SMS</a></li>
+          <li><a href="#channels">Email</a></li>
+          <li><a href="#encounters">Capabilities</a></li>
+          <li><a href="#results">Results</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-label="Footer navigation — Company">
+        <p class="footer__col-title">Company</p>
+        <ul class="footer__links">
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="mailto:hello@heytara.ai">hello@heytara.ai</a></li>
+        </ul>
+      </nav>
+
+    </div>
+
+    <div class="footer__bottom">
+      <p class="footer__copy">&copy; 2026 HeyTARA. All rights reserved.</p>
+      <nav class="footer__legal" aria-label="Legal links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </nav>
+    </div>
+
+  </div>
+</footer>
+
+<!-- Sticky Book a Demo -->
+<a href="contact.html" class="sticky-cta" id="stickyCta" aria-label="Book a Demo">
+  📞 Book a Demo
+</a>
+
+<!-- Scripts -->
+<script src="js/main.js" defer></script>
+
+</body>
+</html>

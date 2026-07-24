@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Demo — HeyTARA</title>
+  <meta name="description" content="Book a live demo with HeyTARA. See how Voice, Text, and Email automation can recover $27K–$40K in annual revenue for your restaurant or hotel." />
+
+  <!-- Open Graph -->
+  <meta property="og:title"       content="Book a Demo — HeyTARA" />
+  <meta property="og:description" content="See how TARA handles every guest interaction across voice, text, and email. Book a personalized demo today." />
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://heytara.ai/contact.html" />
+  <meta property="og:image"       content="heytara-logo.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="heytara-logo.jpg" type="image/jpeg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    /* Contact-page-only overrides */
+    .contact-hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: row;
+      padding-top: 72px; /* nav height */
+    }
+
+    @media (max-width: 900px) {
+      .contact-hero {
+        flex-direction: column;
+      }
+      .contact-hero__form-side {
+        padding: 60px 6% 80px;
+      }
+      .contact-hero__visual-side {
+        order: -1;
+        min-height: 380px;
+        padding: 60px 6%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     NAVIGATION
+     ═══════════════════════════════════════════════════ -->
+<header>
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+
+      <a href="index.html" class="nav__logo" aria-label="HeyTARA home">
+        <img src="heytara-logo.jpg" alt="HeyTARA" />
+        <span class="nav__logo-text"><span class="hey">Hey</span><span class="tara">TARA</span></span>
+      </a>
+
+      <ul class="nav__links" role="list">
+        <li><a href="index.html#channels">How It Works</a></li>
+        <li><a href="index.html#encounters">Capabilities</a></li>
+        <li><a href="index.html#results">Results</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <a href="contact.html" class="nav__cta" aria-current="page">
+        Book a Demo &rarr;
+      </a>
+
+      <button
+        class="nav__burger"
+        id="nav-burger"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="nav-mobile"
+      >
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+
+    <!-- Mobile nav -->
+    <nav id="nav-mobile" class="nav__mobile" aria-label="Mobile navigation">
+      <a href="index.html#channels">How It Works</a>
+      <a href="index.html#encounters">Capabilities</a>
+      <a href="index.html#results">Results</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="nav__cta">Book a Demo &rarr;</a>
+    </nav>
+  </nav>
+</header>
+
+<!-- ═══════════════════════════════════════════════════
+     CONTACT HERO — SPLIT LAYOUT
+     ═══════════════════════════════════════════════════ -->
+<main>
+  <div class="contact-hero">
+
+    <!-- ─── LEFT: FORM ─── -->
+    <div class="contact-hero__form-side">
+
+      <div class="form-header">
+        <span class="form-header__eyebrow">Book a Demo</span>
+        <h1 class="form-header__title">
+          Let's Talk About<br />Your Restaurant
+        </h1>
+        <p class="form-header__sub">
+          Fill out the form and a member of our team will reach out within one business day
+          to schedule a personalized demo. No pressure, no commitments.
+        </p>
+      </div>
+
+      <!-- The form -->
+      <form class="demo-form" id="demo-form" novalidate aria-label="Book a demo form">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Full Name <span aria-hidden="true">*</span></label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Jane Smith"
+              required
+              autocomplete="name"
+              aria-required="true"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address <span aria-hidden="true">*</span></label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="jane@yourrestaurant.com"
+              required
+              autocomplete="email"
+              aria-required="true"
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="restaurant">Restaurant / Hotel Name <span aria-hidden="true">*</span></label>
+          <input
+            type="text"
+            id="restaurant"
+            name="restaurant"
+            placeholder="e.g. The Blue Door Kitchen"
+            required
+            aria-required="true"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="locations">Number of Locations</label>
+          <select id="locations" name="locations" aria-label="Number of locations">
+            <option value="" disabled selected>Select your location count</option>
+            <option value="1">1 location</option>
+            <option value="2-5">2–5 locations</option>
+            <option value="6-15">6–15 locations</option>
+            <option value="16-50">16–50 locations</option>
+            <option value="50+">50+ locations</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="channels">Which channels interest you most?</label>
+          <select id="channels" name="channels" aria-label="Channel interest">
+            <option value="" disabled selected>Select your priority</option>
+            <option value="voice">Voice — Phone answering &amp; ordering</option>
+            <option value="text">Text / SMS — Two-way messaging</option>
+            <option value="email">Email — Follow-up &amp; loyalty</option>
+            <option value="all">All three — Full workflow automation</option>
+            <option value="unsure">Not sure yet — show me everything</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Anything else you'd like us to know?</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Tell us about your biggest challenge with guest communication, your current setup, or anything else that would help us personalize your demo."
+            rows="4"
+          ></textarea>
+        </div>
+
+        <button type="submit" class="form-submit">
+          Book My Demo &rarr;
+        </button>
+
+        <p class="form-note">
+          No spam. No commitments. Just a real conversation about your restaurant.
+        </p>
+
+      </form>
+
+      <!-- Success state (shown on submit) -->
+      <div class="form-success" id="form-success" role="alert" aria-live="polite">
+        <div class="form-success__icon" aria-hidden="true">🎉</div>
+        <h2 class="form-success__title">You're on the list!</h2>
+        <p class="form-success__sub">
+          Thanks for reaching out. A member of our team will be in touch within
+          one business day to schedule your personalized demo.<br /><br />
+          In the meantime, feel free to explore
+          <a href="index.html" style="color:var(--red);font-weight:600;">how HeyTARA works →</a>
+        </p>
+      </div>
+
+    </div>
+
+    <!-- ─── RIGHT: VISUAL ─── -->
+    <aside class="contact-hero__visual-side" aria-label="HeyTARA demo benefits">
+      <div class="contact-visual-orb contact-visual-orb--1" aria-hidden="true"></div>
+      <div class="contact-visual-orb contact-visual-orb--2" aria-hidden="true"></div>
+
+      <div class="contact-visual-content">
+        <div style="display:inline-flex;align-items:center;gap:8px;padding:.4rem 1rem;background:rgba(255,159,67,.15);border:1px solid rgba(255,159,67,.3);border-radius:999px;font-size:.78rem;font-weight:700;color:var(--orange);letter-spacing:.08em;text-transform:uppercase;margin-bottom:1.5rem;">
+          <span style="width:6px;height:6px;background:var(--orange);border-radius:50%;display:inline-block;"></span>
+          Live Demo Available
+        </div>
+
+        <h2 class="section-title" style="color:var(--white);font-size:2.2rem;margin-bottom:1rem;">
+          See TARA in Action — Live
+        </h2>
+        <p class="section-sub section-sub--light">
+          In a 30-minute demo, you'll see exactly how TARA handles your calls,
+          answers your guests, and drives revenue — personalized to your restaurant.
+        </p>
+
+        <div class="contact-perks" role="list">
+
+          <div class="contact-perk" role="listitem">
+            <div class="contact-perk__icon" aria-hidden="true">📞</div>
+            <p class="contact-perk__text">
+              <strong>Live call demo</strong> — hear TARA answer a real call in real time
+            </p>
+          </div>
+
+          <div class="contact-perk" role="listitem">
+            <div class="contact-perk__icon" aria-hidden="true">🍽️</div>
+            <p class="contact-perk__text">
+              <strong>Personalized to your menu</strong> — we'll pre-configure TARA for your brand
+            </p>
+          </div>
+
+          <div class="contact-perk" role="listitem">
+            <div class="contact-perk__icon" aria-hidden="true">📊</div>
+            <p class="contact-perk__text">
+              <strong>Revenue projection</strong> — see what TARA could recover for your specific situation
+            </p>
+          </div>
+
+          <div class="contact-perk" role="listitem">
+            <div class="contact-perk__icon" aria-hidden="true">💬</div>
+            <p class="contact-perk__text">
+              <strong>No pressure</strong> — ask everything, commit to nothing
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Social proof mini -->
+        <div style="margin-top:3rem;padding:1.5rem;background:rgba(255,255,255,.06);border-radius:16px;border:1px solid rgba(255,255,255,.1);">
+          <p style="font-size:.85rem;color:rgba(255,255,255,.5);margin-bottom:.75rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;">Trusted By</p>
+          <div style="display:flex;flex-wrap:wrap;gap:1rem;align-items:center;">
+            <img src="lucilles-logo.png"  alt="Lucille's Smokehouse Bar-B-Que" style="height:36px;width:auto;filter:brightness(0) invert(1) opacity(.5);object-fit:contain;" />
+            <img src="pokeworks-logo.png" alt="Pokeworks"                       style="height:36px;width:auto;filter:brightness(0) invert(1) opacity(.5);object-fit:contain;" />
+            <span style="color:rgba(255,255,255,.4);font-weight:700;font-size:.9rem;">Mendocino Farms</span>
+          </div>
+        </div>
+
+        <!-- Key stat -->
+        <div style="margin-top:2rem;text-align:center;padding:1.5rem;background:rgba(196,30,30,.15);border-radius:16px;border:1px solid rgba(196,30,30,.25);">
+          <div style="font-size:3rem;font-weight:800;color:var(--coral);line-height:1;">$27K–$40K</div>
+          <div style="font-size:.9rem;color:rgba(255,255,255,.6);margin-top:.4rem;">recovered per location per year</div>
+        </div>
+
+      </div>
+    </aside>
+
+  </div>
+</main>
+
+<!-- ═══════════════════════════════════════════════════
+     FOOTER
+     ═══════════════════════════════════════════════════ -->
+<footer class="footer" role="contentinfo">
+  <div class="footer__inner">
+
+    <div class="footer__top">
+
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <img src="heytara-logo.jpg" alt="HeyTARA" />
+          <span class="footer__logo-text"><span class="hey">Hey</span><span class="tara">TARA</span></span>
+        </div>
+        <p class="footer__tagline">
+          Hospitality-driven workflow automation. Voice, Text, and Email — built for
+          restaurants and hotels that refuse to miss a single guest interaction.
+        </p>
+      </div>
+
+      <nav aria-label="Footer navigation — Product">
+        <p class="footer__col-title">Platform</p>
+        <ul class="footer__links">
+          <li><a href="index.html#channels">Voice</a></li>
+          <li><a href="index.html#channels">Text / SMS</a></li>
+          <li><a href="index.html#channels">Email</a></li>
+          <li><a href="index.html#encounters">Capabilities</a></li>
+          <li><a href="index.html#results">Results</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-label="Footer navigation — Company">
+        <p class="footer__col-title">Company</p>
+        <ul class="footer__links">
+          <li><a href="contact.html">Book a Demo</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="mailto:hello@heytara.ai">hello@heytara.ai</a></li>
+        </ul>
+      </nav>
+
+    </div>
+
+    <div class="footer__bottom">
+      <p class="footer__copy">&copy; 2026 HeyTARA. All rights reserved.</p>
+      <nav class="footer__legal" aria-label="Legal links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </nav>
+    </div>
+
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="js/main.js" defer></script>
+
+</body>
+</html>
