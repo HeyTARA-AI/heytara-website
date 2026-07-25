@@ -316,7 +316,7 @@
 // ─────────────────────────────────────────────────────
 (function initStickyCta() {
   const stickyCta = document.getElementById('stickyCta');
-  const hero = document.querySelector('.hero');
+  const hero = document.querySelector('.hero, .page-hero');
   const footer = document.querySelector('.footer');
   if (!stickyCta || !hero) return;
   if (window.location.pathname.includes('contact')) {
