@@ -515,6 +515,7 @@
   appearance: none;
   width: 100%;
   height: 6px;
+  border: none;
   border-radius: var(--radius-pill);
   background: var(--gray-200);
   outline: none;

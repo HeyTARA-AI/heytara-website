@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ROI Calculator — HeyTARA</title>
+  <meta name="description" content="See how much revenue your restaurant loses to missed calls — and how much HeyTARA could recover. Free interactive ROI calculator." />
+
+  <link rel="icon" href="heytara-logo-dark.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<header>
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="HeyTARA home">
+        <img src="heytara-logo-dark.png" alt="HeyTARA" />
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="index.html#channels">How It Works</a></li>
+        <li class="nav__dropdown">
+          <button class="nav__dropdown-toggle" aria-haspopup="true" aria-expanded="false">Industries <span class="nav__caret" aria-hidden="true">▾</span></button>
+          <ul class="nav__dropdown-menu" role="list">
+            <li><a href="industries/qsr.html">Quick Service</a></li>
+            <li><a href="industries/fast-casual.html">Fast Casual</a></li>
+            <li><a href="industries/casual-dining.html">Casual Dining</a></li>
+            <li><a href="industries/fine-dining.html">Fine Dining</a></li>
+            <li><a href="industries/pizza.html">Pizza</a></li>
+            <li><a href="industries/coffee.html">Coffee Shops</a></li>
+            <li><a href="industries/bars.html">Bars &amp; Breweries</a></li>
+          </ul>
+        </li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="index.html#results">Results</a></li>
+        <li><a href="blog/index.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="nav__cta">Book a Demo &rarr;</a>
+      <button class="nav__burger" id="nav-burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav id="nav-mobile" class="nav__mobile" aria-label="Mobile navigation">
+      <a href="index.html#channels">How It Works</a>
+      <span class="nav__mobile-heading">Industries</span>
+      <a href="industries/qsr.html" class="nav__mobile-sub">Quick Service</a>
+      <a href="industries/fast-casual.html" class="nav__mobile-sub">Fast Casual</a>
+      <a href="industries/casual-dining.html" class="nav__mobile-sub">Casual Dining</a>
+      <a href="industries/fine-dining.html" class="nav__mobile-sub">Fine Dining</a>
+      <a href="industries/pizza.html" class="nav__mobile-sub">Pizza</a>
+      <a href="industries/coffee.html" class="nav__mobile-sub">Coffee Shops</a>
+      <a href="industries/bars.html" class="nav__mobile-sub">Bars &amp; Breweries</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="index.html#results">Results</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="nav__cta">Book a Demo &rarr;</a>
+    </nav>
+  </nav>
+</header>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="hero__bg" aria-hidden="true">
+    <div class="hero__orb hero__orb--1"></div>
+    <div class="hero__orb hero__orb--2"></div>
+  </div>
+  <div class="page-hero__inner">
+    <span class="page-hero__eyebrow">ROI Calculator</span>
+    <h1 class="page-hero__title">What Are Missed Calls <em>Costing You?</em></h1>
+    <p class="page-hero__sub">Every unanswered call is a lost order, a lost reservation, a lost guest. Move the sliders to see how much revenue you're leaving on the table — and how much HeyTARA could win back.</p>
+  </div>
+</section>
+
+<!-- CALCULATOR -->
+<section class="section section--offwhite">
+  <div class="section__inner">
+    <div class="section-header section-header--center">
+      <span class="section-eyebrow eyebrow--orange">Your Numbers</span>
+      <h2 class="section-title">Estimate Your ROI</h2>
+      <p class="section-sub section-sub--center">Tell us about your operation. The results update instantly — no email required.</p>
+    </div>
+
+    <div class="roi-layout">
+      <!-- Inputs -->
+      <div class="roi-inputs">
+        <div class="roi-field">
+          <div class="roi-field__top">
+            <label class="roi-field__label" for="roi-locations">Number of locations</label>
+            <span class="roi-field__value" id="roi-locations-val">3</span>
+          </div>
+          <input type="range" class="roi-slider" id="roi-locations" min="1" max="100" value="3" step="1" aria-describedby="roi-locations-val" />
+        </div>
+
+        <div class="roi-field">
+          <div class="roi-field__top">
+            <label class="roi-field__label" for="roi-calls">Average calls per day (per location)</label>
+            <span class="roi-field__value" id="roi-calls-val">80</span>
+          </div>
+          <input type="range" class="roi-slider" id="roi-calls" min="20" max="200" value="80" step="5" aria-describedby="roi-calls-val" />
+        </div>
+
+        <div class="roi-field">
+          <div class="roi-field__top">
+            <label class="roi-field__label" for="roi-miss">Estimated % of missed calls</label>
+            <span class="roi-field__value" id="roi-miss-val">40%</span>
+          </div>
+          <input type="range" class="roi-slider" id="roi-miss" min="10" max="60" value="40" step="1" aria-describedby="roi-miss-val" />
+        </div>
+
+        <div class="roi-field">
+          <div class="roi-field__top">
+            <label class="roi-field__label" for="roi-value">Average order value</label>
+            <span class="roi-field__value" id="roi-value-val">$35</span>
+          </div>
+          <input type="range" class="roi-slider" id="roi-value" min="15" max="75" value="35" step="1" aria-describedby="roi-value-val" />
+        </div>
+      </div>
+
+      <!-- Results -->
+      <div class="roi-results" aria-live="polite">
+        <p class="roi-results__eyebrow">Your Estimated Impact</p>
+
+        <div class="roi-loss">
+          <span class="roi-hero-num" id="roi-lost-year">$0</span>
+          <span class="roi-hero-label">Lost revenue per year to missed calls</span>
+        </div>
+
+        <div class="roi-loss">
+          <span class="roi-hero-num roi-hero-num--green" id="roi-recovered-year">$0</span>
+          <span class="roi-hero-label">Revenue HeyTARA could recover per year</span>
+        </div>
+
+        <div class="roi-rows">
+          <div class="roi-row">
+            <span class="roi-row__label">Missed calls per month</span>
+            <span class="roi-row__val" id="roi-missed">0</span>
+          </div>
+          <div class="roi-row">
+            <span class="roi-row__label">Lost revenue per month</span>
+            <span class="roi-row__val" id="roi-lost-month">$0</span>
+          </div>
+          <div class="roi-row">
+            <span class="roi-row__label">Staff hours saved per month</span>
+            <span class="roi-row__val roi-row__val--green" id="roi-hours">0</span>
+          </div>
+          <div class="roi-row">
+            <span class="roi-row__label">Labor savings per month</span>
+            <span class="roi-row__val roi-row__val--green" id="roi-labor">$0</span>
+          </div>
+        </div>
+
+        <a href="contact.html" class="btn btn--primary btn--large roi-results__cta">Book a Demo to See Your Custom ROI →</a>
+        <p class="roi-disclaimer">Estimates are illustrative and based on the inputs above (assuming a 60% call-to-order conversion rate, an 85% TARA capture rate, and $18/hr labor). Actual results vary by restaurant, menu, and call volume.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="bottom-cta__orb-1"></div>
+  <div class="bottom-cta__orb-2"></div>
+  <div class="cta-band__inner">
+    <h2 class="section-title">Ready to Stop Losing Revenue?</h2>
+    <p class="cta-band__sub">These numbers are just the start. Book a demo and we'll build a custom ROI model for your restaurant — using your real call data.</p>
+    <div class="cta-band__btns">
+      <a href="contact.html" class="btn btn--primary btn--large">Book a Demo →</a>
+      <a href="pricing.html" class="btn btn--ghost btn--large">See Pricing</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="footer__inner">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <img src="heytara-logo-dark.png" alt="HeyTARA" />
+        </div>
+        <p class="footer__tagline">Hospitality-driven workflow automation. Voice, Text, and Email — built for restaurants and hotels that refuse to miss a single guest interaction.</p>
+      </div>
+      <nav aria-label="Footer navigation — Product">
+        <p class="footer__col-title">Platform</p>
+        <ul class="footer__links">
+          <li><a href="index.html#channels">Voice</a></li>
+          <li><a href="index.html#channels">Text / SMS</a></li>
+          <li><a href="index.html#channels">Email</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="roi-calculator.html">ROI Calculator</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Footer navigation — Company">
+        <p class="footer__col-title">Company</p>
+        <ul class="footer__links">
+          <li><a href="success-stories.html">Success Stories</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="blog/index.html">Blog</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="mailto:hello@heytara.ai">hello@heytara.ai</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">&copy; 2026 HeyTARA. All rights reserved.</p>
+      <nav class="footer__legal" aria-label="Legal links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<!-- ROI CALCULATOR LOGIC -->
+<script>
+(function initRoiCalculator() {
+  var locations = document.getElementById('roi-locations');
+  var calls     = document.getElementById('roi-calls');
+  var miss      = document.getElementById('roi-miss');
+  var value     = document.getElementById('roi-value');
+  if (!locations || !calls || !miss || !value) return;
+
+  var out = {
+    locationsVal:  document.getElementById('roi-locations-val'),
+    callsVal:      document.getElementById('roi-calls-val'),
+    missVal:       document.getElementById('roi-miss-val'),
+    valueVal:      document.getElementById('roi-value-val'),
+    lostYear:      document.getElementById('roi-lost-year'),
+    recoveredYear: document.getElementById('roi-recovered-year'),
+    missed:        document.getElementById('roi-missed'),
+    lostMonth:     document.getElementById('roi-lost-month'),
+    hours:         document.getElementById('roi-hours'),
+    labor:         document.getElementById('roi-labor')
+  };
+
+  var CONVERSION = 0.60;   // missed calls that would have become orders
+  var CAPTURE    = 0.85;   // share of lost revenue TARA recovers
+  var HOURS_PER_LOC = 20;  // staff hours saved per location per month
+  var LABOR_RATE = 18;     // $ per hour
+
+  function money(n) { return '$' + Math.round(n).toLocaleString('en-US'); }
+  function num(n)   { return Math.round(n).toLocaleString('en-US'); }
+
+  function recalc() {
+    var nLoc  = parseFloat(locations.value);
+    var nCall = parseFloat(calls.value);
+    var pMiss = parseFloat(miss.value) / 100;
+    var aov   = parseFloat(value.value);
+
+    // Live input labels
+    out.locationsVal.textContent = num(nLoc);
+    out.callsVal.textContent     = num(nCall);
+    out.missVal.textContent      = Math.round(pMiss * 100) + '%';
+    out.valueVal.textContent     = money(aov);
+
+    // Core calculations
+    var missedPerMonth   = nLoc * nCall * pMiss * 30;
+    var lostPerMonth     = missedPerMonth * aov * CONVERSION;
+    var lostPerYear      = lostPerMonth * 12;
+    var recoveredPerYear = lostPerYear * CAPTURE;
+    var staffHours       = nLoc * HOURS_PER_LOC;
+    var laborSavings     = staffHours * LABOR_RATE;
+
+    // Output
+    out.lostYear.textContent      = money(lostPerYear);
+    out.recoveredYear.textContent = money(recoveredPerYear);
+    out.missed.textContent        = num(missedPerMonth);
+    out.lostMonth.textContent     = money(lostPerMonth);
+    out.hours.textContent         = num(staffHours) + ' hrs';
+    out.labor.textContent         = money(laborSavings);
+  }
+
+  [locations, calls, miss, value].forEach(function (el) {
+    el.addEventListener('input', recalc);
+  });
+  recalc();
+})();
+</script>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
