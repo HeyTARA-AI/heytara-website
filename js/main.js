@@ -296,17 +296,27 @@
 // ACTIVE NAV LINK (highlight current page)
 // ─────────────────────────────────────────────────────
 (function highlightActiveNav() {
-  const path = window.location.pathname;
-  const current = path.split('/').pop() || 'index.html';
-  const inBlog = path.includes('/blog');
-  document.querySelectorAll('.nav__links a:not(.nav__cta), .nav__mobile a:not(.nav__cta)').forEach(link => {
-    const href = link.getAttribute('href');
-    const hrefFile = href.split('/').pop();
-    const isMatch = (hrefFile === current || (current === '' && hrefFile === 'index.html'));
-    const isBlogLink = href.includes('blog');
-    if (isMatch || (inBlog && isBlogLink)) {
+  var path = window.location.pathname;
+  var inBlog = path.includes('/blog');
+  var inIndustries = path.includes('/industries');
+  var inCompare = path.includes('/compare');
+  var current = path.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav__links a:not(.nav__cta), .nav__mobile a:not(.nav__cta)').forEach(function(link) {
+    var href = link.getAttribute('href') || '';
+    if (!href || href.startsWith('#')) return;
+    var isBlogLink = href.includes('blog');
+    var isIndustriesLink = href.includes('industries') || link.closest('.nav__dropdown');
+    var hrefFile = href.split('/').pop().split('#')[0] || 'index.html';
+    var match = false;
+    if (inBlog && isBlogLink) {
+      match = true;
+    } else if ((inIndustries || inCompare) && isIndustriesLink) {
+      match = true;
+    } else if (!inBlog && !inIndustries && !inCompare && !isBlogLink && hrefFile === current) {
+      match = true;
+    }
+    if (match) {
       link.style.color = '#C41E1E';
-      link.style.fontWeight = '700';
     }
   });
 })();
