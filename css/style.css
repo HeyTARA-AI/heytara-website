@@ -1076,15 +1076,16 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
 }
 
 .result-card__num {
-  font-size: 3.8rem;
+  font-size: clamp(2.5rem, 4vw, 3.8rem);
   font-weight: 800;
   background: var(--grad-green);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  line-height: 1;
+  line-height: 1.15;
   display: block;
   margin-bottom: .5rem;
+  overflow: visible;
 }
 .result-card__label {
   font-size: 1rem;
