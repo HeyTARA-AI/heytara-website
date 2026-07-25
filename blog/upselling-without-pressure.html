@@ -20,6 +20,19 @@
       <a href="../index.html" class="nav__logo"><img src="../heytara-logo-dark.png" alt="HeyTARA" /></a>
       <ul class="nav__links" role="list">
         <li><a href="../index.html#channels">How It Works</a></li>
+        <li class="nav__dropdown">
+          <button class="nav__dropdown-toggle" aria-haspopup="true" aria-expanded="false">Industries <span class="nav__caret" aria-hidden="true">▾</span></button>
+          <ul class="nav__dropdown-menu" role="list">
+            <li><a href="../industries/qsr.html">Quick Service</a></li>
+            <li><a href="../industries/fast-casual.html">Fast Casual</a></li>
+            <li><a href="../industries/casual-dining.html">Casual Dining</a></li>
+            <li><a href="../industries/fine-dining.html">Fine Dining</a></li>
+            <li><a href="../industries/pizza.html">Pizza</a></li>
+            <li><a href="../industries/coffee.html">Coffee Shops</a></li>
+            <li><a href="../industries/bars.html">Bars &amp; Breweries</a></li>
+          </ul>
+        </li>
+        <li><a href="../pricing.html">Pricing</a></li>
         <li><a href="../index.html#results">Results</a></li>
         <li><a href="index.html">Blog</a></li>
         <li><a href="../contact.html">Contact</a></li>
@@ -27,11 +40,21 @@
       <a href="../contact.html" class="nav__cta">Book a Demo &rarr;</a>
       <button class="nav__burger" id="nav-burger" aria-label="Open menu"><span></span><span></span><span></span></button>
     </div>
-    <nav id="nav-mobile" class="nav__mobile">
+    <nav id="nav-mobile" class="nav__mobile" aria-label="Mobile navigation">
       <a href="../index.html#channels">How It Works</a>
+      <span class="nav__mobile-heading">Industries</span>
+      <a href="../industries/qsr.html" class="nav__mobile-sub">Quick Service</a>
+      <a href="../industries/fast-casual.html" class="nav__mobile-sub">Fast Casual</a>
+      <a href="../industries/casual-dining.html" class="nav__mobile-sub">Casual Dining</a>
+      <a href="../industries/fine-dining.html" class="nav__mobile-sub">Fine Dining</a>
+      <a href="../industries/pizza.html" class="nav__mobile-sub">Pizza</a>
+      <a href="../industries/coffee.html" class="nav__mobile-sub">Coffee Shops</a>
+      <a href="../industries/bars.html" class="nav__mobile-sub">Bars &amp; Breweries</a>
+      <a href="../pricing.html">Pricing</a>
       <a href="../index.html#results">Results</a>
       <a href="index.html">Blog</a>
       <a href="../contact.html">Contact</a>
+      <a href="../contact.html" class="nav__cta">Book a Demo &rarr;</a>
     </nav>
   </nav>
 </header>
