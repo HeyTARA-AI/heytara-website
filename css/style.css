@@ -128,8 +128,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   font-size: .95rem;
   transition: color var(--transition);
 }
-.nav__links a:hover { color: var(--gray-500); }
-.nav__links a.active, .nav__links a[aria-current] { color: var(--red); font-weight: 700; }
+.nav__links a:hover { color: var(--red); }
 
 .nav__cta {
   display: inline-flex;
@@ -1559,6 +1558,12 @@ select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
 .integration-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
+}
+.integration-card__img {
+  width: 100%;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: .75rem;
 }
 .integration-card__logo {
   width: 70px;
