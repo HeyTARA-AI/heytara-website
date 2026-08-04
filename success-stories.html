@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Success Stories — HeyTARA</title>
-  <meta name="description" content="Real results from real operators. See how restaurants recover lost revenue, save staff hours, and delight more guests with HeyTARA." />
+  <title>Featured Deployments — HeyTARA</title>
+  <meta name="description" content="See how real restaurant brands are deploying HeyTARA for voice ordering, guest FAQs, catering, and intelligent call routing." />
 
-  <meta property="og:title"       content="Success Stories — HeyTARA" />
-  <meta property="og:description" content="See how restaurants like Lucille's, Pokeworks, and Mendocino Farms win more orders with TARA." />
+  <meta property="og:title"       content="Featured Deployments — HeyTARA" />
+  <meta property="og:description" content="Real restaurant brands. Real operational workflows. See how TARA is being deployed today." />
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://heytara.ai/success-stories.html" />
   <meta property="og:image"       content="heytara-logo.jpg" />
@@ -19,6 +19,134 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/pages.css" />
+  <style>
+    /* ── Featured Deployments Page ── */
+    .deploy-section { padding: 80px 5%; background: var(--offwhite); }
+    .deploy-section__inner { max-width: var(--max-w); margin: 0 auto; }
+
+    .deploy-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      margin-top: 3rem;
+    }
+
+    .deploy-feature {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--gray-200);
+      overflow: hidden;
+      transition: all var(--transition);
+      box-shadow: 0 2px 12px rgba(0,0,0,.04);
+    }
+    .deploy-feature:hover {
+      box-shadow: 0 8px 32px rgba(0,0,0,.08);
+      transform: translateY(-3px);
+    }
+
+    .deploy-feature__inner {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      min-height: 320px;
+    }
+    @media (max-width: 768px) {
+      .deploy-feature__inner { grid-template-columns: 1fr; }
+    }
+
+    .deploy-feature__brand {
+      background: linear-gradient(135deg, #0A1A0A 0%, #0A2A14 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 2rem;
+      gap: 1rem;
+    }
+    .deploy-feature__brand img {
+      max-height: 56px;
+      max-width: 200px;
+      object-fit: contain;
+      filter: brightness(0) invert(1);
+    }
+    .deploy-feature__brand .logo-text-fallback {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: -.01em;
+    }
+    .deploy-feature__segment {
+      font-size: .75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: rgba(255,255,255,.5);
+    }
+
+    .deploy-feature__content {
+      padding: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .deploy-feature__name {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: .5rem;
+    }
+
+    .deploy-feature__label {
+      font-size: .7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--gray-400);
+      margin-bottom: .5rem;
+    }
+
+    .deploy-feature__summary {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--gray-600);
+      margin-bottom: 1.5rem;
+    }
+
+    .deploy-feature__capabilities {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .deploy-chip {
+      display: inline-flex;
+      align-items: center;
+      padding: .4rem .9rem;
+      border-radius: 100px;
+      font-size: .8rem;
+      font-weight: 600;
+      color: var(--navy);
+      background: rgba(107,203,119,.1);
+      border: 1px solid rgba(107,203,119,.25);
+      white-space: nowrap;
+    }
+
+    .deploy-feature__link {
+      font-size: .9rem;
+      font-weight: 600;
+      color: var(--red);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: .35rem;
+      transition: all var(--transition);
+    }
+    .deploy-feature__link:hover {
+      color: #a01818;
+      gap: .6rem;
+    }
+  </style>
 </head>
 <body>
 
@@ -84,96 +212,90 @@
     <div class="hero__orb hero__orb--3"></div>
   </div>
   <div class="page-hero__inner">
-    <span class="page-hero__eyebrow">Customer Stories</span>
-    <h1 class="page-hero__title">Restaurants Winning with <em>TARA</em></h1>
-    <p class="page-hero__sub">Real results from real operators. See how restaurants recover lost revenue, save staff hours, and delight more guests with HeyTARA.</p>
+    <span class="page-hero__eyebrow">In Production</span>
+    <h1 class="page-hero__title">Featured <em>Deployments</em></h1>
+    <p class="page-hero__sub">Real restaurant brands deploying HeyTARA for real operational workflows — from AI-powered ordering to intelligent call routing.</p>
   </div>
 </section>
 
-<!-- SUCCESS STORIES -->
-<section class="section section--offwhite">
-  <div class="section__inner">
-    <div class="story-grid">
+<!-- FEATURED DEPLOYMENTS -->
+<section class="deploy-section">
+  <div class="deploy-section__inner">
+
+    <div class="deploy-grid">
 
       <!-- Lucille's Smokehouse BBQ -->
-      <div class="story-card fade-in">
-        <div class="story-card__top">
-          <h3 class="story-card__name">Lucille's Smokehouse BBQ</h3>
-          <span class="story-card__segment">Casual Dining</span>
-        </div>
-        <p class="story-card__row"><strong>Challenge:</strong> Missing 35% of calls during dinner rush.</p>
-        <p class="story-card__row"><strong>Solution:</strong> TARA voice answering + SMS order confirmations.</p>
-        <div class="story-metrics">
-          <div class="story-metric">
-            <span class="story-metric__num">+28%</span>
-            <span class="story-metric__label">Orders Captured</span>
+      <div class="deploy-feature fade-in">
+        <div class="deploy-feature__inner">
+          <div class="deploy-feature__brand">
+            <img src="lucilles-logo.png" alt="Lucille's Smokehouse BBQ" />
+            <span class="deploy-feature__segment">Casual Dining</span>
           </div>
-          <div class="story-metric">
-            <span class="story-metric__num">+18%</span>
-            <span class="story-metric__label">Avg Ticket</span>
-          </div>
-          <div class="story-metric">
-            <span class="story-metric__num">22</span>
-            <span class="story-metric__label">Staff Hrs Saved/Wk</span>
-          </div>
-        </div>
-        <blockquote class="story-card__quote">TARA is like having our best employee on every call, every time.</blockquote>
-        <a class="story-card__link" href="contact.html">Read Full Story &rarr;</a>
-      </div>
-
-      <!-- Pokeworks -->
-      <div class="story-card fade-in fade-in-delay-1">
-        <div class="story-card__top">
-          <h3 class="story-card__name">Pokeworks</h3>
-          <span class="story-card__segment">Fast Casual</span>
-        </div>
-        <p class="story-card__row"><strong>Challenge:</strong> High volume of customized orders overwhelming phone staff.</p>
-        <p class="story-card__row"><strong>Solution:</strong> TARA voice ordering with full customization support.</p>
-        <div class="story-metrics">
-          <div class="story-metric">
-            <span class="story-metric__num">+32%</span>
-            <span class="story-metric__label">Phone Orders</span>
-          </div>
-          <div class="story-metric">
-            <span class="story-metric__num">97%</span>
-            <span class="story-metric__label">Order Accuracy</span>
-          </div>
-          <div class="story-metric">
-            <span class="story-metric__num">$4.2K</span>
-            <span class="story-metric__label">Monthly Revenue &uarr;</span>
+          <div class="deploy-feature__content">
+            <h3 class="deploy-feature__name">Lucille's Smokehouse BBQ</h3>
+            <p class="deploy-feature__label">Deployment</p>
+            <p class="deploy-feature__summary">
+              HeyTARA is being deployed to automate takeout phone orders, generate secure SMS payment links, send order confirmations, and ensure every guest call is answered — even during peak hours.
+            </p>
+            <div class="deploy-feature__capabilities">
+              <span class="deploy-chip">AI Takeout Ordering</span>
+              <span class="deploy-chip">SMS Payment Links</span>
+              <span class="deploy-chip">Order Confirmations</span>
+            </div>
+            <a href="contact.html" class="deploy-feature__link">Learn More &rarr;</a>
           </div>
         </div>
-        <blockquote class="story-card__quote">Our team can finally focus on the guests in front of them.</blockquote>
-        <a class="story-card__link" href="contact.html">Read Full Story &rarr;</a>
       </div>
 
       <!-- Mendocino Farms -->
-      <div class="story-card fade-in fade-in-delay-2">
-        <div class="story-card__top">
-          <h3 class="story-card__name">Mendocino Farms</h3>
-          <span class="story-card__segment">Fast Casual</span>
+      <div class="deploy-feature fade-in fade-in-delay-1">
+        <div class="deploy-feature__inner">
+          <div class="deploy-feature__brand">
+            <img src="mendocino-farms-logo.png" alt="Mendocino Farms" onerror="this.outerHTML='<span class=\'logo-text-fallback\'>Mendocino Farms</span>'" />
+            <span class="deploy-feature__segment">Fast Casual</span>
+          </div>
+          <div class="deploy-feature__content">
+            <h3 class="deploy-feature__name">Mendocino Farms</h3>
+            <p class="deploy-feature__label">Deployment</p>
+            <p class="deploy-feature__summary">
+              HeyTARA is being deployed to assist guests with frequently asked questions, automate takeout ordering, support catering inquiries, streamline employee workflows, and intelligently escalate calls to restaurant staff when appropriate.
+            </p>
+            <div class="deploy-feature__capabilities">
+              <span class="deploy-chip">Guest FAQs</span>
+              <span class="deploy-chip">Takeout Ordering</span>
+              <span class="deploy-chip">Catering</span>
+              <span class="deploy-chip">Employee Workflows</span>
+              <span class="deploy-chip">Guest Escalations</span>
+            </div>
+            <a href="contact.html" class="deploy-feature__link">Learn More &rarr;</a>
+          </div>
         </div>
-        <p class="story-card__row"><strong>Challenge:</strong> Catering order follow-up falling through the cracks.</p>
-        <p class="story-card__row"><strong>Solution:</strong> TARA email + SMS follow-up automation.</p>
-        <div class="story-metrics">
-          <div class="story-metric">
-            <span class="story-metric__num">+40%</span>
-            <span class="story-metric__label">Catering Conversion</span>
+      </div>
+
+      <!-- Pokeworks -->
+      <div class="deploy-feature fade-in fade-in-delay-2">
+        <div class="deploy-feature__inner">
+          <div class="deploy-feature__brand">
+            <img src="pokeworks-logo.png" alt="Pokeworks" />
+            <span class="deploy-feature__segment">Fast Casual</span>
           </div>
-          <div class="story-metric">
-            <span class="story-metric__num">3x</span>
-            <span class="story-metric__label">Faster Response</span>
-          </div>
-          <div class="story-metric">
-            <span class="story-metric__num">Zero</span>
-            <span class="story-metric__label">Missed Follow-ups</span>
+          <div class="deploy-feature__content">
+            <h3 class="deploy-feature__name">Pokeworks</h3>
+            <p class="deploy-feature__label">Deployment</p>
+            <p class="deploy-feature__summary">
+              HeyTARA helps answer common guest questions while intelligently transferring callers to restaurant staff whenever a team member is needed.
+            </p>
+            <div class="deploy-feature__capabilities">
+              <span class="deploy-chip">Guest FAQs</span>
+              <span class="deploy-chip">Intelligent Escalations</span>
+            </div>
+            <a href="contact.html" class="deploy-feature__link">Learn More &rarr;</a>
           </div>
         </div>
-        <blockquote class="story-card__quote">The automated follow-ups alone paid for the entire system.</blockquote>
-        <a class="story-card__link" href="contact.html">Read Full Story &rarr;</a>
       </div>
 
     </div>
+
   </div>
 </section>
 
@@ -182,8 +304,8 @@
   <div class="bottom-cta__orb-1" aria-hidden="true"></div>
   <div class="bottom-cta__orb-2" aria-hidden="true"></div>
   <div class="cta-band__inner">
-    <h2 class="section-title">Ready to Write Your Success Story?</h2>
-    <p class="cta-band__sub">Join the restaurants recovering lost revenue and delighting more guests with TARA. See what she could do for your operation.</p>
+    <h2 class="section-title">See TARA in Action</h2>
+    <p class="cta-band__sub">Join the restaurant brands deploying HeyTARA to automate guest communication, capture more orders, and free up their teams. Book a live demo today.</p>
     <div class="cta-band__btns">
       <a class="btn btn--primary btn--large" href="contact.html">Book a Demo &rarr;</a>
     </div>
@@ -213,7 +335,7 @@
       <nav aria-label="Footer navigation — Company">
         <p class="footer__col-title">Company</p>
         <ul class="footer__links">
-          <li><a href="success-stories.html">Success Stories</a></li>
+          <li><a href="success-stories.html">Featured Deployments</a></li>
           <li><a href="careers.html">Careers</a></li>
           <li><a href="blog/index.html">Blog</a></li>
           <li><a href="contact.html">Contact Us</a></li>
