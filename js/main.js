@@ -200,6 +200,7 @@
       email:     form.querySelector('#email')?.value.trim(),
       restaurant: form.querySelector('#restaurant')?.value.trim(),
       locations: form.querySelector('#locations')?.value,
+      channels:  form.querySelector('#channels')?.value,
       message:   form.querySelector('#message')?.value.trim(),
       timestamp: new Date().toISOString(),
     };
@@ -218,16 +219,20 @@
     submitBtn.disabled = true;
     submitBtn.textContent = 'Sending…';
 
-    // Simulate API call (replace with real endpoint)
+    // Submit to Formspree → notifications go to jon@heytara.ai
     try {
-      // In production: await fetch('/api/demo', { method: 'POST', body: JSON.stringify(data), headers: {'Content-Type':'application/json'} });
-      await sleep(1200);
+      const res = await fetch('https://formspree.io/f/xyegzjnk', {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }
+      });
+      if (!res.ok) throw new Error('Formspree error');
       form.style.display = 'none';
       if (successEl) successEl.classList.add('show');
     } catch (err) {
       submitBtn.disabled = false;
       submitBtn.textContent = 'Book My Demo →';
-      showError(form, 'Something went wrong. Please try again or email us directly.');
+      showError(form, 'Something went wrong. Please try again or email us at hello@heytara.ai.');
     }
   });
 
