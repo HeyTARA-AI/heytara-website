@@ -305,13 +305,13 @@
   var inBlog = path.includes('/blog');
   var inIndustries = path.includes('/industries');
   var inCompare = path.includes('/compare');
-  var current = path.split('/').pop() || 'index.html';
+  var current = (path.split('/').pop() || 'index').replace(/\.html$/, '');
   document.querySelectorAll('.nav__links a:not(.nav__cta), .nav__mobile a:not(.nav__cta)').forEach(function(link) {
     var href = link.getAttribute('href') || '';
     if (!href || href.startsWith('#')) return;
     var isBlogLink = href.includes('blog');
     var isIndustriesLink = href.includes('industries') || link.closest('.nav__dropdown');
-    var hrefFile = href.split('/').pop().split('#')[0] || 'index.html';
+    var hrefFile = (href.split('/').pop().split('#')[0] || 'index').replace(/\.html$/, '');
     var match = false;
     if (inBlog && isBlogLink) {
       match = true;
