@@ -1678,3 +1678,11 @@ select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
    =================================================== */
 ::selection { background: rgba(196,30,30,.25); color: var(--navy); }
 :focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
+
+/* Keep desktop nav on one line between tablet and wide desktop */
+.nav__links a, .nav__dropdown-toggle, .nav__cta { white-space: nowrap; }
+@media (max-width: 1150px) and (min-width: 901px) {
+  .nav__links { gap: 1.1rem; }
+  .nav__links a, .nav__links .nav__dropdown-toggle { font-size: .88rem; }
+  .nav__cta { padding: .55rem 1.1rem; font-size: .88rem; }
+}
