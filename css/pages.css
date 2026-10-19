@@ -954,3 +954,8 @@
 /* Partners page */
 .partner-form-wrap { max-width: 640px; }
 .partner-form-wrap .demo-form { max-width: none; }
+
+/* 404 page */
+.notfound__links { margin-top: 2rem; font-size: .95rem; color: var(--gray-700); }
+.notfound__links a { color: var(--red); font-weight: 600; }
+.notfound__links a:hover { text-decoration: underline; }
