@@ -374,6 +374,94 @@
   background: rgba(196,30,30,.1);
   color: var(--red);
 }
+.price-card:hover,
+.price-card:focus-within { z-index: 5; }
+
+/* Feature tooltips */
+.feat {
+  position: relative;
+  cursor: help;
+  border-bottom: 1px dotted var(--gray-500);
+  outline: none;
+}
+.feat__tip {
+  position: absolute;
+  left: 0;
+  bottom: calc(100% + 10px);
+  width: max-content;
+  max-width: 260px;
+  background: var(--navy);
+  color: var(--white);
+  font-size: .8rem;
+  font-weight: 500;
+  line-height: 1.45;
+  text-align: left;
+  padding: .6rem .8rem;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-md);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(4px);
+  transition: opacity .15s ease, transform .15s ease, visibility .15s;
+  pointer-events: none;
+  z-index: 20;
+}
+.feat__tip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 14px;
+  border: 6px solid transparent;
+  border-top-color: var(--navy);
+}
+.feat:hover .feat__tip,
+.feat:focus .feat__tip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Included in every plan */
+.pricing-included {
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: center;
+}
+.pricing-included__title {
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--gray-500);
+  margin-bottom: 1rem;
+}
+.pricing-included__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .6rem;
+}
+.pricing-included__list li {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-pill);
+  padding: .45rem 1rem;
+  font-size: .88rem;
+  font-weight: 600;
+  color: var(--navy);
+  box-shadow: var(--shadow-sm);
+}
+.pricing-included__list .feat { border-bottom: none; }
+.pricing-included__list .feat::before {
+  content: '✓';
+  color: var(--green);
+  font-weight: 700;
+  margin-right: .4rem;
+}
+.pricing-included__list .feat__tip { left: 50%; transform: translate(-50%, 4px); }
+.pricing-included__list .feat:hover .feat__tip,
+.pricing-included__list .feat:focus .feat__tip { transform: translate(-50%, 0); }
+.pricing-included__list .feat__tip::after { left: 50%; margin-left: -6px; }
 
 .pricing-mission {
   margin-top: 4rem;
