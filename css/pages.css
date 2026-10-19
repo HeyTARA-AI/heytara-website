@@ -950,3 +950,7 @@
   .roi-inputs, .roi-results { padding: 1.75rem; }
   .legal { padding: 40px 5% 70px; }
 }
+
+/* Partners page */
+.partner-form-wrap { max-width: 640px; }
+.partner-form-wrap .demo-form { max-width: none; }

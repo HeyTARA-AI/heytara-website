@@ -373,3 +373,49 @@
     });
   });
 })();
+
+// ─────────────────────────────────────────────────────
+// PARTNER FORM HANDLER (Formspree → jon@heytara.ai)
+// ─────────────────────────────────────────────────────
+(function initPartnerForm() {
+  const form = document.getElementById('partner-form-el');
+  if (!form) return;
+  const successEl = document.getElementById('partner-success');
+  const btn = form.querySelector('.form-submit');
+  const val = (id) => (form.querySelector('#' + id)?.value || '').trim();
+  function err(msg) {
+    let el = form.querySelector('.form-error');
+    if (!el) {
+      el = document.createElement('p');
+      el.className = 'form-error';
+      el.style.cssText = 'color:#C41E1E;font-size:.88rem;margin-top:.75rem;font-weight:500;';
+      btn.insertAdjacentElement('afterend', el);
+    }
+    el.textContent = msg;
+  }
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const data = {
+      _subject: 'New HeyTARA partner application',
+      form: 'partner',
+      name: val('p-name'), email: val('p-email'), company: val('p-company'),
+      phone: val('p-phone'), partner_type: val('p-type'), message: val('p-message'),
+      timestamp: new Date().toISOString(),
+    };
+    if (!data.name || !data.email || !data.company) return err('Please fill in all required fields.');
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) return err('Please enter a valid email address.');
+    btn.disabled = true; btn.textContent = 'Sending…';
+    try {
+      const res = await fetch('https://formspree.io/f/xyegzjnk', {
+        method: 'POST', body: JSON.stringify(data),
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }
+      });
+      if (!res.ok) throw new Error('Formspree error');
+      form.style.display = 'none';
+      if (successEl) successEl.classList.add('show');
+    } catch (x) {
+      btn.disabled = false; btn.textContent = 'Apply to Partner →';
+      err('Something went wrong. Please try again or email us at hello@heytara.ai.');
+    }
+  });
+})();
