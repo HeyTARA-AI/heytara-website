@@ -104,6 +104,28 @@
   font-size: .98rem;
   color: var(--gray-700);
 }
+/* Collapsible Industries group (enabled by main.js) */
+.nav__mobile--collapsible .nav__mobile-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .85rem 0;
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--navy);
+  cursor: pointer;
+  user-select: none;
+}
+.nav__mobile-caret {
+  font-size: .9rem;
+  color: var(--gray-500);
+  transition: transform var(--transition);
+}
+.nav__mobile.industries-open .nav__mobile-caret { transform: rotate(180deg); }
+.nav__mobile--collapsible a.nav__mobile-sub { display: none; }
+.nav__mobile--collapsible.industries-open a.nav__mobile-sub { display: block; }
 
 /* ===================================================
    GENERIC PAGE HERO (sub-pages)

@@ -15,6 +15,7 @@
 
   burger.addEventListener('click', () => {
     const isOpen = mobileNav.classList.toggle('open');
+    if (!isOpen) mobileNav.classList.remove('industries-open');
     burger.classList.toggle('active', isOpen);
     burger.setAttribute('aria-expanded', isOpen);
   });
@@ -34,6 +35,30 @@
   };
   window.addEventListener('scroll', updateNavScroll, { passive: true });
   updateNavScroll();
+
+  // Mobile Industries group: collapsed by default, tap the heading to expand
+  const indHeading = mobileNav.querySelector('.nav__mobile-heading');
+  if (indHeading) {
+    mobileNav.classList.add('nav__mobile--collapsible');
+    indHeading.setAttribute('role', 'button');
+    indHeading.setAttribute('tabindex', '0');
+    indHeading.setAttribute('aria-expanded', 'false');
+    const caret = document.createElement('span');
+    caret.className = 'nav__mobile-caret';
+    caret.setAttribute('aria-hidden', 'true');
+    caret.textContent = '▾';
+    indHeading.appendChild(caret);
+    const toggleInd = (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const open = mobileNav.classList.toggle('industries-open');
+      indHeading.setAttribute('aria-expanded', open);
+    };
+    indHeading.addEventListener('click', toggleInd);
+    indHeading.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') toggleInd(e);
+    });
+  }
 
   // Close mobile nav on link click
   mobileNav.querySelectorAll('a').forEach(link => {
