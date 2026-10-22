@@ -446,3 +446,97 @@
     }
   });
 })();
+
+// ─────────────────────────────────────────────────────
+// IVR RECORDINGS: SAMPLE PLAYERS + ORDER FORM (Formspree → jon@heytara.ai)
+// ─────────────────────────────────────────────────────
+(function initIvrSamples() {
+  const samples = document.querySelectorAll('.ivr-sample');
+  if (!samples.length) return;
+  let current = null;
+  samples.forEach(function(card) {
+    const btn = card.querySelector('.ivr-sample__play');
+    const icon = card.querySelector('.ivr-sample__icon');
+    const bar = document.createElement('div');
+    bar.className = 'ivr-sample__bar';
+    bar.innerHTML = '<span></span>';
+    card.querySelector('.ivr-sample__body').appendChild(bar);
+    const fill = bar.firstChild;
+    const audio = new Audio();
+    audio.preload = 'none';
+    audio.src = card.dataset.src;
+    function reset() { card.classList.remove('is-playing'); icon.innerHTML = '&#9654;'; }
+    audio.addEventListener('timeupdate', function() {
+      if (audio.duration) fill.style.width = (audio.currentTime / audio.duration * 100) + '%';
+    });
+    audio.addEventListener('ended', function() { reset(); fill.style.width = '0'; });
+    audio.addEventListener('pause', reset);
+    btn.addEventListener('click', function() {
+      if (!audio.paused) { audio.pause(); return; }
+      if (current && current !== audio) current.pause();
+      current = audio;
+      audio.play().then(function() {
+        card.classList.add('is-playing');
+        icon.innerHTML = '&#10074;&#10074;';
+        if (typeof gtag === 'function') gtag('event', 'ivr_sample_play', { sample: card.querySelector('.ivr-sample__title').textContent });
+      }).catch(function() {
+        card.querySelector('.ivr-sample__meta').textContent = 'Sample unavailable right now';
+      });
+    });
+  });
+})();
+
+(function initIvrForm() {
+  const form = document.getElementById('ivr-form-el');
+  if (!form) return;
+  const successEl = document.getElementById('ivr-success');
+  const btn = form.querySelector('.form-submit');
+  const val = (id) => (form.querySelector('#' + id)?.value || '').trim();
+  const script = form.querySelector('#r-script');
+  const count = document.getElementById('r-script-count');
+  if (script && count) script.addEventListener('input', function() {
+    const n = script.value.trim() ? script.value.trim().split(/\s+/).length : 0;
+    count.textContent = n + (n === 1 ? ' word' : ' words');
+  });
+  function err(msg) {
+    let el = form.querySelector('.form-error');
+    if (!el) {
+      el = document.createElement('p');
+      el.className = 'form-error';
+      el.style.cssText = 'color:#C41E1E;font-size:.88rem;margin-top:.75rem;font-weight:500;text-align:center;';
+      btn.insertAdjacentElement('afterend', el);
+    }
+    el.textContent = msg;
+  }
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const voice = (form.querySelector('input[name="voice"]:checked') || {}).value || '';
+    const data = {
+      _subject: 'New HeyTARA recording order: ' + val('r-company'),
+      _replyto: val('r-email'),
+      _gotcha: (form.querySelector('input[name="_gotcha"]') || {}).value || '',
+      form: 'ivr-recording',
+      name: val('r-name'), company: val('r-company'), email: val('r-email'),
+      voice: voice, script: val('r-script'),
+      pronunciation_notes: val('r-pron'), additional_instructions: val('r-notes'),
+      price: '$20 per recording',
+      timestamp: new Date().toISOString(),
+    };
+    if (!data.name || !data.company || !data.email || !data.script) return err('Please fill in your name, company, email and script.');
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) return err('Please enter a valid email address.');
+    btn.disabled = true; btn.textContent = 'Sending…';
+    try {
+      const res = await fetch('https://formspree.io/f/xyegzjnk', {
+        method: 'POST', body: JSON.stringify(data),
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }
+      });
+      if (!res.ok) throw new Error('Formspree error');
+      if (typeof gtag === 'function') gtag('event', 'generate_lead', { form_name: 'ivr_recording', page_path: location.pathname, value: 20, currency: 'USD' });
+      form.style.display = 'none';
+      if (successEl) { successEl.classList.add('show'); successEl.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+    } catch (x) {
+      btn.disabled = false; btn.textContent = 'Order Your Recording →';
+      err('Something went wrong. Please try again or email us at hello@heytara.ai.');
+    }
+  });
+})();
