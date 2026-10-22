@@ -1710,3 +1710,16 @@ a.integration-card { display: block; color: inherit; }
 :is(.footer, .cta-band, .bottom-cta, .problem, .encounters, .results, .channel, .section--navy, .stat-card) .ht-wm__tara { color: #FFFFFF; -webkit-text-fill-color: #FFFFFF; }
 .section-eyebrow, .page-hero__eyebrow, .form-header__eyebrow, .roi-results__eyebrow, .hero__badge,
 .blog-card__tag, .article__tag { font-family: var(--font-brand); letter-spacing: .1em; }
+
+/* Brand pass 2: black dark sections, brand font on dark-section headlines */
+section.problem, section.encounters, section.results, section.bottom-cta, section.cta-band, section.section--navy {
+  background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(187,0,0,.16) 0%, rgba(187,0,0,0) 70%), #000000;
+}
+:is(.problem, .encounters, .results, .bottom-cta, .cta-band, .section--navy) .section-title {
+  font-family: var(--font-brand); font-weight: 700; letter-spacing: 0;
+}
+
+/* Mobile: long button labels wrap instead of pushing the page sideways */
+@media (max-width: 600px) {
+  .btn--large { white-space: normal; max-width: 100%; justify-content: center; text-align: center; }
+}
