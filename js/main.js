@@ -252,6 +252,7 @@
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }
       });
       if (!res.ok) throw new Error('Formspree error');
+      if (typeof gtag === 'function') gtag('event', 'generate_lead', { form_name: 'demo', page_path: location.pathname });
       form.style.display = 'none';
       if (successEl) successEl.classList.add('show');
     } catch (err) {
@@ -436,6 +437,7 @@
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }
       });
       if (!res.ok) throw new Error('Formspree error');
+      if (typeof gtag === 'function') gtag('event', 'generate_lead', { form_name: 'partner', page_path: location.pathname });
       form.style.display = 'none';
       if (successEl) successEl.classList.add('show');
     } catch (x) {
