@@ -988,11 +988,6 @@
 .ivr-pills { display: flex; flex-wrap: wrap; justify-content: center; gap: .75rem; margin-top: 2rem; list-style: none; }
 .ivr-pills li { background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-pill); padding: .5rem 1.1rem; font-size: .92rem; color: var(--gray-700); box-shadow: var(--shadow-sm); }
 .ivr-pills strong { color: var(--navy); }
-.ivr-trust { background: var(--white); border-top: 1px solid var(--gray-200); border-bottom: 1px solid var(--gray-200); padding: 2rem 5%; }
-.ivr-trust__inner { max-width: 860px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 2rem; }
-.ivr-trust__logo { height: 56px; width: auto; flex-shrink: 0; }
-.ivr-trust__text { font-size: 1rem; color: var(--gray-700); line-height: 1.6; }
-.ivr-trust__text strong { color: var(--navy); }
 .ivr-header { margin-bottom: 3rem; }
 .ivr-samples { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; max-width: 960px; margin: 0 auto; }
 .ivr-sample { display: flex; gap: 1.25rem; align-items: flex-start; background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-lg); padding: 1.5rem; box-shadow: var(--shadow-sm); transition: box-shadow var(--transition), border-color var(--transition); }
@@ -1031,6 +1026,5 @@
 .ivr-hp { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; opacity: 0; }
 @media (max-width: 760px) {
   .ivr-samples, .ivr-compare { grid-template-columns: 1fr; }
-  .ivr-trust__inner { flex-direction: column; text-align: center; gap: 1rem; }
   .ivr-sample { padding: 1.25rem; }
 }

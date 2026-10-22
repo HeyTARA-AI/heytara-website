@@ -517,7 +517,7 @@
       _gotcha: (form.querySelector('input[name="_gotcha"]') || {}).value || '',
       form: 'ivr-recording',
       name: val('r-name'), company: val('r-company'), email: val('r-email'),
-      voice: voice, script: val('r-script'),
+      voice: voice, file_format: val('r-format'), script: val('r-script'),
       pronunciation_notes: val('r-pron'), additional_instructions: val('r-notes'),
       price: '$20 per recording',
       timestamp: new Date().toISOString(),
