@@ -1693,3 +1693,10 @@ select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
   border-radius: 50%; background: rgba(255,255,255,.06); color: rgba(255,255,255,.55); transition: background var(--transition), color var(--transition); }
 .footer__social a:hover { background: var(--red); color: #fff; }
 .footer__social svg { width: 16px; height: 16px; fill: currentColor; }
+
+/* In-content links (integration pages, FAQ, feature lists) */
+a.integration-card { display: block; color: inherit; }
+.integration-note a + br { line-height: 2.2; }
+.faq-item__a a { color: var(--red); font-weight: 600; }
+.faq-item__a a:hover { text-decoration: underline; }
+.feature-item__text a { color: var(--white); text-decoration: underline; text-underline-offset: 2px; }

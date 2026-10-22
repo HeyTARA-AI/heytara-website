@@ -220,3 +220,5 @@
   .article__inner { padding: 0 1.5rem; }
   .article-cta { margin: 2rem 1.5rem 0; padding: 2rem 1.5rem; }
 }
+
+.article__body a { color: var(--red); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
