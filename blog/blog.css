@@ -62,7 +62,7 @@
   text-transform: uppercase;
   letter-spacing: .08em;
   color: var(--red);
-  background: rgba(196,30,30,.08);
+  background: rgba(187,0,0,.08);
   padding: .25rem .65rem;
   border-radius: 999px;
 }
@@ -125,7 +125,7 @@
   text-transform: uppercase;
   letter-spacing: .08em;
   color: var(--red);
-  background: rgba(196,30,30,.08);
+  background: rgba(187,0,0,.08);
   padding: .25rem .65rem;
   border-radius: 999px;
 }
@@ -211,7 +211,7 @@
 }
 .article-cta a:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(196,30,30,.3);
+  box-shadow: 0 8px 24px rgba(187,0,0,.3);
 }
 
 @media (max-width: 600px) {
