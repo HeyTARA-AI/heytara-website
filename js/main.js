@@ -540,3 +540,9 @@
     }
   });
 })();
+
+// Track clicks on marked CTAs (data-cta="...") as GA4 cta_click
+document.addEventListener('click', function (e) {
+  var a = e.target.closest && e.target.closest('[data-cta]');
+  if (a && typeof gtag === 'function') gtag('event', 'cta_click', { cta: a.getAttribute('data-cta'), link_url: a.getAttribute('href'), page_path: location.pathname });
+});
