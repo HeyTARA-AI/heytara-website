@@ -21,8 +21,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Saira+Semi+Condensed:wght@700&display=swap" rel="stylesheet" />
 
   <!-- Styles -->
-  <link rel="stylesheet" href="css/style.css?v=20261104b" />
-  <link rel="stylesheet" href="css/pages.css?v=20261104b" />
+  <link rel="stylesheet" href="css/style.css?v=20261104c" />
+  <link rel="stylesheet" href="css/pages.css?v=20261104c" />
   <link rel="canonical" href="https://heytara.ai/" />
   <meta property="og:site_name" content="HeyTARA" />
   <meta property="og:title" content="HeyTARA — The Hospitality OS for Multi-Unit Restaurants" />
@@ -136,9 +136,9 @@
     </h1>
 
     <p class="hero__sub">
-      <strong>Fully managed restaurant automation, powered by voice.</strong> TARA answers every call,
-      takes orders, handles guest requests, and routes catering, complaints, and team member inquiries
-      to the right team at every location — so your staff can focus on the guests right in front of them.
+      <strong>Fully managed restaurant automation, powered by voice.</strong> Every guest call becomes
+      an order in your POS, a text to your guest, a ticket for the right team and a report across every
+      location — so your staff can focus on the guests right in front of them.
     </p>
 
     <div class="hero__channels" aria-label="Communication channels">
@@ -151,7 +151,7 @@
       <a href="contact" class="btn btn--primary btn--large">
         Book a Demo &rarr;
       </a>
-      <a href="#how-it-works" class="btn btn--ghost btn--large">
+      <a href="#after-the-call" class="btn btn--ghost btn--large">
         See How It Works ↓
       </a>
     </div>
@@ -160,10 +160,47 @@
     </div><!-- end hero__left -->
 
     <!-- Right side: Restaurant illustration -->
-    <div class="hero__right">
-      <div class="hero__illustration">
-        <img src="heytara-restaurant.png" alt="HeyTARA Restaurant Illustration" class="hero__restaurant-img" />
-      </div>
+    <div class="hero__right hero__right--dash">
+      <figure class="dash-wrap">
+        <div class="dash" aria-label="HeyTARA dashboard showing 30 days of calls, revenue and call reasons across all restaurants">
+          <div class="dash__bar" aria-hidden="true">
+            <span class="dash__dots"><i></i><i></i><i></i></span>
+            <span class="dash__brand"><span>Hey</span>TARA</span>
+          </div>
+          <div class="dash__body">
+            <div class="dash__head">
+              <span class="dash__title">Dashboard</span>
+              <span class="dash__chip">All restaurants &#9662;</span>
+              <span class="dash__chip dash__chip--on">30 days</span>
+              <span class="dash__chip">Export PDF</span>
+            </div>
+            <div class="dash__kpis">
+              <div class="dash__kpi"><span>Calls answered</span><b>1,547</b></div>
+              <div class="dash__kpi dash__kpi--hl"><span>Takeout revenue</span><b>$2,715</b></div>
+              <div class="dash__kpi"><span>Avg order size</span><b>$69.62</b></div>
+              <div class="dash__kpi"><span>Catering calls</span><b>91</b></div>
+            </div>
+            <div class="dash__chart">
+              <div class="dash__chart-head"><b>Revenue and call volume</b><span><i class="dash__dot dash__dot--rev"></i>Revenue <i class="dash__dot dash__dot--vol"></i>Calls</span></div>
+              <svg viewBox="0 0 600 160" preserveAspectRatio="none" aria-hidden="true">
+                <g class="dash__grid"><line x1="0" x2="600" y1="40" y2="40" /><line x1="0" x2="600" y1="80" y2="80" /><line x1="0" x2="600" y1="120" y2="120" /></g>
+                <path class="dash__area dash__area--vol" d="M0.0,131.3 C3.4,129.1 13.8,119.8 20.7,118.2 C27.6,116.5 34.5,122.6 41.4,121.5 C48.3,120.4 55.2,113.0 62.1,111.6 C69.0,110.2 75.9,112.7 82.8,113.2 C89.7,113.8 96.6,119.5 103.4,114.9 C110.3,110.2 117.2,91.6 124.1,85.3 C131.0,79.0 137.9,79.0 144.8,77.1 C151.7,75.1 158.6,73.8 165.5,73.8 C172.4,73.8 179.3,77.9 186.2,77.1 C193.1,76.2 200.0,67.7 206.9,68.8 C213.8,69.9 220.7,77.3 227.6,83.6 C234.5,89.9 241.4,106.7 248.3,106.7 C255.2,106.7 262.1,85.6 269.0,83.6 C275.9,81.7 282.8,92.1 289.7,95.2 C296.6,98.2 303.4,100.9 310.3,101.7 C317.2,102.6 324.1,102.0 331.0,100.1 C337.9,98.2 344.8,92.4 351.7,90.2 C358.6,88.0 365.5,86.1 372.4,86.9 C379.3,87.8 386.2,96.8 393.1,95.2 C400.0,93.5 406.9,78.4 413.8,77.1 C420.7,75.7 427.6,88.3 434.5,86.9 C441.4,85.6 448.3,68.3 455.2,68.8 C462.1,69.4 469.0,86.4 475.9,90.2 C482.8,94.1 489.7,92.4 496.6,91.9 C503.4,91.3 510.3,88.3 517.2,86.9 C524.1,85.6 531.0,83.4 537.9,83.6 C544.8,83.9 551.7,89.7 558.6,88.6 C565.5,87.5 572.4,72.1 579.3,77.1 C586.2,82.0 596.6,111.3 600.0,118.2 L600,160 L0,160 Z" />
+                <path class="dash__line dash__line--vol" d="M0.0,131.3 C3.4,129.1 13.8,119.8 20.7,118.2 C27.6,116.5 34.5,122.6 41.4,121.5 C48.3,120.4 55.2,113.0 62.1,111.6 C69.0,110.2 75.9,112.7 82.8,113.2 C89.7,113.8 96.6,119.5 103.4,114.9 C110.3,110.2 117.2,91.6 124.1,85.3 C131.0,79.0 137.9,79.0 144.8,77.1 C151.7,75.1 158.6,73.8 165.5,73.8 C172.4,73.8 179.3,77.9 186.2,77.1 C193.1,76.2 200.0,67.7 206.9,68.8 C213.8,69.9 220.7,77.3 227.6,83.6 C234.5,89.9 241.4,106.7 248.3,106.7 C255.2,106.7 262.1,85.6 269.0,83.6 C275.9,81.7 282.8,92.1 289.7,95.2 C296.6,98.2 303.4,100.9 310.3,101.7 C317.2,102.6 324.1,102.0 331.0,100.1 C337.9,98.2 344.8,92.4 351.7,90.2 C358.6,88.0 365.5,86.1 372.4,86.9 C379.3,87.8 386.2,96.8 393.1,95.2 C400.0,93.5 406.9,78.4 413.8,77.1 C420.7,75.7 427.6,88.3 434.5,86.9 C441.4,85.6 448.3,68.3 455.2,68.8 C462.1,69.4 469.0,86.4 475.9,90.2 C482.8,94.1 489.7,92.4 496.6,91.9 C503.4,91.3 510.3,88.3 517.2,86.9 C524.1,85.6 531.0,83.4 537.9,83.6 C544.8,83.9 551.7,89.7 558.6,88.6 C565.5,87.5 572.4,72.1 579.3,77.1 C586.2,82.0 596.6,111.3 600.0,118.2" />
+                <path class="dash__area dash__area--rev" d="M0.0,156.0 C3.4,156.0 13.8,156.0 20.7,156.0 C27.6,156.0 34.5,156.0 41.4,156.0 C48.3,148.8 55.2,119.6 62.1,112.7 C69.0,105.9 75.9,119.6 82.8,115.0 C89.7,110.5 96.6,86.2 103.4,85.4 C110.3,84.7 117.2,98.7 124.1,110.5 C131.0,122.2 137.9,152.2 144.8,156.0 C151.7,156.0 158.6,136.3 165.5,133.2 C172.4,130.2 179.3,137.4 186.2,137.8 C193.1,138.2 200.0,138.5 206.9,135.5 C213.8,132.5 220.7,117.3 227.6,119.6 C234.5,121.8 241.4,144.6 248.3,149.2 C255.2,153.7 262.1,147.7 269.0,146.9 C275.9,146.1 282.8,143.1 289.7,144.6 C296.6,146.1 303.4,154.1 310.3,156.0 C317.2,156.0 324.1,156.0 331.0,156.0 C337.9,155.2 344.8,156.0 351.7,151.4 C358.6,146.1 365.5,128.3 372.4,124.1 C379.3,119.9 386.2,122.2 393.1,126.4 C400.0,130.6 406.9,144.2 413.8,149.2 C420.7,154.1 427.6,156.0 434.5,156.0 C441.4,154.9 448.3,145.0 455.2,142.3 C462.1,139.7 469.0,137.8 475.9,140.1 C482.8,142.3 489.7,156.0 496.6,156.0 C503.4,138.2 510.3,41.4 517.2,33.0 C524.1,24.7 531.0,85.4 537.9,105.9 C544.8,126.4 551.7,148.4 558.6,156.0 C565.5,156.0 572.4,151.4 579.3,151.4 C586.2,151.4 596.6,155.2 600.0,156.0 L600,160 L0,160 Z" />
+                <path class="dash__line dash__line--rev" d="M0.0,156.0 C3.4,156.0 13.8,156.0 20.7,156.0 C27.6,156.0 34.5,156.0 41.4,156.0 C48.3,148.8 55.2,119.6 62.1,112.7 C69.0,105.9 75.9,119.6 82.8,115.0 C89.7,110.5 96.6,86.2 103.4,85.4 C110.3,84.7 117.2,98.7 124.1,110.5 C131.0,122.2 137.9,152.2 144.8,156.0 C151.7,156.0 158.6,136.3 165.5,133.2 C172.4,130.2 179.3,137.4 186.2,137.8 C193.1,138.2 200.0,138.5 206.9,135.5 C213.8,132.5 220.7,117.3 227.6,119.6 C234.5,121.8 241.4,144.6 248.3,149.2 C255.2,153.7 262.1,147.7 269.0,146.9 C275.9,146.1 282.8,143.1 289.7,144.6 C296.6,146.1 303.4,154.1 310.3,156.0 C317.2,156.0 324.1,156.0 331.0,156.0 C337.9,155.2 344.8,156.0 351.7,151.4 C358.6,146.1 365.5,128.3 372.4,124.1 C379.3,119.9 386.2,122.2 393.1,126.4 C400.0,130.6 406.9,144.2 413.8,149.2 C420.7,154.1 427.6,156.0 434.5,156.0 C441.4,154.9 448.3,145.0 455.2,142.3 C462.1,139.7 469.0,137.8 475.9,140.1 C482.8,142.3 489.7,156.0 496.6,156.0 C503.4,138.2 510.3,41.4 517.2,33.0 C524.1,24.7 531.0,85.4 537.9,105.9 C544.8,126.4 551.7,148.4 558.6,156.0 C565.5,156.0 572.4,151.4 579.3,151.4 C586.2,151.4 596.6,155.2 600.0,156.0" />
+              </svg>
+            </div>
+            <div class="dash__tags" aria-label="Top call reasons">
+              <span>Catering / Large Orders <b>91</b></span>
+              <span>Order Issues <b>76</b></span>
+              <span>Order Status <b>72</b></span>
+              <span>Menu Questions <b>70</b></span>
+              <span>Complaints &amp; Feedback <b>23</b></span>
+            </div>
+          </div>
+        </div>
+        <figcaption class="dash__cap">From a live HeyTARA dashboard, last 30 days</figcaption>
+      </figure>
     </div>
 
   </div><!-- end hero__inner--split -->
@@ -214,6 +251,81 @@
     </div>
 
   </div><!-- end hero__bottom -->
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     AFTER THE CALL — PLATFORM OUTPUTS
+     ═══════════════════════════════════════════════════ -->
+<section class="aftercall" id="after-the-call" aria-labelledby="aftercall-title">
+  <div class="aftercall__inner">
+    <header class="section-header section-header--center">
+      <span class="section-eyebrow eyebrow--orange">After the Call</span>
+      <h2 class="section-title" id="aftercall-title">Every Call Becomes Work That Gets Done</h2>
+      <p class="section-sub section-sub--center">
+        Answering is where TARA starts. Every conversation turns into the right next step for your
+        guest, your team and your operations, at every location, with nothing re-keyed by hand.
+      </p>
+    </header>
+    <div class="aftercall__start fade-in" aria-hidden="true"><span>📞 One guest call</span></div>
+    <div class="aftercall-grid">
+      <article class="aftercall-card fade-in">
+        <span class="aftercall-card__icon" aria-hidden="true">🧾</span>
+        <h3 class="aftercall-card__title">An order in your POS</h3>
+        <p class="aftercall-card__desc">Phone orders go straight into Toast, Clover, Square, SpotOn, NCR Aloha, SkyTab or any POS that uses Olo, with real-time menu sync.</p>
+        <span class="aftercall-card__tag">POS sync</span>
+      </article>
+      <article class="aftercall-card fade-in fade-in-delay-1">
+        <span class="aftercall-card__icon" aria-hidden="true">💬</span>
+        <h3 class="aftercall-card__title">A text to your guest</h3>
+        <p class="aftercall-card__desc">An order confirmation, a secure payment link or your online ordering link, sent by text the moment the call ends.</p>
+        <span class="aftercall-card__tag">Text / SMS</span>
+      </article>
+      <article class="aftercall-card fade-in fade-in-delay-2">
+        <span class="aftercall-card__icon" aria-hidden="true">🎫</span>
+        <h3 class="aftercall-card__title">A ticket for the right team</h3>
+        <p class="aftercall-card__desc">Complaints are emailed to the store with the full transcript. Catering goes to your catering team. Team member and HR requests land in your help desk.</p>
+        <span class="aftercall-card__tag">Routing &amp; escalation</span>
+      </article>
+      <article class="aftercall-card fade-in fade-in-delay-3">
+        <span class="aftercall-card__icon" aria-hidden="true">📊</span>
+        <h3 class="aftercall-card__title">A row in your dashboard</h3>
+        <p class="aftercall-card__desc">Every call tagged, transcribed and counted: volume, outcomes, orders and revenue captured, by brand and by store. Export to CSV or PDF anytime.</p>
+        <span class="aftercall-card__tag">Analytics</span>
+      </article>
+    </div>
+    <div class="reasons fade-in">
+      <div class="reasons__head">
+        <h3>Beyond takeout: what guests actually called about</h3>
+        <p>From a live HeyTARA dashboard, last 30 days. Every one of these calls was tagged and transcribed, then handled by TARA or routed to the right team. A call can have more than one reason.</p>
+      </div>
+      <div class="reasons__donut" style="background:conic-gradient(#BB0000 0.0deg 69.4deg, #F06418 69.4deg 127.4deg, #B83C0B 127.4deg 182.3deg, #FDBA74 182.3deg 235.7deg, #7A2E0E 235.7deg 285.3deg, #EA580C 285.3deg 302.8deg, #FB923C 302.8deg 319.6deg, #9F1239 319.6deg 329.5deg, #BB0000 329.5deg 337.9deg, #F06418 337.9deg 344.7deg, #B83C0B 344.7deg 350.1deg, #FDBA74 350.1deg 353.9deg, #7A2E0E 353.9deg 356.2deg, #EA580C 356.2deg 357.7deg, #FB923C 357.7deg 359.2deg, #9F1239 359.2deg 360.0deg)" aria-hidden="true"><div class="reasons__center"><b>472</b><span>requests beyond takeout</span></div></div>
+      <ul class="reasons__list">
+        <li><i style="background:#BB0000"></i>Catering / Large Orders<b>91</b></li>
+        <li><i style="background:#F06418"></i>Order Issues<b>76</b></li>
+        <li><i style="background:#B83C0B"></i>Order Status / Modifications<b>72</b></li>
+        <li><i style="background:#FDBA74"></i>Menu Questions<b>70</b></li>
+        <li><i style="background:#7A2E0E"></i>Order Adjustments / Cancellations<b>65</b></li>
+        <li><i style="background:#EA580C"></i>Complaints &amp; Feedback<b>23</b></li>
+        <li><i style="background:#FB923C"></i>Promo Code Issues<b>22</b></li>
+        <li><i style="background:#9F1239"></i>Reservations / Waitlist<b>13</b></li>
+        <li><i style="background:#BB0000"></i>Operation Hours<b>11</b></li>
+        <li><i style="background:#F06418"></i>Location / Directions<b>9</b></li>
+        <li><i style="background:#B83C0B"></i>Job Inquiries<b>7</b></li>
+        <li><i style="background:#FDBA74"></i>Missing Items<b>5</b></li>
+        <li><i style="background:#7A2E0E"></i>Delivery Issues<b>3</b></li>
+        <li><i style="background:#EA580C"></i>Lost &amp; Found<b>2</b></li>
+        <li><i style="background:#FB923C"></i>Delayed Orders<b>2</b></li>
+        <li><i style="background:#9F1239"></i>Refund Requests<b>1</b></li>
+      </ul>
+    </div>
+    <h3 class="multiloc__title fade-in">Built for multi-unit groups</h3>
+    <div class="multiloc">
+      <div class="multiloc__item fade-in"><span aria-hidden="true">↗️</span><div><b>Routing to the right person</b><p>Calls go to managers, district managers or specific stores based on what the caller needs.</p></div></div>
+      <div class="multiloc__item fade-in fade-in-delay-1"><span aria-hidden="true">🏢</span><div><b>Location-level settings</b><p>Set hours, escalation contacts and workflows for each location.</p></div></div>
+      <div class="multiloc__item fade-in fade-in-delay-2"><span aria-hidden="true">📊</span><div><b>One view of every store</b><p>Performance across every location, with reporting by brand and by store.</p></div></div>
+    </div>
+    <p class="aftercall__note fade-in">Help desk routing and the multi-location dashboard are part of Chef&rsquo;s Special. <a href="pricing">Compare plans &rarr;</a></p>
+  </div>
 </section>
 
 <!-- ═══════════════════════════════════════════════════
@@ -331,347 +443,50 @@
 </section>
 
 <!-- ═══════════════════════════════════════════════════
-     CHANNEL: VOICE
+     CHANNELS — VOICE / TEXT / EMAIL (compact)
      ═══════════════════════════════════════════════════ -->
-<section class="channel channel--voice" id="channels" aria-labelledby="voice-title">
-  <div class="channel__inner container">
-
-    <!-- Left: Copy -->
-    <div class="channel__content fade-in">
-      <div class="channel__icon-wrap" aria-hidden="true">📞</div>
-      <span class="section-eyebrow eyebrow--purple">Voice Channel</span>
-      <h2 class="section-title" id="voice-title">
-        Your Best Employee,<br />On Every Call
-      </h2>
-
-      <blockquote class="channel__quote">
-        "Answer nuisance calls so your employees don't have to.
-        Let your team focus on the guests right in front of them."
-      </blockquote>
-
-      <p class="section-sub section-sub--light">
-        TARA answers every call instantly — zero hold time, zero missed orders.
-        She takes orders, books reservations, answers FAQs, and intelligently upsells
-        like your best server, on every single interaction.
-      </p>
-
-      <ul class="feature-list" aria-label="Voice features">
-        <li class="feature-item">
-          <div class="feature-item__check" aria-hidden="true">✓</div>
-          <span class="feature-item__text"><strong>Zero hold time</strong> — answers every call instantly, even during the dinner rush</span>
-        </li>
-        <li class="feature-item">
-          <div class="feature-item__check" aria-hidden="true">✓</div>
-          <span class="feature-item__text"><strong>Intelligent upselling</strong> — +20% average ticket increase, naturally</span>
-        </li>
-        <li class="feature-item">
-          <div class="feature-item__check" aria-hidden="true">✓</div>
-          <span class="feature-item__text"><strong>Direct POS integration</strong> — orders sync to Toast, Square, Clover, and more, automatically</span>
-        </li>
-        <li class="feature-item">
-          <div class="feature-item__check" aria-hidden="true">✓</div>
-          <span class="feature-item__text"><strong>SMS payment link</strong> — completes the transaction, no back-and-forth</span>
-        </li>
-        <li class="feature-item">
-          <div class="feature-item__check" aria-hidden="true">✓</div>
-          <span class="feature-item__text"><strong>Infinite patience</strong> — on brand every time, no matter how busy</span>
-        </li>
-        <li class="feature-item">
-          <div class="feature-item__check" aria-hidden="true">✓</div>
-          <span class="feature-item__text"><strong>Smart escalation</strong> — knows when to route to a real person</span>
-        </li>
-      </ul>
-    </div>
-
-    <!-- Right: Visual -->
-    <div class="channel__visual fade-in fade-in-delay-2">
-      <div class="channel__card">
-        <div class="channel__card-title">
-          <span aria-hidden="true">🎙️</span> TARA is live — answering now
-        </div>
-
-        <!-- Waveform animation -->
-        <div class="waveform" aria-label="Audio waveform visualization" aria-hidden="true">
-          <div class="waveform__bar"></div>
-          <div class="waveform__bar"></div>
-          <div class="waveform__bar"></div>
-          <div class="waveform__bar"></div>
-          <div class="waveform__bar"></div>
-          <div class="waveform__bar"></div>
-          <div class="waveform__bar"></div>
-          <div class="waveform__bar"></div>
-          <div class="waveform__bar"></div>
-          <div class="waveform__bar"></div>
-          <div class="waveform__bar"></div>
-          <div class="waveform__bar"></div>
-        </div>
-
-        <p style="font-size:.85rem;color:rgba(255,255,255,.6);margin-bottom:1rem;font-style:italic;">
-          "Hi! Thanks for calling. I'm TARA — I'd love to help with your order or reservation tonight."
-        </p>
-
-        <!-- Stat pills -->
-        <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem;">
-          <div style="padding:.4rem .9rem;background:rgba(207,147,255,.15);border-radius:999px;font-size:.78rem;font-weight:600;color:#CF93FF;">
-            ✓ Order Taken
-          </div>
-          <div style="padding:.4rem .9rem;background:rgba(107,203,119,.15);border-radius:999px;font-size:.78rem;font-weight:600;color:#74F0A0;">
-            ✓ Upsell +$12
-          </div>
-          <div style="padding:.4rem .9rem;background:rgba(114,195,255,.15);border-radius:999px;font-size:.78rem;font-weight:600;color:#72C3FF;">
-            ✓ POS Synced
-          </div>
-          <div style="padding:.4rem .9rem;background:rgba(255,217,61,.15);border-radius:999px;font-size:.78rem;font-weight:600;color:#FFD93D;">
-            ✓ SMS Sent
-          </div>
-        </div>
-
-        <!-- Mini stats -->
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.1);">
-          <div>
-            <div style="font-size:1.8rem;font-weight:800;color:#CF93FF;">0s</div>
-            <div style="font-size:.78rem;color:rgba(255,255,255,.45);">Hold time</div>
-          </div>
-          <div>
-            <div style="font-size:1.8rem;font-weight:800;color:#CF93FF;">100%</div>
-            <div style="font-size:.78rem;color:rgba(255,255,255,.45);">Calls answered</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════
-     CHANNEL: TEXT / SMS
-     ═══════════════════════════════════════════════════ -->
-<section class="channel channel--text" aria-labelledby="text-title">
-  <div class="channel__inner channel__inner--reverse container">
-
-    <!-- Left (visual) — reversed layout -->
-    <div class="channel__visual fade-in">
-      <div class="channel__card">
-        <div class="channel__card-title">
-          <span aria-hidden="true">💬</span> Texts TARA sends after the call
-        </div>
-
-        <div class="sms-thread" aria-label="Example texts sent to a guest after a phone order">
-          <p class="sms-label" style="text-align:right;">TARA · 6:12 PM</p>
-          <div class="sms-bubble sms-bubble--out">
-            Thanks for calling! Here's your order for 7:00 PM pickup:<br/>
-            2 Spicy Tuna Rolls + 1 Edamame + 1 Miso Soup 🍣<br/><br/>
-            Total: $34.50. Pay securely here:<br/>
-            <strong style="color:#72C3FF;">heytara.ai/pay/xq98k</strong>
-          </div>
-
-          <p class="sms-label" style="text-align:right;">TARA · 6:14 PM</p>
-          <div class="sms-bubble sms-bubble--out">
-            Your order is confirmed for 7:00 PM pickup. See you soon! 🙌
-          </div>
-        </div>
-
-        <div style="margin-top:1.5rem;padding:.9rem 1rem;background:rgba(114,195,255,.08);border-radius:12px;border:1px solid rgba(114,195,255,.15);font-size:.82rem;color:rgba(255,255,255,.6);">
-          📱 Guest number saved, so your team can text or call back anytime.
-        </div>
-      </div>
-    </div>
-
-    <!-- Right: Copy -->
-    <div class="channel__content fade-in fade-in-delay-2">
-      <div class="channel__icon-wrap" aria-hidden="true">💬</div>
-      <span class="section-eyebrow eyebrow--blue">Text / SMS Channel</span>
-      <h2 class="section-title" id="text-title">
-        Meet Guests<br />Where They Are
-      </h2>
-
-      <blockquote class="channel__quote">
-        "Consistent, on-brand communication at scale — every guest gets the same great experience."
-      </blockquote>
-
-      <p class="section-sub section-sub--light">
-        The call ends, the guest experience doesn't. TARA texts guests a secure payment link,
-        an order confirmation, or a link to your online ordering site, and saves every
-        caller's number so your team can text or call them back anytime.
-      </p>
-
-      <ul class="feature-list" aria-label="Text features">
-        <li class="feature-item">
-          <div class="feature-item__check" aria-hidden="true">✓</div>
-          <span class="feature-item__text"><strong>Payment links</strong> — guests pay securely by text right after the call</span>
-        </li>
-        <li class="feature-item">
-          <div class="feature-item__check" aria-hidden="true">✓</div>
-          <span class="feature-item__text"><strong>Order confirmations</strong> — order details texted automatically, every time</span>
-        </li>
-        <li class="feature-item">
-          <div class="feature-item__check" aria-hidden="true">✓</div>
-          <span class="feature-item__text"><strong>Text-to-order links</strong> — guests who'd rather order online get your link instantly</span>
-        </li>
-        <li class="feature-item">
-          <div class="feature-item__check" aria-hidden="true">✓</div>
-          <span class="feature-item__text"><strong>Guest phone numbers saved</strong> — text or call guests back whenever you want</span>
-        </li>
-      </ul>
-    </div>
-
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════
-     CHANNEL: EMAIL
-     ═══════════════════════════════════════════════════ -->
-<section class="channel channel--email" aria-labelledby="email-title">
-  <div class="channel__inner container">
-
-    <!-- Left: Copy -->
-    <div class="channel__content fade-in">
-      <div class="channel__icon-wrap" aria-hidden="true">📧</div>
-      <span class="section-eyebrow eyebrow--green">Email Channel</span>
-      <h2 class="section-title" id="email-title">
-        Turn Callers<br />Into Regulars
-      </h2>
-
-      <blockquote class="channel__quote">
-        "Every call grows your guest list."
-      </blockquote>
-
-      <p class="section-sub section-sub--light">
-        TARA collects guest email addresses and phone numbers on the call, building a
-        guest list your team can use to send promos, special offers and news to your
-        regulars — and bring them back again.
-      </p>
-
-      <ul class="feature-list" aria-label="Email features">
-        <li class="feature-item">
-          <div class="feature-item__check" aria-hidden="true">✓</div>
-          <span class="feature-item__text"><strong>Guest email collection</strong> — TARA captures emails during the call</span>
-        </li>
-        <li class="feature-item">
-          <div class="feature-item__check" aria-hidden="true">✓</div>
-          <span class="feature-item__text"><strong>Phone numbers saved</strong> — every caller, ready for a text or call back</span>
-        </li>
-        <li class="feature-item">
-          <div class="feature-item__check" aria-hidden="true">✓</div>
-          <span class="feature-item__text"><strong>Promos & special offers</strong> — reach your regulars whenever you want</span>
-        </li>
-        <li class="feature-item">
-          <div class="feature-item__check" aria-hidden="true">✓</div>
-          <span class="feature-item__text"><strong>Events & news</strong> — fill seats on slow nights</span>
-        </li>
-      </ul>
-    </div>
-
-    <!-- Right: Visual -->
-    <div class="channel__visual fade-in fade-in-delay-2">
-      <div class="channel__card">
-        <div class="channel__card-title">
-          <span aria-hidden="true">📬</span> Built from your calls
-        </div>
-
-        <div style="padding:1rem;background:rgba(116,240,160,.08);border-radius:12px;border:1px solid rgba(116,240,160,.15);margin-bottom:1.5rem;">
-          <div style="font-size:.8rem;color:rgba(255,255,255,.5);margin-bottom:.75rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;">New guests this week</div>
-          <div style="display:grid;grid-template-columns:1fr auto;gap:.55rem 1rem;font-size:.82rem;color:rgba(255,255,255,.75);">
-            <div><strong style="color:#fff;">Sarah M.</strong> · sarah.m@email.com</div><div style="color:#74F0A0;">Pickup order</div>
-            <div><strong style="color:#fff;">David R.</strong> · (555) 014-2290</div><div style="color:#74F0A0;">Catering</div>
-            <div><strong style="color:#fff;">Priya K.</strong> · priya.k@email.com</div><div style="color:#74F0A0;">Pickup order</div>
-          </div>
-        </div>
-
-        <div class="email-preview">
-          <div class="email-preview__header">
-            <div class="email-preview__subject">Thursday is Rib Night 🍖</div>
-            <div class="email-preview__from">From: Lucille's · sent by your team to your guest list</div>
-          </div>
-          <div class="email-preview__body">
-            <p>Hi Sarah,</p><br/>
-            <p>Thanks for ordering with us! This Thursday, enjoy 20% off any rib platter for pickup or dine-in.</p>
-            <div class="email-preview__cta">🎁 Claim 20% Off</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════
-     WORKFLOW — HOW THE CHANNELS CONNECT
-     ═══════════════════════════════════════════════════ -->
-<section class="workflow" id="how-it-works" aria-labelledby="workflow-title">
-  <div class="workflow__inner">
-
+<section class="channels3" id="channels" aria-labelledby="channels-title">
+  <div class="container">
     <header class="section-header section-header--center">
-      <span class="section-eyebrow eyebrow--orange">One Coherent Strategy</span>
-      <h2 class="section-title" id="workflow-title">
-        Three Channels. Every Guest.<br />One Seamless Experience.
-      </h2>
-      <p class="section-sub section-sub--center">
-        Voice is where it starts, not where it ends. The <span class="ht-wm"><span class="ht-wm__hey">Hey</span><span class="ht-wm__tara">TARA</span></span> platform turns every conversation into
-        the right next step — order, confirmation, routing, and follow-up — across Voice, Text, and Email.
-      </p>
+      <span class="section-eyebrow eyebrow--orange">Voice · Text · Email</span>
+      <h2 class="section-title" id="channels-title">Starts With a Call. Doesn&rsquo;t End There.</h2>
+      <p class="section-sub section-sub--center">TARA answers by voice, follows up by text and builds your guest list for email, so every guest gets the same on-brand experience at every location.</p>
     </header>
-
-    <!-- Visual workflow diagram — inspired by deck flow -->
-    <div class="workflow-diagram-v2" role="list" aria-label="Guest journey workflow">
-      
-      <div class="wf-step wf-step--start" role="listitem">
-        <div class="wf-step__circle" style="background:linear-gradient(135deg,var(--orange),var(--yellow));">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="white"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-        </div>
-        <div class="wf-step__label">Guest Calls</div>
-        <div class="wf-step__sub">Any location, any time</div>
-      </div>
-
-      <div class="wf-connector"><div class="wf-connector__line"></div><div class="wf-connector__arrow">›</div></div>
-
-      <div class="wf-step" role="listitem">
-        <div class="wf-step__circle" style="background:linear-gradient(135deg,var(--red),var(--coral));">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="white"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/></svg>
-        </div>
-        <div class="wf-step__label">TARA Answers Instantly</div>
-        <div class="wf-step__sub">No hold time. No menu maze.</div>
-      </div>
-
-      <div class="wf-connector"><div class="wf-connector__line"></div><div class="wf-connector__arrow">›</div></div>
-
-      <div class="wf-step" role="listitem">
-        <div class="wf-step__circle" style="background:linear-gradient(135deg,#A855F7,#7C3AED);">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-        </div>
-        <div class="wf-step__label">Understands Intent</div>
-        <div class="wf-step__sub">Orders, reservations, FAQs, upsells</div>
-      </div>
-
-      <div class="wf-connector"><div class="wf-connector__line"></div><div class="wf-connector__arrow">›</div></div>
-
-      <div class="wf-step" role="listitem">
-        <div class="wf-step__circle" style="background:linear-gradient(135deg,var(--green),var(--teal));">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="white"><path d="M18 17H6V5h12m0-2H6a2 2 0 00-2 2v14a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2M7 7h10v2H7V7m0 4h10v2H7v-2m0 4h7v2H7v-2z"/></svg>
-        </div>
-        <div class="wf-step__label">Completes the Transaction</div>
-        <div class="wf-step__sub">POS synced. Payment link sent via SMS.</div>
-      </div>
-
-      <div class="wf-connector"><div class="wf-connector__line"></div><div class="wf-connector__arrow">›</div></div>
-
-      <div class="wf-step wf-step--end" role="listitem">
-        <div class="wf-step__circle" style="background:linear-gradient(135deg,var(--yellow),var(--orange));">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="white"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-        </div>
-        <div class="wf-step__label">Stay in Touch</div>
-        <div class="wf-step__sub">Guest email & phone saved for promos and return visits.</div>
-      </div>
-
+    <div class="channels3-grid">
+      <article class="ch3 ch3--voice fade-in">
+        <span class="ch3__icon" aria-hidden="true">📞</span>
+        <span class="ch3__eyebrow">Voice</span>
+        <h3>Your best employee, on every call</h3>
+        <ul>
+          <li><strong>Zero hold time</strong>, even during the dinner rush</li>
+          <li><strong>Intelligent upselling</strong>, +20% average ticket</li>
+          <li><strong>Direct POS integration</strong> with Toast, Square, Clover and more</li>
+          <li><strong>Smart escalation</strong> to a real person when it&rsquo;s needed</li>
+        </ul>
+      </article>
+      <article class="ch3 ch3--text fade-in fade-in-delay-1">
+        <span class="ch3__icon" aria-hidden="true">💬</span>
+        <span class="ch3__eyebrow">Text / SMS</span>
+        <h3>The call ends, the experience doesn&rsquo;t</h3>
+        <ul>
+          <li><strong>Payment links</strong>, so guests pay securely right after the call</li>
+          <li><strong>Order confirmations</strong> texted automatically, every time</li>
+          <li><strong>Text-to-order links</strong> for guests who&rsquo;d rather order online</li>
+          <li><strong>Guest numbers saved</strong> so your team can text or call back</li>
+        </ul>
+      </article>
+      <article class="ch3 ch3--email fade-in fade-in-delay-2">
+        <span class="ch3__icon" aria-hidden="true">📧</span>
+        <span class="ch3__eyebrow">Email</span>
+        <h3>Turn callers into regulars</h3>
+        <ul>
+          <li><strong>Guest emails captured</strong> during the call</li>
+          <li><strong>A guest list that grows</strong> with every call</li>
+          <li><strong>Promos and special offers</strong> for your regulars</li>
+          <li><strong>Events and news</strong> to fill seats on slow nights</li>
+        </ul>
+      </article>
     </div>
-
-    <!-- Mission statement -->
-    <div class="fade-in" style="text-align:center;margin-top:4rem;padding:3rem;background:var(--white);border-radius:24px;box-shadow:var(--shadow-md);">
-      <p style="font-size:1.3rem;font-weight:700;color:var(--navy);max-width:600px;margin:0 auto;line-height:1.5;">
-        Three channels. One coherent strategy.<br>Every guest touched at the right time, in the right way.      </p>
-      <p style="font-size:.95rem;color:var(--gray-700);margin-top:1rem;">Omnichannel, consistent guest experience across orders, reservations, and support.</p>
-    </div>
-
   </div>
 </section>
 
@@ -765,50 +580,6 @@
 
     </div>
 
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════
-     AFTER THE CALL — PLATFORM OUTPUTS
-     ═══════════════════════════════════════════════════ -->
-<section class="aftercall" id="after-the-call" aria-labelledby="aftercall-title">
-  <div class="aftercall__inner">
-    <header class="section-header section-header--center">
-      <span class="section-eyebrow eyebrow--orange">After the Call</span>
-      <h2 class="section-title" id="aftercall-title">Every Call Becomes Work That Gets Done</h2>
-      <p class="section-sub section-sub--center">
-        Answering is where TARA starts. Every conversation turns into the right next step for your
-        guest, your team and your operations, at every location, with nothing re-keyed by hand.
-      </p>
-    </header>
-    <div class="aftercall__start fade-in" aria-hidden="true"><span>📞 One guest call</span></div>
-    <div class="aftercall-grid">
-      <article class="aftercall-card fade-in">
-        <span class="aftercall-card__icon" aria-hidden="true">🧾</span>
-        <h3 class="aftercall-card__title">An order in your POS</h3>
-        <p class="aftercall-card__desc">Phone orders go straight into Toast, Clover, Square, SpotOn, NCR Aloha, SkyTab or any POS that uses Olo, with real-time menu sync.</p>
-        <span class="aftercall-card__tag">POS sync</span>
-      </article>
-      <article class="aftercall-card fade-in fade-in-delay-1">
-        <span class="aftercall-card__icon" aria-hidden="true">💬</span>
-        <h3 class="aftercall-card__title">A text to your guest</h3>
-        <p class="aftercall-card__desc">An order confirmation, a secure payment link or your online ordering link, sent by text the moment the call ends.</p>
-        <span class="aftercall-card__tag">Text / SMS</span>
-      </article>
-      <article class="aftercall-card fade-in fade-in-delay-2">
-        <span class="aftercall-card__icon" aria-hidden="true">🎫</span>
-        <h3 class="aftercall-card__title">A ticket for the right team</h3>
-        <p class="aftercall-card__desc">Complaints are emailed to the store with the full transcript. Catering goes to your catering team. Team member and HR requests land in your help desk.</p>
-        <span class="aftercall-card__tag">Routing &amp; escalation</span>
-      </article>
-      <article class="aftercall-card fade-in fade-in-delay-3">
-        <span class="aftercall-card__icon" aria-hidden="true">📊</span>
-        <h3 class="aftercall-card__title">A row in your dashboard</h3>
-        <p class="aftercall-card__desc">Every call tagged, transcribed and counted: volume, outcomes, orders and revenue captured, by brand and by store. Export to CSV or PDF anytime.</p>
-        <span class="aftercall-card__tag">Analytics</span>
-      </article>
-    </div>
-    <p class="aftercall__note fade-in">Help desk routing and the multi-location dashboard are part of Chef&rsquo;s Special. <a href="pricing">Compare plans &rarr;</a></p>
   </div>
 </section>
 
