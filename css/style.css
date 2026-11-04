@@ -1723,3 +1723,25 @@ section.problem, section.encounters, section.results, section.bottom-cta, sectio
 @media (max-width: 600px) {
   .btn--large { white-space: normal; max-width: 100%; justify-content: center; text-align: center; }
 }
+
+/* ── After the call: platform outputs (homepage) ── */
+.encounter-card__after { margin-top: .85rem; padding-top: .85rem; border-top: 1px dashed rgba(255,255,255,.12); font-size: .84rem; color: rgba(255,255,255,.7); line-height: 1.55; }
+.encounter-card__after strong { color: var(--yellow); font-weight: 700; }
+.aftercall { padding: 100px 5%; background: var(--white); }
+.aftercall__inner { max-width: var(--max-w); margin: 0 auto; }
+.aftercall .section-header { margin-bottom: 2rem; }
+.aftercall__start { display: flex; justify-content: center; margin-bottom: 1.75rem; position: relative; }
+.aftercall__start span { display: inline-block; padding: .55rem 1.25rem; border-radius: var(--radius-pill); background: var(--navy); color: var(--white); font-weight: 700; font-size: .95rem; box-shadow: var(--shadow-sm); }
+.aftercall-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+.aftercall-card { background: var(--offwhite); border: 1px solid var(--gray-200); border-top: 4px solid var(--orange); border-radius: var(--radius-lg); padding: 1.6rem 1.4rem; display: flex; flex-direction: column; }
+.aftercall-card:nth-child(2) { border-top-color: #3B82F6; }
+.aftercall-card:nth-child(3) { border-top-color: var(--red); }
+.aftercall-card:nth-child(4) { border-top-color: var(--green); }
+.aftercall-card__icon { font-size: 1.9rem; margin-bottom: .75rem; display: block; }
+.aftercall-card__title { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: .5rem; }
+.aftercall-card__desc { font-size: .9rem; color: var(--gray-700); line-height: 1.6; flex-grow: 1; }
+.aftercall-card__tag { align-self: flex-start; margin-top: 1rem; padding: .22rem .7rem; border-radius: var(--radius-pill); background: rgba(0,0,0,.05); font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--gray-700); }
+.aftercall__note { text-align: center; margin-top: 1.75rem; font-size: .88rem; color: var(--gray-700); }
+.aftercall__note a { color: var(--red); font-weight: 700; }
+@media (max-width: 960px) { .aftercall-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .aftercall { padding: 70px 5%; } .aftercall-grid { grid-template-columns: 1fr; } }
