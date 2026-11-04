@@ -1847,3 +1847,11 @@ section.problem, section.encounters, section.results, section.bottom-cta, sectio
 .enc-ch b { display: block; color: #fff; font-size: 1rem; margin-bottom: .2rem; }
 @media (max-width: 900px) { .enc-channels { grid-template-columns: 1fr; } }
 .encounter-quote { font-style: normal; }
+
+/* ── Results: customer quote ── */
+.results-quote { position: relative; z-index: 1; max-width: 860px; margin: 3.5rem auto 0; display: flex; align-items: center; gap: 2rem; padding: 2rem 2.25rem; border-radius: 20px; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.1); }
+.results-quote__logo { flex: 0 0 auto; width: 150px; height: auto; }
+.results-quote blockquote { margin: 0; color: #fff; font-size: 1.3rem; font-weight: 600; line-height: 1.45; }
+.results-quote figcaption { margin-top: .75rem; color: rgba(255,255,255,.6); font-size: .9rem; letter-spacing: .02em; }
+.results-quote figcaption::before { content: "— "; }
+@media (max-width: 700px) { .results-quote { flex-direction: column; text-align: center; gap: 1.25rem; padding: 1.75rem 1.25rem; } .results-quote blockquote { font-size: 1.1rem; } }
