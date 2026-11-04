@@ -1750,7 +1750,7 @@ section.problem, section.encounters, section.results, section.bottom-cta, sectio
 /* ── Homepage v2: hero dashboard mock ── */
 .hero__right--dash { align-items: center; }
 .dash-wrap { width: 100%; max-width: 620px; margin: 0; }
-.dash { background: #fff; border: 1px solid var(--gray-200); border-radius: 18px; box-shadow: 0 30px 80px rgba(26,26,46,.18), 0 4px 14px rgba(26,26,46,.06); overflow: hidden; transform: perspective(1600px) rotateY(-4deg); }
+.dash { background: #fff; border: 1px solid var(--gray-200); border-radius: 18px; box-shadow: 0 30px 80px rgba(26,26,46,.18), 0 4px 14px rgba(26,26,46,.06); overflow: hidden; -webkit-font-smoothing: antialiased; text-rendering: geometricPrecision; }
 .dash__bar { display: flex; align-items: center; gap: .9rem; padding: .6rem 1rem; background: #23262F; }
 .dash__dots { display: flex; gap: 5px; }
 .dash__dots i { width: 9px; height: 9px; border-radius: 50%; background: rgba(255,255,255,.25); }
@@ -1759,16 +1759,16 @@ section.problem, section.encounters, section.results, section.bottom-cta, sectio
 .dash__body { padding: 1rem 1.1rem 1.1rem; }
 .dash__head { display: flex; align-items: center; gap: .45rem; margin-bottom: .85rem; flex-wrap: wrap; }
 .dash__title { font-weight: 800; font-size: 1.05rem; color: var(--navy); margin-right: auto; }
-.dash__chip { font-size: .68rem; font-weight: 600; color: var(--gray-700); border: 1px solid var(--gray-200); border-radius: 999px; padding: .22rem .6rem; }
+.dash__chip { font-size: .74rem; font-weight: 600; color: var(--gray-700); border: 1px solid var(--gray-200); border-radius: 999px; padding: .22rem .6rem; }
 .dash__chip--on { background: var(--navy); color: #fff; border-color: var(--navy); }
 .dash__kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: .5rem; margin-bottom: .7rem; }
 .dash__kpi { border: 1px solid var(--gray-200); border-radius: 10px; padding: .55rem .6rem; }
-.dash__kpi span { display: block; font-size: .62rem; color: var(--gray-700); margin-bottom: .2rem; white-space: nowrap; }
-.dash__kpi b { font-size: 1.05rem; font-weight: 800; color: var(--navy); }
+.dash__kpi span { display: block; font-size: .7rem; color: var(--gray-700); margin-bottom: .2rem; white-space: nowrap; }
+.dash__kpi b { font-size: 1.15rem; font-weight: 800; color: var(--navy); }
 .dash__kpi--hl { background: #FFF4F4; border-color: rgba(187,0,0,.35); border-top: 2px solid var(--red); }
 .dash__chart { border: 1px solid var(--gray-200); border-radius: 10px; padding: .6rem .7rem .4rem; margin-bottom: .7rem; }
-.dash__chart-head { display: flex; justify-content: space-between; align-items: center; font-size: .7rem; color: var(--gray-700); margin-bottom: .35rem; }
-.dash__chart-head b { color: var(--navy); font-size: .75rem; }
+.dash__chart-head { display: flex; justify-content: space-between; align-items: center; font-size: .74rem; color: var(--gray-700); margin-bottom: .35rem; }
+.dash__chart-head b { color: var(--navy); font-size: .8rem; }
 .dash__dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; margin: 0 .25rem 0 .55rem; }
 .dash__dot--rev { background: var(--red); }
 .dash__dot--vol { background: #F06418; }
@@ -1780,9 +1780,9 @@ section.problem, section.encounters, section.results, section.bottom-cta, sectio
 .dash__line--vol { stroke: #F06418; }
 .dash__line--rev { stroke: var(--red); }
 .dash__tags { display: flex; flex-wrap: wrap; gap: .35rem; }
-.dash__tags span { font-size: .66rem; font-weight: 600; color: var(--navy); background: #FFF3EA; border: 1px solid #FBD5BC; border-radius: 999px; padding: .22rem .55rem; }
+.dash__tags span { font-size: .72rem; font-weight: 600; color: var(--navy); background: #FFF3EA; border: 1px solid #FBD5BC; border-radius: 999px; padding: .22rem .55rem; }
 .dash__tags b { color: var(--red); margin-left: .2rem; }
-.dash__cap { text-align: center; font-size: .75rem; color: var(--gray-500); margin-top: .9rem; }
+.dash__cap { text-align: center; font-size: .78rem; color: var(--gray-700); margin-top: .9rem; }
 
 /* ── Homepage v2: call reasons + multi-unit ── */
 .reasons { display: grid; grid-template-columns: 1.1fr 200px 1.6fr; gap: 2rem; align-items: center; margin-top: 3rem; padding: 2rem; background: var(--offwhite); border: 1px solid var(--gray-200); border-radius: var(--radius-lg); }
