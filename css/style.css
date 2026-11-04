@@ -1836,3 +1836,13 @@ section.problem, section.encounters, section.results, section.bottom-cta, sectio
   .reasons__list { grid-template-columns: 1fr; width: 100%; }
   .channels3 { padding: 70px 5%; }
 }
+
+/* ── Homepage v2.1: channels folded into Handled; hero stat strip removed ── */
+.anchor-target { position: relative; top: -80px; height: 0; }
+.hero__bottom { margin-top: 2.5rem; }
+.hero__trusted { margin-top: 0; }
+.enc-channels { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,.12); }
+.enc-ch { display: flex; gap: .8rem; align-items: flex-start; color: rgba(255,255,255,.8); font-size: .9rem; line-height: 1.5; }
+.enc-ch > span { font-size: 1.4rem; line-height: 1; margin-top: .15rem; }
+.enc-ch b { display: block; color: #fff; font-size: 1rem; margin-bottom: .2rem; }
+@media (max-width: 900px) { .enc-channels { grid-template-columns: 1fr; } }
