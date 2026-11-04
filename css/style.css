@@ -1725,7 +1725,8 @@ section.problem, section.encounters, section.results, section.bottom-cta, sectio
 }
 
 /* ── After the call: platform outputs (homepage) ── */
-.encounter-card__after { margin-top: .85rem; padding-top: .85rem; border-top: 1px dashed rgba(255,255,255,.12); font-size: .84rem; color: rgba(255,255,255,.7); line-height: 1.55; }
+.encounter-card__after { margin-top: .85rem; padding-top: .85rem; border-top: 1px dashed rgba(255,255,255,.18); font-size: .86rem; color: rgba(255,255,255,.88); line-height: 1.55; }
+.encounters .encounter-card__desc { color: rgba(255,255,255,.75); }
 .encounter-card__after strong { color: var(--yellow); font-weight: 700; }
 .aftercall { padding: 100px 5%; background: var(--white); }
 .aftercall__inner { max-width: var(--max-w); margin: 0 auto; }
