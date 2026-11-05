@@ -144,6 +144,27 @@
       color: #a01818;
       gap: .6rem;
     }
+
+    /* ── Lucille's case study ── */
+    .case { padding: 90px 5%; background: var(--white); }
+    .case__inner { max-width: 960px; margin: 0 auto; }
+    .case__head { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
+    .case__head img { width: 150px; height: auto; }
+    .case__eyebrow { font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; color: var(--red); margin-bottom: .35rem; }
+    .case__title { font-size: 2rem; font-weight: 800; color: var(--navy); line-height: 1.2; margin: 0; }
+    .case__cols { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem 3rem; }
+    @media (max-width: 768px) { .case__cols { grid-template-columns: 1fr; } .case__title { font-size: 1.6rem; } }
+    .case h3 { font-size: 1.1rem; font-weight: 700; color: var(--navy); margin: 0 0 .6rem; }
+    .case p, .case li { font-size: 1rem; line-height: 1.7; color: var(--gray-700); }
+    .case ul { margin: 0; padding-left: 1.2rem; }
+    .case li { margin-bottom: .35rem; }
+    .case__results { margin: 3rem 0 0; }
+    .case__results .metric-strip { margin-top: 1rem; }
+    .case__note { font-size: .85rem !important; color: var(--gray-500) !important; text-align: center; margin-top: 1rem; }
+    .case__quote { margin: 3rem 0 0; padding: 2rem 2.25rem; border-radius: var(--radius-lg); background: var(--offwhite); border-left: 4px solid var(--red); }
+    .case__quote blockquote { margin: 0; font-size: 1.25rem; font-weight: 600; color: var(--navy); line-height: 1.5; }
+    .case__quote figcaption { margin-top: .75rem; font-size: .9rem; color: var(--gray-500); }
+    .case__quote figcaption::before { content: "— "; }
   </style>
   <link rel="canonical" href="https://heytara.ai/featured-deployments" />
   <meta property="og:site_name" content="HeyTARA" />
@@ -156,6 +177,7 @@
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="HeyTARA — The Hospitality OS for Multi-Unit Restaurants" />
   <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://heytara.ai/"}, {"@type": "ListItem", "position": 2, "name": "Featured Deployments", "item": "https://heytara.ai/featured-deployments"}]}, {"@context": "https://schema.org", "@type": "CollectionPage", "name": "Featured Deployments", "description": "See how real restaurant brands are deploying HeyTARA for voice ordering, guest FAQs, catering, and intelligent call routing.", "url": "https://heytara.ai/featured-deployments", "publisher": {"@type": "Organization", "name": "HeyTARA", "url": "https://heytara.ai/"}}]</script>
 </head>
 <body>
 
@@ -246,14 +268,14 @@
             <h3 class="deploy-feature__name">Lucille's Smokehouse BBQ</h3>
             <p class="deploy-feature__label">Deployment</p>
             <p class="deploy-feature__summary">
-              <span class="ht-wm"><span class="ht-wm__hey">Hey</span><span class="ht-wm__tara">TARA</span></span> is being deployed to automate takeout phone orders, generate secure SMS payment links, send order confirmations, and ensure every guest call is answered — even during peak hours.
+              <span class="ht-wm"><span class="ht-wm__hey">Hey</span><span class="ht-wm__tara">TARA</span></span> is live in production, taking takeout phone orders, generating secure SMS payment links, sending order confirmations, and making sure every guest call is answered — even during peak hours.
             </p>
             <div class="deploy-feature__capabilities">
               <span class="deploy-chip">AI Takeout Ordering</span>
               <span class="deploy-chip">SMS Payment Links</span>
               <span class="deploy-chip">Order Confirmations</span>
             </div>
-            <a href="contact" class="deploy-feature__link">Learn More &rarr;</a>
+            <a href="#lucilles-case-study" class="deploy-feature__link">Read the Case Study &rarr;</a>
           </div>
         </div>
       </div>
@@ -307,6 +329,61 @@
 
     </div>
 
+  </div>
+</section>
+
+<!-- LUCILLE'S CASE STUDY -->
+<section class="case" id="lucilles-case-study">
+  <div class="case__inner">
+    <div class="case__head fade-in">
+      <img src="lucilles-logo-2026.png" alt="Lucille's Smokehouse BBQ" width="180" height="95" loading="lazy" />
+      <div>
+        <p class="case__eyebrow">Case Study · Casual Dining</p>
+        <h2 class="case__title">How Lucille&rsquo;s Smokehouse BBQ Turned Its Phones Into a Takeout Channel</h2>
+      </div>
+    </div>
+
+    <div class="case__cols fade-in">
+      <div>
+        <h3>The Challenge</h3>
+        <p>Lucille&rsquo;s is a multi-location smokehouse BBQ brand, and many of its takeout orders start with a phone call. Every call answered by a team member is time away from guests in the dining room, and every call that goes unanswered during a rush can be a lost order.</p>
+        <p>Lucille&rsquo;s wanted every call answered and every phone order captured accurately, without pulling staff away from guests in the building.</p>
+      </div>
+      <div>
+        <h3>Why <span class="ht-wm"><span class="ht-wm__hey">Hey</span><span class="ht-wm__tara">TARA</span></span></h3>
+        <p>Lucille&rsquo;s reviewed the key AI phone vendors before choosing <span class="ht-wm"><span class="ht-wm__hey">Hey</span><span class="ht-wm__tara">TARA</span></span>. Our team configures and runs the deployment together with the brand&rsquo;s operations and technology teams, so TARA is built around how Lucille&rsquo;s actually works.</p>
+      </div>
+      <div>
+        <h3>What TARA Does</h3>
+        <ul>
+          <li>Answers every call, including during the dinner rush</li>
+          <li>Takes takeout orders in natural conversation, with modifiers and pickup times</li>
+          <li>Suggests add-ons that fit the order</li>
+          <li>Texts guests a secure link to pay, so no one reads a card number out loud</li>
+          <li>Sends an SMS confirmation of every order</li>
+          <li>Transfers callers who ask for a person to the team</li>
+        </ul>
+      </div>
+      <div>
+        <h3>How It Rolled Out</h3>
+        <p>We started with a production pilot with real guests and real orders. Our team built TARA around Lucille&rsquo;s menu, hours and escalation rules before launch. After the pilot, Lucille&rsquo;s asked us to expand to more locations.</p>
+      </div>
+    </div>
+
+    <div class="case__results fade-in">
+      <h3 style="text-align:center;">Pilot Results</h3>
+      <div class="metric-strip">
+        <div class="metric"><span class="metric__num">1.5 hrs</span><span class="metric__label">Staff phone time saved per location, per week</span></div>
+        <div class="metric"><span class="metric__num">11%</span><span class="metric__label">Upsell acceptance</span></div>
+        <div class="metric"><span class="metric__num">+7.9%</span><span class="metric__label">Higher average ticket</span></div>
+      </div>
+      <p class="case__note">From Lucille&rsquo;s pilot reporting. Results vary by restaurant and call volume.</p>
+    </div>
+
+    <figure class="case__quote fade-in">
+      <blockquote>&ldquo;We selected HeyTARA after thoroughly reviewing all of the key competitors. They made us feel like a real partner.&rdquo;</blockquote>
+      <figcaption>Lucille&rsquo;s Smokehouse BBQ</figcaption>
+    </figure>
   </div>
 </section>
 
