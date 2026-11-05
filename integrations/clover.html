@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-55Z00Z27TK"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-55Z00Z27TK');</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clover AI Phone Ordering &amp; Answering | HeyTARA</title>
+  <meta name="description" content="AI phone ordering for Clover restaurants. TARA answers every call, takes orders from your Clover menu and sends them into Clover. Flat pricing per location, no commissions." />
+  <link rel="icon" href="../favicon.ico?v=2" type="image/x-icon" />
+  <link rel="icon" href="../favicon.png?v=2" type="image/png" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Saira+Semi+Condensed:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/pages.css" />
+  <link rel="canonical" href="https://heytara.ai/integrations/clover" />
+  <meta property="og:site_name" content="HeyTARA" />
+  <meta property="og:title" content="Clover AI Phone Ordering &amp; Answering | HeyTARA" />
+  <meta property="og:description" content="AI phone ordering for Clover restaurants. TARA answers every call, takes orders from your Clover menu and sends them into Clover. Flat pricing per location, no commissions." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://heytara.ai/integrations/clover" />
+  <meta property="og:image" content="https://heytara.ai/heytara-og-v3.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="HeyTARA — The Hospitality OS for Multi-Unit Restaurants" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://heytara.ai/"}, {"@type": "ListItem", "position": 2, "name": "Integrations", "item": "https://heytara.ai/integrations/"}, {"@type": "ListItem", "position": 3, "name": "Clover", "item": "https://heytara.ai/integrations/clover"}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Does HeyTARA integrate with Clover?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. HeyTARA connects to Clover with real-time menu sync. On the Main Course plan ($199/month per location), TARA takes full phone orders and sends them into Clover. On the Starter plan ($99/month per location), TARA answers every call and texts guests a link to your online ordering site."}}, {"@type": "Question", "name": "Do phone orders go straight into Clover, or does the guest get a link?", "acceptedAnswer": {"@type": "Answer", "text": "Either. With direct ordering on Main Course, TARA takes the whole order in conversation and sends it into Clover, so nobody keys it in by hand. Text-to-order links are on every plan for guests who would rather finish online."}}, {"@type": "Question", "name": "Does TARA understand our Clover modifier groups?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. TARA builds each order from the items, modifiers and prices in your Clover menu, including combos, substitutions, add-ons and pickup times. Clean, clearly named modifier groups make phone orders faster, and we help with that during setup."}}, {"@type": "Question", "name": "What happens when we change prices or run out of an item in Clover?", "acceptedAnswer": {"@type": "Answer", "text": "TARA uses real-time menu sync with Clover, so menu and price changes you make in Clover carry over to what TARA offers callers. You don't maintain a second menu."}}, {"@type": "Question", "name": "How do guests pay for Clover phone orders?", "acceptedAnswer": {"@type": "Answer", "text": "On Main Course, TARA texts guests a secure link to pay for their order, so no one reads a card number over the phone."}}, {"@type": "Question", "name": "Do you charge a commission on Clover orders?", "acceptedAnswer": {"@type": "Answer", "text": "No. Every HeyTARA plan is a flat monthly price per location with unlimited calls, and you keep 100% of every order TARA takes. Paying for the year up front saves 25%."}}, {"@type": "Question", "name": "Does TARA take calls in Spanish?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. On the Main Course plan, TARA understands and responds to callers in Spanish."}}, {"@type": "Question", "name": "Some of our locations aren't on Clover. Can one phone agent cover all of them?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Besides Clover, HeyTARA connects to Toast, Square, SpotOn, NCR Aloha, SkyTab and any POS that uses Olo, so groups with different systems across brands or locations can run one phone agent."}}, {"@type": "Question", "name": "Who sets it up, and how long does it take?", "acceptedAnswer": {"@type": "Answer", "text": "We do. We connect Clover, import your menu, set up your hours, upsells and transfers, and run test calls before you go live. We'll give you a go-live date for your locations on the demo call."}}]}]</script>
+</head>
+<body>
+
+
+<header>
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="../" class="nav__logo" aria-label="HeyTARA home">
+        <img src="../heytara-logo-dark.png" alt="HeyTARA" />
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="../#channels">How It Works</a></li>
+        <li class="nav__dropdown">
+          <button class="nav__dropdown-toggle" aria-haspopup="true" aria-expanded="false">Industries <span class="nav__caret" aria-hidden="true">&#9662;</span></button>
+          <ul class="nav__dropdown-menu" role="list">
+            <li><a href="../industries/qsr">Quick Service</a></li>
+            <li><a href="../industries/fast-casual">Fast Casual</a></li>
+            <li><a href="../industries/casual-dining">Casual Dining</a></li>
+            <li><a href="../industries/fine-dining">Fine Dining</a></li>
+            <li><a href="../industries/pizza">Pizza</a></li>
+            <li><a href="../industries/coffee">Coffee Shops</a></li>
+            <li><a href="../industries/bars">Bars &amp; Breweries</a></li>
+          </ul>
+        </li>
+        <li><a href="../pricing">Pricing</a></li>
+        <li><a href="../#results">Results</a></li>
+        <li><a href="../partners">Partners</a></li>
+        <li><a href="../blog/">Blog</a></li>
+        <li><a href="../contact">Contact</a></li>
+      </ul>
+      <a href="../contact" class="nav__cta">Book a Demo &rarr;</a>
+      <button class="nav__burger" id="nav-burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav id="nav-mobile" class="nav__mobile" aria-label="Mobile navigation">
+      <a href="../#channels">How It Works</a>
+      <span class="nav__mobile-heading">Industries</span>
+      <a href="../industries/qsr" class="nav__mobile-sub">Quick Service</a>
+      <a href="../industries/fast-casual" class="nav__mobile-sub">Fast Casual</a>
+      <a href="../industries/casual-dining" class="nav__mobile-sub">Casual Dining</a>
+      <a href="../industries/fine-dining" class="nav__mobile-sub">Fine Dining</a>
+      <a href="../industries/pizza" class="nav__mobile-sub">Pizza</a>
+      <a href="../industries/coffee" class="nav__mobile-sub">Coffee Shops</a>
+      <a href="../industries/bars" class="nav__mobile-sub">Bars &amp; Breweries</a>
+      <a href="../pricing">Pricing</a>
+      <a href="../#results">Results</a>
+      <a href="../partners">Partners</a>
+      <a href="../blog/">Blog</a>
+      <a href="../contact">Contact</a>
+      <a href="../contact" class="nav__cta">Book a Demo &rarr;</a>
+    </nav>
+  </nav>
+</header>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="hero__bg" aria-hidden="true">
+    <div class="hero__orb hero__orb--1"></div>
+    <div class="hero__orb hero__orb--2"></div>
+    <div class="hero__orb hero__orb--3"></div>
+  </div>
+  <div class="page-hero__inner">
+    <span class="page-hero__eyebrow"><a href="./" style="color:inherit;text-decoration:none;">Integrations</a> · Clover</span>
+    <h1 class="page-hero__title">AI Phone Ordering for<br /><em>Clover</em> Restaurants</h1>
+    <p class="page-hero__sub">TARA picks up every call, takes the order in conversation and sends it into Clover, using the items, modifier groups and prices you already set up. Flat pricing per location, unlimited calls and no commission on your orders.</p>
+    <div class="page-hero__ctas">
+      <a href="../contact" class="btn btn--primary btn--large">Book a Clover Demo &rarr;</a>
+      <a href="#how-it-works" class="btn btn--ghost btn--large">See How It Works ↓</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--offwhite">
+  <div class="section__inner">
+    <header class="section-header section-header--center">
+      <span class="section-eyebrow eyebrow--red">The Challenge</span>
+      <h2 class="section-title">Clover Runs the Counter. Who&#x27;s Running the Phone?</h2>
+      <p class="section-sub section-sub--center">Payments, the register and online orders all run through Clover. The phone still depends on whoever has a free hand.</p>
+    </header>
+    <div class="card-grid">
+      <article class="info-card fade-in">
+        <span class="info-card__icon" aria-hidden="true">🧑‍🍳</span>
+        <h3 class="info-card__title">Everyone Is Already Busy</h3>
+        <p class="info-card__desc">In a lean crew the person who answers the phone is also ringing up the counter and bagging orders. During the lunch rush, the phone loses.</p>
+      </article>
+      <article class="info-card fade-in fade-in-delay-1">
+        <span class="info-card__icon" aria-hidden="true">📝</span>
+        <h3 class="info-card__title">Notepad Orders</h3>
+        <p class="info-card__desc">Orders written down by hand and keyed into Clover later are how a &ldquo;no onions&rdquo; or a missing side slips through.</p>
+      </article>
+      <article class="info-card fade-in fade-in-delay-2">
+        <span class="info-card__icon" aria-hidden="true">🔗</span>
+        <h3 class="info-card__title">Half-Finished Orders</h3>
+        <p class="info-card__desc">Tools that only text a link hand the work back to the guest. Some finish the order. Some call the place down the street instead.</p>
+      </article>
+      <article class="info-card fade-in fade-in-delay-3">
+        <span class="info-card__icon" aria-hidden="true">💳</span>
+        <h3 class="info-card__title">Card Numbers Out Loud</h3>
+        <p class="info-card__desc">Taking a card number by phone at a loud counter is slow, error-prone and not something you want staff writing down.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="channel channel--voice" id="how-it-works">
+  <div class="channel__inner container">
+    <div class="channel__content fade-in">
+      <div class="channel__icon-wrap" aria-hidden="true">🔌</div>
+      <span class="section-eyebrow eyebrow--purple">How TARA Works With Clover</span>
+      <h2 class="section-title">Phone Orders That Show Up in Clover, Ready to Make</h2>
+      <p class="section-sub section-sub--light">TARA orders from the menu you already keep in Clover, so your team gets a normal Clover order instead of a note.</p>
+      <ul class="feature-list">
+        <li class="feature-item">
+          <div class="feature-item__check" aria-hidden="true">✓</div>
+          <span class="feature-item__text">Picks up on the first ring, including several calls at once</span>
+        </li>
+        <li class="feature-item">
+          <div class="feature-item__check" aria-hidden="true">✓</div>
+          <span class="feature-item__text">Builds each order from your Clover items, modifier groups and prices</span>
+        </li>
+        <li class="feature-item">
+          <div class="feature-item__check" aria-hidden="true">✓</div>
+          <span class="feature-item__text">Sends the finished order into Clover (Main Course)</span>
+        </li>
+        <li class="feature-item">
+          <div class="feature-item__check" aria-hidden="true">✓</div>
+          <span class="feature-item__text">Real-time menu sync: price and menu changes in Clover carry over</span>
+        </li>
+        <li class="feature-item">
+          <div class="feature-item__check" aria-hidden="true">✓</div>
+          <span class="feature-item__text">Texts a secure payment link, so no card numbers over the phone</span>
+        </li>
+        <li class="feature-item">
+          <div class="feature-item__check" aria-hidden="true">✓</div>
+          <span class="feature-item__text">Texts your online ordering link to guests who&#x27;d rather order online</span>
+        </li>
+      </ul>
+    </div>
+    <div class="channel__visual fade-in fade-in-delay-2">
+      <div class="channel__card">
+        <div class="channel__card-title"><span aria-hidden="true">🧾</span> New phone order → Clover</div>
+        <div style="font-size:.92rem;color:rgba(255,255,255,.85);line-height:1.9;">
+          <div style="display:flex;justify-content:space-between;gap:1rem;"><span>2× Chicken Caesar Wrap</span><span style="color:rgba(255,255,255,.45);">no croutons</span></div>
+          <div style="display:flex;justify-content:space-between;gap:1rem;"><span>1× Turkey Club</span><span style="color:rgba(255,255,255,.45);">sub sourdough</span></div>
+          <div style="display:flex;justify-content:space-between;gap:1rem;"><span>3× Lemonade</span><span style="color:#CF93FF;">+ added by TARA</span></div>
+          <div style="display:flex;justify-content:space-between;gap:1rem;"><span>Pickup</span><span style="color:rgba(255,255,255,.45);">12:15 PM</span></div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.1);">
+          <div><div style="font-size:1.8rem;font-weight:800;color:#CF93FF;">0</div><div style="font-size:.78rem;color:rgba(255,255,255,.45);">Card numbers read aloud</div></div>
+          <div><div style="font-size:1.8rem;font-weight:800;color:#CF93FF;">0%</div><div style="font-size:.78rem;color:rgba(255,255,255,.45);">Commission on orders</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="howitworks">
+  <div class="howitworks__inner">
+    <header class="section-header section-header--center">
+      <span class="section-eyebrow eyebrow--orange">Before You Go Live</span>
+      <h2 class="section-title">Get Your Clover Menu Phone-Ready</h2>
+    </header>
+    <div class="steps">
+      <div class="step-card">
+        <div class="step-num" aria-hidden="true">1</div>
+        <h3 class="step-card__title">Names Guests Say</h3>
+        <p class="step-card__desc">TARA reads your menu out loud, so &ldquo;Chicken Caesar Wrap&rdquo; works better than &ldquo;CHX CSR WRP.&rdquo; We&#x27;ll flag any names that need a tweak.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num" aria-hidden="true">2</div>
+        <h3 class="step-card__title">Clean Modifier Groups</h3>
+        <p class="step-card__desc">Clear group names, required choices like size marked as required, and no duplicates. TARA asks for what&#x27;s required and offers what&#x27;s optional.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num" aria-hidden="true">3</div>
+        <h3 class="step-card__title">Prices on Add-Ons</h3>
+        <p class="step-card__desc">Put prices on modifiers like extra cheese or a size upgrade in Clover, so every phone order totals correctly.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num" aria-hidden="true">4</div>
+        <h3 class="step-card__title">Hide What You Don&#x27;t Sell To-Go</h3>
+        <p class="step-card__desc">Dine-in-only items, open items and test items shouldn&#x27;t be offered by phone. We set up which items TARA offers callers.</p>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:2rem;color:var(--gray-500);font-size:.95rem;">The full checklist is in our <a href="../blog/best-ai-phone-agent-clover-restaurants" style="color:var(--red);font-weight:600;">Clover buying guide</a>.</p>
+  </div>
+</section>
+
+<section class="section section--white">
+  <div class="section__inner">
+    <header class="section-header section-header--center">
+      <span class="section-eyebrow eyebrow--orange">Side by Side</span>
+      <h2 class="section-title">Three Ways to Handle Clover Phone Orders</h2>
+      <p class="section-sub section-sub--center">Whatever you compare, ask where the order ends up, then ask to watch a phone order land in your Clover live on the demo.</p>
+    </header>
+    <div class="compare-table-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th scope="col">What matters</th>
+            <th scope="col" class="compare-col-tara"><span class="ht-wm"><span class="ht-wm__hey">Hey</span><span class="ht-wm__tara">TARA</span></span> + Clover</th>
+            <th scope="col">Link-only phone tools</th>
+            <th scope="col">Staff on the phone</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="compare-feature">Where the order goes</td>
+            <td class="compare-col-tara"><span class="compare-yes">&#10003; Into Clover</span></td>
+            <td><span class="compare-partial">~ Guest finishes online, if they do</span></td>
+            <td><span class="compare-partial">~ Keyed in by hand</span></td>
+          </tr>
+          <tr>
+            <td class="compare-feature">Modifiers and add-on prices</td>
+            <td class="compare-col-tara"><span class="compare-yes">&#10003; From your Clover menu</span></td>
+            <td><span class="compare-yes">&#10003; Your online menu</span></td>
+            <td><span class="compare-partial">~ Depends who answers</span></td>
+          </tr>
+          <tr>
+            <td class="compare-feature">Calls during the rush</td>
+            <td class="compare-col-tara"><span class="compare-yes">&#10003; All answered, at once</span></td>
+            <td><span class="compare-yes">&#10003; All answered</span></td>
+            <td><span class="compare-no">&#10007; Some ring out</span></td>
+          </tr>
+          <tr>
+            <td class="compare-feature">Taking payment</td>
+            <td class="compare-col-tara"><span class="compare-yes">&#10003; Secure link by text</span></td>
+            <td><span class="compare-yes">&#10003; Guest pays online</span></td>
+            <td><span class="compare-partial">~ Card number read aloud</span></td>
+          </tr>
+          <tr>
+            <td class="compare-feature">Upsell on every order</td>
+            <td class="compare-col-tara"><span class="compare-yes">&#10003; Yes</span></td>
+            <td><span class="compare-no">&#10007; No</span></td>
+            <td><span class="compare-partial">~ When there&#x27;s time</span></td>
+          </tr>
+          <tr>
+            <td class="compare-feature">Commissions</td>
+            <td class="compare-col-tara"><span class="compare-yes">&#10003; None</span></td>
+            <td><span class="compare-partial">~ Varies by vendor</span></td>
+            <td><span class="compare-yes">&#10003; None, but labor cost</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="text-align:center;margin-top:2rem;color:var(--gray-500);font-size:.95rem;max-width:760px;margin-left:auto;margin-right:auto;">Comparing vendors? Bring the questions from our <a href="../blog/best-ai-phone-agent-clover-restaurants" style="color:var(--red);font-weight:600;">Clover guide</a> and the vendor-neutral <a href="../restaurant-ai-phone-agent-buyers-guide/" style="color:var(--red);font-weight:600;">buyer&#x27;s guide</a>.</p>
+  </div>
+</section>
+
+<section class="section section--offwhite">
+  <div class="section__inner">
+    <header class="section-header section-header--center">
+      <span class="section-eyebrow eyebrow--green">Pick Your Level</span>
+      <h2 class="section-title">Answer Every Call Now. Add Clover Ordering When You&#x27;re Ready.</h2>
+      <p class="section-sub section-sub--center">Every plan includes unlimited calls and no commissions. Pay for the year up front and save 25%.</p>
+    </header>
+    <div class="card-grid">
+      <article class="info-card fade-in">
+        <span class="info-card__icon" aria-hidden="true">📞</span>
+        <h3 class="info-card__title">Starter, $99/mo per location</h3>
+        <p class="info-card__desc">TARA answers every call, handles your FAQs, transfers guests who ask for a person and texts callers your online ordering link.</p>
+      </article>
+      <article class="info-card fade-in fade-in-delay-1">
+        <span class="info-card__icon" aria-hidden="true">🍽️</span>
+        <h3 class="info-card__title">Main Course, $199/mo per location</h3>
+        <p class="info-card__desc">Adds phone orders sent straight into Clover with real-time menu sync, upselling, payments by text, Spanish, warm handoffs, reservations and call transcripts.</p>
+      </article>
+      <article class="info-card fade-in fade-in-delay-2">
+        <span class="info-card__icon" aria-hidden="true">🏢</span>
+        <h3 class="info-card__title">Chef&#x27;s Special, Custom</h3>
+        <p class="info-card__desc">For multi-unit groups: multi-location dashboard, smart call routing, location-level settings and custom integrations, managed by our team.</p>
+      </article>
+    </div>
+    <p style="text-align:center;margin-top:2rem;"><a href="../pricing" style="color:var(--red);font-weight:700;">Compare every feature &rarr;</a></p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <header class="section-header section-header--center">
+      <span class="section-eyebrow eyebrow--orange">Common Questions</span>
+      <h2 class="section-title">Clover + <span class="ht-wm"><span class="ht-wm__hey">Hey</span><span class="ht-wm__tara">TARA</span></span> FAQ</h2>
+    </header>
+    <div class="faq-list fade-in">
+      <div class="faq-item">
+        <button class="faq-item__q" aria-expanded="false">
+          <span>Does <span class="ht-wm"><span class="ht-wm__hey">Hey</span><span class="ht-wm__tara">TARA</span></span> integrate with Clover?</span>
+          <span class="faq-item__icon">+</span>
+        </button>
+        <div class="faq-item__a">
+          <p>Yes. <span class="ht-wm"><span class="ht-wm__hey">Hey</span><span class="ht-wm__tara">TARA</span></span> connects to Clover with real-time menu sync. On the Main Course plan ($199/month per location), TARA takes full phone orders and sends them into Clover. On the Starter plan ($99/month per location), TARA answers every call and texts guests a link to your online ordering site.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-item__q" aria-expanded="false">
+          <span>Do phone orders go straight into Clover, or does the guest get a link?</span>
+          <span class="faq-item__icon">+</span>
+        </button>
+        <div class="faq-item__a">
+          <p>Either. With direct ordering on Main Course, TARA takes the whole order in conversation and sends it into Clover, so nobody keys it in by hand. Text-to-order links are on every plan for guests who would rather finish online.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-item__q" aria-expanded="false">
+          <span>Does TARA understand our Clover modifier groups?</span>
+          <span class="faq-item__icon">+</span>
+        </button>
+        <div class="faq-item__a">
+          <p>Yes. TARA builds each order from the items, modifiers and prices in your Clover menu, including combos, substitutions, add-ons and pickup times. Clean, clearly named modifier groups make phone orders faster, and we help with that during setup.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-item__q" aria-expanded="false">
+          <span>What happens when we change prices or run out of an item in Clover?</span>
+          <span class="faq-item__icon">+</span>
+        </button>
+        <div class="faq-item__a">
+          <p>TARA uses real-time menu sync with Clover, so menu and price changes you make in Clover carry over to what TARA offers callers. You don&#x27;t maintain a second menu.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-item__q" aria-expanded="false">
+          <span>How do guests pay for Clover phone orders?</span>
+          <span class="faq-item__icon">+</span>
+        </button>
+        <div class="faq-item__a">
+          <p>On Main Course, TARA texts guests a secure link to pay for their order, so no one reads a card number over the phone.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-item__q" aria-expanded="false">
+          <span>Do you charge a commission on Clover orders?</span>
+          <span class="faq-item__icon">+</span>
+        </button>
+        <div class="faq-item__a">
+          <p>No. Every <span class="ht-wm"><span class="ht-wm__hey">Hey</span><span class="ht-wm__tara">TARA</span></span> plan is a flat monthly price per location with unlimited calls, and you keep 100% of every order TARA takes. Paying for the year up front saves 25%.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-item__q" aria-expanded="false">
+          <span>Does TARA take calls in Spanish?</span>
+          <span class="faq-item__icon">+</span>
+        </button>
+        <div class="faq-item__a">
+          <p>Yes. On the Main Course plan, TARA understands and responds to callers in Spanish.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-item__q" aria-expanded="false">
+          <span>Some of our locations aren&#x27;t on Clover. Can one phone agent cover all of them?</span>
+          <span class="faq-item__icon">+</span>
+        </button>
+        <div class="faq-item__a">
+          <p>Yes. Besides Clover, <span class="ht-wm"><span class="ht-wm__hey">Hey</span><span class="ht-wm__tara">TARA</span></span> connects to Toast, <a href="square">Square</a>, SpotOn, <a href="ncr-aloha">NCR Aloha</a>, SkyTab and any POS that uses <a href="olo-omnivore">Olo</a>, so groups with different systems across brands or locations can run one phone agent.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-item__q" aria-expanded="false">
+          <span>Who sets it up, and how long does it take?</span>
+          <span class="faq-item__icon">+</span>
+        </button>
+        <div class="faq-item__a">
+          <p>We do. We connect Clover, import your menu, set up your hours, upsells and transfers, and run test calls before you go live. We&#x27;ll give you a go-live date for your locations on the demo call.</p>
+        </div>
+      </div>
+
+    </div>
+    <p style="text-align:center;margin-top:2rem;color:var(--gray-500);font-size:.95rem;max-width:760px;margin-left:auto;margin-right:auto;">See all <a href="./" style="color:var(--red);font-weight:600;">integrations</a>, compare <a href="../pricing" style="color:var(--red);font-weight:600;">plans</a>, or estimate your missed-call revenue with the <a href="../roi-calculator" style="color:var(--red);font-weight:600;">ROI Calculator</a>.</p>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="bottom-cta__orb-1" aria-hidden="true"></div>
+  <div class="bottom-cta__orb-2" aria-hidden="true"></div>
+  <div class="cta-band__inner">
+    <h2 class="section-title">Running Clover? Watch a Phone Order Land.</h2>
+    <p class="cta-band__sub">Book a 30-minute demo and hear TARA take an order from your menu and send it into Clover.</p>
+    <div class="cta-band__btns">
+      <a href="../contact" class="btn btn--primary btn--large">Book a Demo &rarr;</a>
+      <a href="../pricing" class="btn btn--ghost btn--large">See Pricing</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer__inner">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <img src="../heytara-logo-light.png" alt="HeyTARA" />
+        </div>
+        <p class="footer__tagline">The hospitality OS for multi-unit restaurants. Fully managed restaurant automation, powered by voice — so your team can focus on hospitality.</p>
+      </div>
+      <nav aria-label="Footer navigation — Product">
+        <p class="footer__col-title">Platform</p>
+        <ul class="footer__links">
+          <li><a href="../#channels">Voice</a></li>
+          <li><a href="../#channels">Text / SMS</a></li>
+          <li><a href="../#channels">Email</a></li>
+          <li><a href="../pricing">Pricing</a></li>
+          <li><a href="../roi-calculator">ROI Calculator</a></li>
+          <li><a href="../integrations/">Integrations</a></li>
+          <li><a href="../ai-phone-answering-for-restaurants/">AI Phone Answering</a></li>
+          <li><a href="../private-events/">Private Event Leads</a></li>
+          <li><a href="../ivr-recordings">Phone Recordings</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Footer navigation — Company">
+        <p class="footer__col-title">Company</p>
+        <ul class="footer__links">
+          <li><a href="../featured-deployments">Featured Deployments</a></li>
+          <li><a href="../careers">Careers</a></li>
+          <li><a href="../partners">Partners</a></li>
+          <li><a href="../blog/">Blog</a></li>
+          <li><a href="../contact">Contact Us</a></li>
+          <li><a href="mailto:hello@heytara.ai">hello@heytara.ai</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">&copy; 2026 <span class="ht-wm"><span class="ht-wm__hey">Hey</span><span class="ht-wm__tara">TARA</span></span>. All rights reserved.</p>
+      <div class="footer__social" aria-label="HeyTARA on social media">
+        <a href="https://www.linkedin.com/company/heytara" target="_blank" rel="noopener" aria-label="HeyTARA on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
+        <a href="https://www.instagram.com/heytara.ai" target="_blank" rel="noopener" aria-label="HeyTARA on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.3-1.46.72-2.13 1.38A5.9 5.9 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.3.79.72 1.46 1.38 2.13a5.9 5.9 0 0 0 2.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.9 5.9 0 0 0 2.13-1.38 5.9 5.9 0 0 0 1.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.9 5.9 0 0 0-1.38-2.13A5.9 5.9 0 0 0 19.86.63C19.1.33 18.22.13 16.95.07 15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg></a>
+        <a href="https://www.facebook.com/profile.php?id=61579001577069" target="_blank" rel="noopener" aria-label="HeyTARA on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.33l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07z"/></svg></a>
+      </div>
+      <nav class="footer__legal" aria-label="Legal links">
+        <a href="../privacy">Privacy Policy</a>
+        <a href="../terms">Terms of Service</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<a href="../contact" class="sticky-cta" id="stickyCta" aria-label="Book a Demo">📞 Book a Demo</a>
+<script src="../js/main.js" defer></script>
+</body>
+</html>
