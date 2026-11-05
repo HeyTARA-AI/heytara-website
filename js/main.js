@@ -541,6 +541,34 @@
   });
 })();
 
+// Keep pricing feature tooltips inside the screen on small phones
+(function () {
+  var tips = document.querySelectorAll('.feat__tip');
+  if (!tips.length) return;
+  var PAD = 12;
+  function fit(t) {
+    // Measure without the CSS transition so we read the real position, not a mid-animation one
+    t.style.transition = 'none';
+    t.style.setProperty('--tip-dx', '0px');
+    var r = t.getBoundingClientRect();
+    var vw = document.documentElement.clientWidth;
+    var dx = 0;
+    if (r.right > vw - PAD) dx = (vw - PAD) - r.right;
+    if (r.left + dx < PAD) dx = PAD - r.left;
+    if (dx) t.style.setProperty('--tip-dx', Math.round(dx) + 'px');
+    void t.offsetWidth;
+    t.style.transition = '';
+  }
+  function fitAll() { tips.forEach(fit); }
+  fitAll();
+  window.addEventListener('load', fitAll);
+  window.addEventListener('resize', fitAll);
+  document.addEventListener('focusin', function (e) {
+    var t = e.target.querySelector && e.target.querySelector('.feat__tip');
+    if (t) fit(t);
+  });
+})();
+
 // Track clicks on marked CTAs (data-cta="...") as GA4 cta_click
 document.addEventListener('click', function (e) {
   var a = e.target.closest && e.target.closest('[data-cta]');

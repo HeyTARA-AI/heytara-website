@@ -411,7 +411,7 @@
   left: 0;
   bottom: calc(100% + 10px);
   width: max-content;
-  max-width: 260px;
+  max-width: min(260px, calc(100vw - 24px));
   background: var(--navy);
   color: var(--white);
   font-size: .8rem;
@@ -423,7 +423,7 @@
   box-shadow: var(--shadow-md);
   opacity: 0;
   visibility: hidden;
-  transform: translateY(4px);
+  transform: translate(var(--tip-dx, 0px), 4px);
   transition: opacity .15s ease, transform .15s ease, visibility .15s;
   pointer-events: none;
   z-index: 20;
@@ -432,7 +432,7 @@
   content: '';
   position: absolute;
   top: 100%;
-  left: 14px;
+  left: calc(14px - var(--tip-dx, 0px));
   border: 6px solid transparent;
   border-top-color: var(--navy);
 }
@@ -440,7 +440,7 @@
 .feat:focus .feat__tip {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
+  transform: translate(var(--tip-dx, 0px), 0);
 }
 
 /* Included in every plan */
@@ -480,10 +480,10 @@
   font-weight: 700;
   margin-right: .4rem;
 }
-.pricing-included__list .feat__tip { left: 50%; transform: translate(-50%, 4px); }
+.pricing-included__list .feat__tip { left: 50%; transform: translate(calc(-50% + var(--tip-dx, 0px)), 4px); }
 .pricing-included__list .feat:hover .feat__tip,
-.pricing-included__list .feat:focus .feat__tip { transform: translate(-50%, 0); }
-.pricing-included__list .feat__tip::after { left: 50%; margin-left: -6px; }
+.pricing-included__list .feat:focus .feat__tip { transform: translate(calc(-50% + var(--tip-dx, 0px)), 0); }
+.pricing-included__list .feat__tip::after { left: calc(50% - var(--tip-dx, 0px)); margin-left: -6px; }
 
 .pricing-mission {
   margin-top: 4rem;
