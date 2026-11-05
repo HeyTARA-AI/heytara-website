@@ -330,6 +330,7 @@
 }
 .price-card__price {
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
   gap: .3rem;
   margin-bottom: .35rem;
@@ -350,6 +351,54 @@
   color: var(--red);
   font-weight: 600;
   margin-bottom: 1.5rem;
+}
+.price-card__cents { font-size: .55em; vertical-align: .62em; margin-left: .04em; }
+.price-card__billing {
+  font-size: .8rem;
+  color: var(--gray-700);
+  margin-bottom: .35rem;
+  min-height: 1.3em;
+}
+
+/* Monthly / annual billing toggle */
+.billing-toggle {
+  display: flex;
+  width: max-content;
+  margin: 2.5rem auto 0;
+  padding: .3rem;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-sm);
+}
+.billing-toggle__btn {
+  font: inherit;
+  font-size: .92rem;
+  font-weight: 700;
+  color: var(--gray-700);
+  background: transparent;
+  border: 0;
+  border-radius: var(--radius-pill);
+  padding: .6rem 1.4rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  transition: background var(--transition), color var(--transition);
+}
+@media (max-width: 380px) {
+  .price-card__amount { font-size: 2.3rem; }
+}
+.billing-toggle__btn:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+.billing-toggle__btn.is-active { background: var(--navy); color: var(--white); }
+.billing-toggle__save {
+  font-size: .7rem;
+  font-weight: 800;
+  letter-spacing: .03em;
+  color: var(--white);
+  background: var(--red);
+  border-radius: var(--radius-pill);
+  padding: .2rem .55rem;
 }
 .price-card__cta {
   width: 100%;

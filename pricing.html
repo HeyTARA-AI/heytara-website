@@ -114,6 +114,11 @@
       </ul>
     </div>
 
+    <div class="billing-toggle" role="group" aria-label="Billing period">
+      <button type="button" class="billing-toggle__btn is-active" data-billing="monthly" aria-pressed="true">Monthly</button>
+      <button type="button" class="billing-toggle__btn" data-billing="annual" aria-pressed="false">Annual <span class="billing-toggle__save">Save 25%</span></button>
+    </div>
+
     <div class="pricing-grid">
 
       <!-- STARTER -->
@@ -121,9 +126,10 @@
         <h2 class="price-card__name">Starter</h2>
         <p class="price-card__tagline">Never miss a call: TARA answers questions and texts guests your ordering link.</p>
         <div class="price-card__price">
-          <span class="price-card__amount">$99</span>
+          <span class="price-card__amount" data-monthly="$99" data-annual="$74&lt;span class=&quot;price-card__cents&quot;&gt;.25&lt;/span&gt;">$99</span>
           <span class="price-card__period">/mo per location</span>
         </div>
+        <p class="price-card__billing" data-monthly="Billed monthly" data-annual="$891 billed yearly, up front &middot; save $297">Billed monthly</p>
         <p class="price-card__meta">Unlimited calls · No commissions</p>
         <a href="contact" class="btn btn--primary price-card__cta">Get Started</a>
         <p class="price-card__feature-head">What's included</p>
@@ -144,9 +150,10 @@
         <h2 class="price-card__name">Main Course</h2>
         <p class="price-card__tagline">Take phone orders into your POS and grow every ticket.</p>
         <div class="price-card__price">
-          <span class="price-card__amount">$199</span>
+          <span class="price-card__amount" data-monthly="$199" data-annual="$149&lt;span class=&quot;price-card__cents&quot;&gt;.25&lt;/span&gt;">$199</span>
           <span class="price-card__period">/mo per location</span>
         </div>
+        <p class="price-card__billing" data-monthly="Billed monthly" data-annual="$1,791 billed yearly, up front &middot; save $597">Billed monthly</p>
         <p class="price-card__meta">Unlimited calls · No commissions</p>
         <a href="contact" class="btn btn--orange price-card__cta">Get Started</a>
         <p class="price-card__feature-head">Everything in Starter, plus:</p>
@@ -176,6 +183,7 @@
         <div class="price-card__price">
           <span class="price-card__amount">Custom</span>
         </div>
+        <p class="price-card__billing">Priced for your group</p>
         <p class="price-card__meta">Let's build your plan together</p>
         <a href="contact" class="btn btn--primary price-card__cta">Contact Sales</a>
         <p class="price-card__feature-head">Everything in Main Course, plus:</p>

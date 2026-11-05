@@ -569,6 +569,30 @@
   });
 })();
 
+// Pricing page: monthly / annual billing toggle (annual = paid up front, 25% off)
+(function () {
+  var btns = document.querySelectorAll('.billing-toggle__btn');
+  if (!btns.length) return;
+  function setBilling(mode) {
+    btns.forEach(function (b) {
+      var on = b.getAttribute('data-billing') === mode;
+      b.classList.toggle('is-active', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    document.querySelectorAll('[data-monthly][data-annual]').forEach(function (el) {
+      el.innerHTML = el.getAttribute('data-' + mode);
+    });
+  }
+  btns.forEach(function (b) {
+    b.addEventListener('click', function () {
+      var mode = b.getAttribute('data-billing');
+      setBilling(mode);
+      if (typeof gtag === 'function') gtag('event', 'billing_toggle', { billing: mode });
+    });
+  });
+  if (/[?&]billing=annual\b/.test(location.search)) setBilling('annual');
+})();
+
 // Track clicks on marked CTAs (data-cta="...") as GA4 cta_click
 document.addEventListener('click', function (e) {
   var a = e.target.closest && e.target.closest('[data-cta]');
