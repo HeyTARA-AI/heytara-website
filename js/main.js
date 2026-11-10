@@ -210,6 +210,71 @@
 // ─────────────────────────────────────────────────────
 // DEMO FORM HANDLER
 // ─────────────────────────────────────────────────────
+// ─────────────────────────────────────────────────────
+// LEAD SOURCE: remember how a visitor found the site and add it to
+// every form submission (shows up in the Formspree lead email).
+// First visit is kept 90 days in localStorage; the current visit in sessionStorage.
+// ─────────────────────────────────────────────────────
+(function initLeadSource() {
+  const FIRST = 'ht_first_touch', SESSION = 'ht_session_touch', MAX_AGE = 90 * 24 * 3600 * 1000;
+  const store = (name) => { try { return window[name]; } catch (e) { return null; } };
+  const read = (s, k) => { try { return JSON.parse((s && s.getItem(k)) || 'null'); } catch (e) { return null; } };
+  const write = (s, k, v) => { try { s && s.setItem(k, JSON.stringify(v)); } catch (e) {} };
+  const host = (u) => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch (e) { return ''; } };
+  const SOURCES = [
+    [/^mail\.google\.com$/, 'Gmail (email link)'], [/(^|\.)(outlook\.(live|office)\.com|office\.com)$/, 'Outlook (email link)'],
+    [/^gemini\.google\.com$|^bard\.google\.com$/, 'Gemini'], [/(^|\.)google\./, 'Google search'],
+    [/(^|\.)bing\.com$/, 'Bing search'], [/(^|\.)duckduckgo\.com$/, 'DuckDuckGo search'], [/(^|\.)yahoo\./, 'Yahoo search'],
+    [/^(chatgpt\.com|chat\.openai\.com)$/, 'ChatGPT'], [/(^|\.)perplexity\.ai$/, 'Perplexity'], [/^copilot\.microsoft\.com$/, 'Copilot'], [/^claude\.ai$/, 'Claude'],
+    [/(^|\.)linkedin\.com$|^lnkd\.in$/, 'LinkedIn'], [/(^|\.)facebook\.com$|^fb\.me$/, 'Facebook'], [/(^|\.)instagram\.com$/, 'Instagram'],
+    [/^(t\.co|x\.com|twitter\.com)$/, 'X / Twitter'], [/(^|\.)youtube\.com$/, 'YouTube'], [/(^|\.)reddit\.com$/, 'Reddit'],
+  ];
+  function label(ref, utm) {
+    if (utm.utm_source) return utm.utm_source + (utm.utm_medium ? ' / ' + utm.utm_medium : '') + ' (campaign link)';
+    if (utm.gclid) return 'Google Ads';
+    if (!ref) return 'Direct (typed in, bookmark, or a link in an email, text or app)';
+    const h = host(ref);
+    for (const [re, name] of SOURCES) if (re.test(h)) return name;
+    return h ? 'Link on ' + h : 'Unknown';
+  }
+  const local = store('localStorage'), session = store('sessionStorage');
+  const params = new URLSearchParams(location.search);
+  const utm = {};
+  ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid', 'fbclid', 'li_fat_id'].forEach((k) => {
+    const v = params.get(k); if (v) utm[k] = v.slice(0, 200);
+  });
+  const ref = document.referrer || '';
+  const internal = !!ref && host(ref) === location.hostname.replace(/^www\./, '');
+  if (!internal || Object.keys(utm).length) {
+    const touch = {
+      source: label(ref, utm),
+      landing_page: (location.pathname + location.search).slice(0, 300),
+      referrer: ref.slice(0, 300),
+      campaign: utm,
+      time: new Date().toISOString(),
+    };
+    if (!read(session, SESSION)) write(session, SESSION, touch);
+    const first = read(local, FIRST);
+    if (!first || !first.time || Date.now() - Date.parse(first.time) > MAX_AGE) write(local, FIRST, touch);
+  }
+  const tags = (c) => (c && Object.keys(c).length ? Object.keys(c).map((k) => k + '=' + c[k]).join(', ') : '');
+  window.htLeadSource = function () {
+    const f = read(local, FIRST) || {}, s = read(session, SESSION) || {};
+    return {
+      lead_source: s.source || f.source || 'Unknown',
+      landing_page: s.landing_page || f.landing_page || 'Unknown',
+      referrer: s.referrer || f.referrer || 'none',
+      campaign_tags: tags(s.campaign) || tags(f.campaign) || 'none',
+      submitted_from: location.pathname,
+      first_visit: f.source ? f.source + ' → ' + f.landing_page + ' on ' + String(f.time).slice(0, 10) : 'Unknown',
+    };
+  };
+})();
+
+function withLeadSource(data) {
+  try { return Object.assign(data, window.htLeadSource ? window.htLeadSource() : {}); } catch (e) { return data; }
+}
+
 (function initDemoForm() {
   const form = document.getElementById('demo-form');
   if (!form) return;
@@ -243,6 +308,8 @@
     // Disable button
     submitBtn.disabled = true;
     submitBtn.textContent = 'Sending…';
+
+    withLeadSource(data);
 
     // Submit to Formspree → notifications go to jon@heytara.ai
     try {
@@ -430,6 +497,7 @@
     };
     if (!data.name || !data.email || !data.company) return err('Please fill in all required fields.');
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) return err('Please enter a valid email address.');
+    withLeadSource(data);
     btn.disabled = true; btn.textContent = 'Sending…';
     try {
       const res = await fetch('https://formspree.io/f/xyegzjnk', {
@@ -524,6 +592,7 @@
     };
     if (!data.name || !data.company || !data.email || !data.script) return err('Please fill in your name, company, email and script.');
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) return err('Please enter a valid email address.');
+    withLeadSource(data);
     btn.disabled = true; btn.textContent = 'Sending…';
     try {
       const res = await fetch('https://formspree.io/f/xyegzjnk', {
