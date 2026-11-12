@@ -119,7 +119,7 @@
     <div class="hero__orb hero__orb--3"></div>
   </div>
 
-  <div class="hero__inner hero__inner--split">
+  <div class="hero__inner hero__inner--split hero__inner--dash">
 
     <div class="hero__left">
     <div class="hero__badge" aria-hidden="true">
@@ -158,45 +158,83 @@
 
     <!-- Right side: Restaurant illustration -->
     <div class="hero__right hero__right--dash">
-      <figure class="dash-wrap">
-        <div class="dash" aria-label="Example HeyTARA dashboard for one location of a 20-unit restaurant group, showing 30 days of calls, phone order revenue and call reasons">
+      <figure class="dash-wrap dash-wrap--ent">
+        <div class="dash dash--ent" role="img" aria-label="Example HeyTARA multi-location dashboard for a 20-unit restaurant group over 30 days: 31,860 calls answered, $324,155 in phone order revenue, 18.4% upsell success, call outcomes, top locations and calls routed to staff">
           <div class="dash__bar" aria-hidden="true">
             <span class="dash__dots"><i></i><i></i><i></i></span>
             <span class="dash__brand"><span>Hey</span>TARA</span>
+            <span class="dash__tabs"><span class="is-on">Overview</span><span>Calls</span><span>Orders</span><span>Locations</span><span>Reports</span></span>
+            <span class="dash__live"><i></i>Live</span>
           </div>
-          <div class="dash__body">
+          <div class="dash__body" aria-hidden="true">
             <div class="dash__head">
-              <span class="dash__title">Dashboard</span>
-              <span class="dash__chip">Store 07 of 20 &#9662;</span>
-              <span class="dash__chip dash__chip--on">30 days</span>
-              <span class="dash__chip">Export PDF</span>
+              <span class="dash__title">All locations</span>
+              <span class="dash__chip">All brands &#9662;</span>
+              <span class="dash__chip">20 stores &#9662;</span>
+              <span class="dash__chip dash__chip--on">30 days vs prior</span>
+              <span class="dash__chip">Export CSV / PDF</span>
             </div>
-            <div class="dash__kpis">
-              <div class="dash__kpi"><span>Calls answered</span><b>1,640</b></div>
-              <div class="dash__kpi dash__kpi--hl"><span>Phone order revenue</span><b>$16,480</b></div>
-              <div class="dash__kpi"><span>Avg order size</span><b>$54.80</b></div>
-              <div class="dash__kpi"><span>Catering calls</span><b>62</b></div>
+            <div class="dash__kpis dash__kpis--6">
+              <div class="dash__kpi"><span>Calls answered</span><b>31,860</b><em class="up">&#9650; 12%</em></div>
+              <div class="dash__kpi dash__kpi--hl"><span>Order revenue</span><b>$324,155</b><em class="up">&#9650; 18%</em></div>
+              <div class="dash__kpi"><span>Orders placed</span><b>5,912</b><em class="up">&#9650; 15%</em></div>
+              <div class="dash__kpi"><span>Avg ticket</span><b>$54.83</b><em class="up">&#9650; 4%</em></div>
+              <div class="dash__kpi"><span>Upsell rate</span><b>18.4%</b><em class="up">&#9650; 2.1 pts</em></div>
+              <div class="dash__kpi"><span>Resolved by AI</span><b>86%</b><em>14% to staff</em></div>
             </div>
-            <div class="dash__chart">
-              <div class="dash__chart-head"><b>Revenue and call volume</b><span><i class="dash__dot dash__dot--rev"></i>Revenue <i class="dash__dot dash__dot--vol"></i>Calls</span></div>
-              <svg viewBox="0 0 600 160" preserveAspectRatio="none" aria-hidden="true">
+            <div class="dash__row">
+              <div class="dash__chart">
+                <div class="dash__chart-head"><b>Revenue &amp; calls</b><span><i class="dash__dot dash__dot--rev"></i>Revenue <i class="dash__dot dash__dot--vol"></i>Calls</span></div>
+                <svg viewBox="0 0 600 160" preserveAspectRatio="none" aria-hidden="true">
                 <g class="dash__grid"><line x1="0" x2="600" y1="40" y2="40" /><line x1="0" x2="600" y1="80" y2="80" /><line x1="0" x2="600" y1="120" y2="120" /></g>
                 <path class="dash__area dash__area--vol" d="M0.0,96.0 C3.4,94.8 13.8,90.6 20.7,89.0 C27.6,87.5 34.5,87.2 41.4,86.6 C48.3,85.9 55.2,88.1 62.1,85.1 C69.0,82.1 75.9,71.9 82.8,68.5 C89.7,65.1 96.6,63.2 103.4,64.7 C110.3,66.1 117.2,71.5 124.1,77.0 C131.0,82.6 137.9,95.9 144.8,98.0 C151.7,100.0 158.6,91.3 165.5,89.3 C172.4,87.3 179.3,88.7 186.2,86.1 C193.1,83.6 200.0,78.9 206.9,73.9 C213.8,68.9 220.7,57.9 227.6,56.1 C234.5,54.4 241.4,59.8 248.3,63.5 C255.2,67.2 262.1,72.9 269.0,78.5 C275.9,84.2 282.8,95.6 289.7,97.4 C296.6,99.2 303.4,91.0 310.3,89.2 C317.2,87.3 324.1,87.1 331.0,86.5 C337.9,85.8 344.8,89.7 351.7,85.1 C358.6,80.5 365.5,62.9 372.4,58.8 C379.3,54.8 386.2,57.9 393.1,60.8 C400.0,63.8 406.9,71.6 413.8,76.7 C420.7,81.8 427.6,88.6 434.5,91.3 C441.4,94.1 448.3,94.1 455.2,93.3 C462.1,92.5 469.0,89.4 475.9,86.7 C482.8,84.0 489.7,82.3 496.6,76.9 C503.4,71.5 510.3,57.2 517.2,54.3 C524.1,51.3 531.0,54.8 537.9,59.2 C544.8,63.6 551.7,73.9 558.6,80.5 C565.5,87.1 572.4,97.6 579.3,98.8 C586.2,100.0 596.6,89.7 600.0,87.8 L600,160 L0,160 Z" />
                 <path class="dash__line dash__line--vol" d="M0.0,96.0 C3.4,94.8 13.8,90.6 20.7,89.0 C27.6,87.5 34.5,87.2 41.4,86.6 C48.3,85.9 55.2,88.1 62.1,85.1 C69.0,82.1 75.9,71.9 82.8,68.5 C89.7,65.1 96.6,63.2 103.4,64.7 C110.3,66.1 117.2,71.5 124.1,77.0 C131.0,82.6 137.9,95.9 144.8,98.0 C151.7,100.0 158.6,91.3 165.5,89.3 C172.4,87.3 179.3,88.7 186.2,86.1 C193.1,83.6 200.0,78.9 206.9,73.9 C213.8,68.9 220.7,57.9 227.6,56.1 C234.5,54.4 241.4,59.8 248.3,63.5 C255.2,67.2 262.1,72.9 269.0,78.5 C275.9,84.2 282.8,95.6 289.7,97.4 C296.6,99.2 303.4,91.0 310.3,89.2 C317.2,87.3 324.1,87.1 331.0,86.5 C337.9,85.8 344.8,89.7 351.7,85.1 C358.6,80.5 365.5,62.9 372.4,58.8 C379.3,54.8 386.2,57.9 393.1,60.8 C400.0,63.8 406.9,71.6 413.8,76.7 C420.7,81.8 427.6,88.6 434.5,91.3 C441.4,94.1 448.3,94.1 455.2,93.3 C462.1,92.5 469.0,89.4 475.9,86.7 C482.8,84.0 489.7,82.3 496.6,76.9 C503.4,71.5 510.3,57.2 517.2,54.3 C524.1,51.3 531.0,54.8 537.9,59.2 C544.8,63.6 551.7,73.9 558.6,80.5 C565.5,87.1 572.4,97.6 579.3,98.8 C586.2,100.0 596.6,89.7 600.0,87.8" />
                 <path class="dash__area dash__area--rev" d="M0.0,123.9 C3.4,123.4 13.8,122.6 20.7,121.2 C27.6,119.9 34.5,117.1 41.4,115.7 C48.3,114.3 55.2,114.7 62.1,112.8 C69.0,110.8 75.9,104.8 82.8,104.0 C89.7,103.3 96.6,108.5 103.4,108.2 C110.3,108.0 117.2,100.0 124.1,102.6 C131.0,105.3 137.9,123.0 144.8,124.0 C151.7,125.1 158.6,123.8 165.5,109.2 C172.4,94.7 179.3,35.9 186.2,36.7 C193.1,37.4 200.0,103.3 206.9,113.8 C213.8,124.3 220.7,100.8 227.6,99.6 C234.5,98.5 241.4,106.4 248.3,107.1 C255.2,107.8 262.1,101.8 269.0,103.8 C275.9,105.9 282.8,117.2 289.7,119.4 C296.6,121.6 303.4,117.0 310.3,117.1 C317.2,117.2 324.1,120.0 331.0,120.0 C337.9,120.0 344.8,120.8 351.7,117.2 C358.6,113.6 365.5,101.8 372.4,98.4 C379.3,94.9 386.2,94.3 393.1,96.5 C400.0,98.6 406.9,108.1 413.8,111.1 C420.7,114.0 427.6,113.0 434.5,114.0 C441.4,115.0 448.3,130.9 455.2,116.9 C462.1,102.9 469.0,31.0 475.9,30.1 C482.8,29.2 489.7,99.4 496.6,111.4 C503.4,123.4 510.3,105.5 517.2,102.2 C524.1,99.0 531.0,90.6 537.9,92.0 C544.8,93.3 551.7,105.7 558.6,110.3 C565.5,114.8 572.4,118.7 579.3,119.2 C586.2,119.8 596.6,114.5 600.0,113.5 L600,160 L0,160 Z" />
                 <path class="dash__line dash__line--rev" d="M0.0,123.9 C3.4,123.4 13.8,122.6 20.7,121.2 C27.6,119.9 34.5,117.1 41.4,115.7 C48.3,114.3 55.2,114.7 62.1,112.8 C69.0,110.8 75.9,104.8 82.8,104.0 C89.7,103.3 96.6,108.5 103.4,108.2 C110.3,108.0 117.2,100.0 124.1,102.6 C131.0,105.3 137.9,123.0 144.8,124.0 C151.7,125.1 158.6,123.8 165.5,109.2 C172.4,94.7 179.3,35.9 186.2,36.7 C193.1,37.4 200.0,103.3 206.9,113.8 C213.8,124.3 220.7,100.8 227.6,99.6 C234.5,98.5 241.4,106.4 248.3,107.1 C255.2,107.8 262.1,101.8 269.0,103.8 C275.9,105.9 282.8,117.2 289.7,119.4 C296.6,121.6 303.4,117.0 310.3,117.1 C317.2,117.2 324.1,120.0 331.0,120.0 C337.9,120.0 344.8,120.8 351.7,117.2 C358.6,113.6 365.5,101.8 372.4,98.4 C379.3,94.9 386.2,94.3 393.1,96.5 C400.0,98.6 406.9,108.1 413.8,111.1 C420.7,114.0 427.6,113.0 434.5,114.0 C441.4,115.0 448.3,130.9 455.2,116.9 C462.1,102.9 469.0,31.0 475.9,30.1 C482.8,29.2 489.7,99.4 496.6,111.4 C503.4,123.4 510.3,105.5 517.2,102.2 C524.1,99.0 531.0,90.6 537.9,92.0 C544.8,93.3 551.7,105.7 558.6,110.3 C565.5,114.8 572.4,118.7 579.3,119.2 C586.2,119.8 596.6,114.5 600.0,113.5" />
               </svg>
+              </div>
+              <div class="dash__panel">
+                <b class="dash__ph">Call outcomes</b>
+                <div class="dash__outcomes">
+                  <div class="dash__donut"><span><b>31.9k</b>calls</span></div>
+                  <ul class="dash__legend">
+                    <li><i style="background:#BB0000"></i>Order placed<b>19%</b></li>
+                    <li><i style="background:#F06418"></i>Question answered<b>38%</b></li>
+                    <li><i style="background:#F5B841"></i>Ordering link texted<b>11%</b></li>
+                    <li><i style="background:#3D7BF0"></i>Reservation<b>8%</b></li>
+                    <li><i style="background:#1A1A2E"></i>Routed to staff<b>14%</b></li>
+                    <li><i style="background:#D5D7DE"></i>Other<b>10%</b></li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <div class="dash__tags" aria-label="Top call reasons">
-              <span>Takeout Orders <b>301</b></span>
-              <span>Catering / Large Orders <b>62</b></span>
-              <span>Order Status <b>58</b></span>
-              <span>Menu Questions <b>51</b></span>
-              <span>Hours &amp; Directions <b>44</b></span>
+            <div class="dash__row dash__row--b">
+              <div class="dash__panel">
+                <div class="dash__ph-row"><b class="dash__ph">Top locations</b><span>Revenue &#9662;</span></div>
+                <table class="dash__table">
+                  <thead><tr><th>Location</th><th>Calls</th><th>Revenue</th><th class="dash__c-ups">Upsell</th><th>Trend</th></tr></thead>
+                  <tbody>
+                    <tr><td><span class="dash__rank">1</span>Pasadena</td><td>2,140</td><td>$24,860</td><td class="dash__c-ups">22%</td><td><svg viewBox="0 0 48 14"><polyline points="0,11 8,10 16,11 24,7 32,8 40,4 48,2" /></svg></td></tr>
+                    <tr><td><span class="dash__rank">2</span>Santa Monica</td><td>1,980</td><td>$21,940</td><td class="dash__c-ups">20%</td><td><svg viewBox="0 0 48 14"><polyline points="0,9 8,10 16,7 24,8 32,6 40,5 48,4" /></svg></td></tr>
+                    <tr><td><span class="dash__rank">3</span>Irvine</td><td>1,870</td><td>$19,320</td><td class="dash__c-ups">19%</td><td><svg viewBox="0 0 48 14"><polyline points="0,10 8,8 16,9 24,6 32,7 40,6 48,5" /></svg></td></tr>
+                    <tr><td><span class="dash__rank">4</span>Long Beach</td><td>1,720</td><td>$17,650</td><td class="dash__c-ups">17%</td><td><svg viewBox="0 0 48 14"><polyline points="0,6 8,7 16,5 24,8 32,7 40,8 48,7" /></svg></td></tr>
+                    <tr><td><span class="dash__rank">5</span>Burbank</td><td>1,640</td><td>$16,480</td><td class="dash__c-ups">16%</td><td><svg viewBox="0 0 48 14"><polyline points="0,12 8,11 16,9 24,10 32,7 40,8 48,6" /></svg></td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="dash__panel">
+                <b class="dash__ph">Routed to your team</b>
+                <ul class="dash__feed">
+                  <li><span>&#x1F371;</span><div><b>Catering, 120 guests</b>Irvine &rarr; catering team</div><time>2m</time></li>
+                  <li><span>&#x26A0;&#xFE0F;</span><div><b>Complaint: missing item</b>Long Beach &rarr; GM, with transcript</div><time>9m</time></li>
+                  <li><span>&#x1F464;</span><div><b>Manager request</b>Pasadena &rarr; warm handoff</div><time>14m</time></li>
+                  <li><span>&#x1F389;</span><div><b>Private event, 40 guests</b>Santa Monica &rarr; events lead</div><time>22m</time></li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-        <figcaption class="dash__cap">Example: one location of a 20-unit group, 30 days</figcaption>
+        <figcaption class="dash__cap">Example: Chef&rsquo;s Special multi-location dashboard for a 20-unit group, last 30 days</figcaption>
       </figure>
     </div>
 
